@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="css/styleforindex.css">
     <link rel="stylesheet" href="css/aos.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
         <img src="img/profile_icons/crow03.png" id="icon" alt="">
@@ -73,35 +71,111 @@
         <iframe id="resume-preview" src="./doc/EduardosDosSantosFerreira.pdf"
             style="display: none; width: 100%; height: 1000px;"></iframe>
     </div>
-    <!--icones-->
     <div id="categoria" class="container" style="align-items: center; text-align: center;">
+        <h1>Categoria de Projetos</h1>
         <div class="row">
             <div class="col-lg">
-                <a href=""><img src="img/profile_icons/crow03.png" width="140" height="140"
-                        alt="" title=""></a>
+                <a href="#" class="categoria-link" data-categoria="arduinos">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" id="icones" alt="Arduinos" title="Arduinos"/>
+                </a>
                 <h2 class="fw-normal">Arduinos</h2>
             </div>
-            <br>
             <div class="col-lg">
-                <a href=""><img src="img/profile_icons/crow03.png" width="140" height="140"
-                        alt="icone de farmácia" title="Curso de Farmácia"></a>
+                <a href="#" class="categoria-link" data-categoria="aplicativos">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg" id="icones" alt="Aplicativos" title="Aplicativos"/>
+                </a>
                 <h2 class="fw-normal">Aplicativos</h2>
             </div>
-            <br>
             <div class="col-lg">
-                <a href=""><img src="img/profile_icons/crow03.png" width="140" height="140"
-                        alt="icone de desenvolvimento de sistemas" title=""></a>
+                <a href="#" class="categoria-link" data-categoria="games">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Pacman.svg" id="icones" alt="Games" title="Games">
+                </a>
                 <h2 class="fw-normal">Games</h2>
             </div>
-            <br>
             <div class="col-lg">
-                <a href=""><img src="img/profile_icons/crow03.png" width="140" height="140"
-                        alt="icone de Informática para internet" title=""></a>
+                <a href="#" class="categoria-link" data-categoria="sites">
+                    <img src="img/profile_icons/crow03.png" id="icones" alt="Web-Sites" title="Web-Sites">
+                </a>
                 <h2 class="fw-normal">Sites</h2>
             </div>
         </div>
     </div>
-    <!--fim dos icones-->
+    
+    <div id="projetos">
+        <div id="projetos-arduinos" style="display: none; text-align: center;">
+            <h2>Projetos de Arduinos</h2>
+            <section id="projects" class="projects sec-pad">
+                <div class="main-container">
+                  <h2 class="heading heading-sec heading-sec__mb-bg">
+                  </h2>
+            
+                  <div class="projects__content">
+                    <div class="projects__row" data-aos="fade-right">
+                      <div class="projects__row-img-cont">
+                        <img src="img/sites/etec.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
+                      </div>
+                      <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Etec de Itanhaém</h3>
+                        <p class="projects__row-content-desc">
+                          Site alternativo destinado a Escola Técnica Estadual de Itanhaém.
+                        </p>
+                        <a href="https://eduardodossantosferreira.github.io/project-etec/"
+                          class="btn btn--med btn--theme dynamicBgClr" target="_blank">Clique e Veja !</a>
+                      </div>
+                    </div>
+                    <div class="projects__row" data-aos="fade-left">
+                      <div class="projects__row-img-cont">
+                        <img src="img/sites/delmes.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
+                      </div>
+                      <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Destiny Monterrey</h3>
+                        <p class="projects__row-content-desc">
+                          Site de reserva de Viagens e Hoteis
+                        </p>
+                        <a href="https://eduardodossantosferreira.github.io/destino-del-mes/"
+                          class="btn btn--med btn--theme dynamicBgClr" target="_blank">Faça sua reseva
+                          !</a>
+                      </div>
+                    </div>
+                    <div class="projects__row" data-aos="fade-right">
+                      <div class="projects__row-img-cont">
+                        <img src="img/sites/barber.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
+                      </div>
+                      <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Barber Shop</h3>
+                        <p class="projects__row-content-desc">
+                          Site para homens dar um tapa no visual, agende seu horário e venha fazer "o corte"
+                        </p>
+            
+                        <a href="https://eduardodossantosferreira.github.io/project-barber/"
+                          class="btn btn--med btn--theme dynamicBgClr" target="_blank">Acesse Já !</a>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <br>
+                  <div class="space"></div>
+                  <div data-aos="fade-down" class="container" style="align-items: center; text-align: center;"><a
+                      href="https://github.com/EduardoDosSantosFerreira?tab=repositories">
+                      <button class="comic-button">Veja mais Projetos!</button></a>
+                  </div>
+                  <br>
+                  <div class="space"></div>
+              </section>
+        </div>
+        <div id="projetos-aplicativos" style="display: none; text-align: center;">
+            <!-- Conteúdo dos projetos de Aplicativos -->
+            <h2>Projetos de Aplicativos</h2>
+        </div>
+        <div id="projetos-games" style="display: none; text-align: center;">
+            <!-- Conteúdo dos projetos de Games -->
+            <h2>Projetos de Games</h2>
+        </div>
+        <div id="projetos-sites" style="display: none; text-align: center;">
+            <!-- Conteúdo dos projetos de Sites -->
+            <h2>Projetos de Sites</h2>
+        </div>
+    </div>
     <div id="contact" class="container-fluid">
         <h1 id="contato">Contato</h1>
         <p>Entre em contato comigo:</p>
@@ -135,5 +209,10 @@
         );
     </script>
 </body>
-
 </html>
+
+
+
+
+
+
