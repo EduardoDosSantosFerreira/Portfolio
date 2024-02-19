@@ -1,0 +1,110 @@
+a {
+  color: #000;
+}
+html {
+  scroll-behavior: smooth;
+  color: black;
+}
+body {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  color: black;
+  padding: 50px;
+}
+.card {
+  margin-bottom: 20px;
+}
+#about {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.btn-primary {
+  background-color: red;
+  border-color: rgb(0, 0, 0);
+}
+.btn-primary:hover {
+  color: rgb(255, 0, 0);
+  background-color: black;
+  border-color: rgb(255, 0, 0);
+}
+#contact {
+  background-color: black;
+  color: white;
+}
+#contato {
+  color: white;
+}
+#icon {
+  width: 90px;
+  margin-left: 15px;
+}
+#sobre {
+  font-size: 20px;
+}
+.comic-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #ff0000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  box-shadow: 5px 5px 0px #ff0000;
+}
+.comic-button:active {
+  background-color: #000000;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+#category {
+  padding-bottom: 50px;
+}
+.navbar {
+  background-color: #fff;
+  color: #000;
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar-nav .nav-item {
+  margin-right: 25px; /* Espaçamento entre os itens */
+}
+.navbar.hidden {
+  top: -10000px; /* Altura da navbar */
+}
+.navbar .nav-item {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.navbar.hidden .nav-item {
+  opacity: 0;
+}
+body {
+  padding-top: 100px; /* Altura da navbar para evitar que o conteúdo seja cortado */
+}
+#btn-cv{
+padding-bottom: 30px;
+}
+#categoria{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
