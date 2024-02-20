@@ -20,7 +20,8 @@ body {
   color: black;
   background-color: white;
 }
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   color: black;
   padding: 50px;
@@ -78,7 +79,6 @@ h1, h2 {
   border: 2px solid #ff0000;
   box-shadow: 5px 5px 0px #ff0000;
   transform: scale(1.1);
-
 }
 .comic-button:active {
   background-color: #000000;
@@ -111,7 +111,7 @@ h1, h2 {
 .navbar.hidden .nav-item {
   opacity: 0;
 }
-.nav-link{
+.nav-link {
   color: #000;
 }
 .nav-link:hover {
@@ -121,24 +121,24 @@ h1, h2 {
 body {
   padding-top: 100px; /* Altura da navbar para evitar que o conteúdo seja cortado */
 }
-#btn-cv{
-padding-bottom: 30px;
-text-align: center;
+#btn-cv {
+  padding-bottom: 30px;
+  text-align: center;
 }
-#btn{
+#btn {
   margin-top: 80px;
   text-align: center;
   align-items: center;
 }
-#btnico{
+#btnico {
   text-decoration: none;
 }
-#categoria{
+#categoria {
   margin-top: 60px;
   margin-bottom: 60px;
   text-decoration: none;
 }
-#icones{
+#icones {
   width: 140px;
 }
 
@@ -256,10 +256,9 @@ text-align: center;
     order: 2;
   }
 }
-.projects__row-content-title{
+.projects__row-content-title {
   font-size: 30px;
   font-weight: bolder;
-
 }
 
 /* CSS */
@@ -271,10 +270,25 @@ text-align: center;
   transform: scale(1.1);
 }
 
-
 /* container projetos */
+
+#ico-ftr {
+  width: 50px;
+  margin-right: 10px;
+}
 
 #ico-ftr:hover {
   transform: scale(1.1); /* Aumenta o tamanho em 10% */
   transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+#resume-preview {
+  display: none;
+  width: 100%;
+  height: 1000px;
+}
+
+footer {
+  background-color: black;
+  color: white;
 }
