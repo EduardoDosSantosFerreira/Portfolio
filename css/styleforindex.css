@@ -4,34 +4,26 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00416A;
+  background: #6a0000;
   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #006f9c5c;
+  background-color: #9c00005c;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 html {
   scroll-behavior: smooth;
-  color: black;
 }
+
 body {
   color: black;
   background-color: white;
-  text-decoration: none;
 }
-h1 {
+h1, h2 {
   text-align: center;
   color: black;
   padding: 50px;
-}
-li {
-  list-style: none;
 }
 .card {
   margin-bottom: 20px;
@@ -39,6 +31,7 @@ li {
 #about {
   text-align: justify;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 .btn-primary {
   background-color: red;
@@ -77,12 +70,15 @@ li {
   box-shadow: 5px 5px 0px #000;
   transition: all 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 .comic-button:hover {
   background-color: #fff;
   color: #ff0000;
   border: 2px solid #ff0000;
   box-shadow: 5px 5px 0px #ff0000;
+  transform: scale(1.1);
+
 }
 .comic-button:active {
   background-color: #000000;
@@ -94,7 +90,6 @@ li {
 }
 .navbar {
   background-color: #fff;
-  color: #000;
   transition: top 0.3s;
   position: fixed;
   width: 100%;
@@ -116,15 +111,32 @@ li {
 .navbar.hidden .nav-item {
   opacity: 0;
 }
+.nav-link{
+  color: #000;
+}
+.nav-link:hover {
+  color: #b40000;
+}
+
 body {
   padding-top: 100px; /* Altura da navbar para evitar que o conteúdo seja cortado */
 }
 #btn-cv{
 padding-bottom: 30px;
+text-align: center;
+}
+#btn{
+  margin-top: 80px;
+  text-align: center;
+  align-items: center;
+}
+#btnico{
+  text-decoration: none;
 }
 #categoria{
   margin-top: 60px;
   margin-bottom: 60px;
+  text-decoration: none;
 }
 #icones{
   width: 140px;
@@ -217,14 +229,10 @@ padding-bottom: 30px;
   margin-bottom: 20px;
 }
 
-.projects__row-img-cont {
-  margin-right: 20px;
-}
-
 .projects__row-img {
   max-width: 100%;
   height: auto;
-  width: 800px;
+  width: 600px;
   padding: 60px;
 }
 
@@ -247,4 +255,26 @@ padding-bottom: 30px;
   .projects__row:nth-child(2) .projects__row-content {
     order: 2;
   }
+}
+.projects__row-content-title{
+  font-size: 30px;
+  font-weight: bolder;
+
+}
+
+/* CSS */
+#categoria img {
+  transition: transform 0.3s;
+}
+
+#categoria img:hover {
+  transform: scale(1.1);
+}
+
+
+/* container projetos */
+
+#ico-ftr:hover {
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
