@@ -2,7 +2,7 @@ function adicionarNavbarAoDOM() {
     var div = document.createElement('div');
     div.innerHTML = `
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
-        <img src="img/profile_icons/crow03.png" id="icon" alt="">
+        <img src="../img/profile_icons/crow03.png" id="icon" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@ function adicionarNavbarAoDOM() {
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#about">Sobre Mim</a>
@@ -21,7 +21,7 @@ function adicionarNavbarAoDOM() {
                         Projetos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="projetosDropdown">
-                        <a class="dropdown-item" href="#arduinos">Arduinos</a>
+                        <a class="dropdown-item" href="../pages/arduino.html">Arduinos</a>
                         <a class="dropdown-item" href="#aplicativos">Aplicativos</a>
                         <a class="dropdown-item" href="#games">Games</a>
                         <a class="dropdown-item" href="#sites">Sites</a>
@@ -46,11 +46,10 @@ function adicionarNavbarAoDOM() {
 
     document.body.appendChild(div);
 
-    // Adiciona um evento de clique aos links da navbar
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(item => {
-        item.addEventListener('click', event => {
-            // Esconde a navbar
-            document.querySelector('.navbar-collapse').classList.remove('show');
+    // Adiciona event listener para esconder navbar quando clicar em dropdown-item ou nav-link
+    document.querySelectorAll('.dropdown-item, .nav-item active').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelector(".navbar").classList.add("hidden");
         });
     });
 }

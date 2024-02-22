@@ -6,17 +6,17 @@ function adicionarLoginAoDOM() {
         <div class="container text-center">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-12">
-                    <img src="img/profile_icons/crow04.png" id="footer-icon" alt="corvo" style="width: 50px;"
+                    <img src="../img/profile_icons/crow04.png" id="footer-icon" alt="corvo" style="width: 50px;"
                         class="footer-logo">
                     <hr class="bg-white">
                 </div>
                 <div class="col-md-12">
-                    <a href="http://"><img src="img/icons/wts.png" alt="Whatsapp" title="Whatsapp" id="ico-ftr"></a>
-                    <a href="http://"><img src="img/icons/in.png" alt="Linkedin" title="Linkedin" id="ico-ftr"></a>
-                    <a href="http://"><img src="img/icons/dc.png" alt="Discord" title="Discord" id="ico-ftr"></a>
-                    <a href="http://"><img src="img/icons/reddit.png" alt="Reddit" title="Reddit" id="ico-ftr"></a>
-                    <a href="http://"><img src="img/icons/gmail.png" alt="Gmail" title="Gmail" id="ico-ftr"></a>
-                    <a href="http://"><img src="img/icons/github.png" alt="Github" title="Github" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/wts.png" alt="Whatsapp" title="Whatsapp" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/in.png" alt="Linkedin" title="Linkedin" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/dc.png" alt="Discord" title="Discord" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/reddit.png" alt="Reddit" title="Reddit" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/gmail.png" alt="Gmail" title="Gmail" id="ico-ftr"></a>
+                    <a href="http://"><img src="../img/icons/github.png" alt="Github" title="Github" id="ico-ftr"></a>
                 </div>
             </div>
             <br>

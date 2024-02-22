@@ -5,9 +5,11 @@ body {
   padding-top: 100px;
   color: black;
   background-color: white;
+  scroll-behavior: smooth;
+
 }
 footer {
-  background-color: black;
+  background-color: #000;
   color: white;
 }
 h1,
@@ -204,6 +206,18 @@ h2 {
     flex-direction: row-reverse;
   }
   .projects__row:nth-child(2) .projects__row-content {
+    order: 2;
+  }
+  .projects__row:nth-child(4) {
+    flex-direction: row-reverse;
+  }
+  .projects__row:nth-child(4) .projects__row-content {
+    order: 2;
+  }
+  .projects__row:nth-child(6) {
+    flex-direction: row-reverse;
+  }
+  .projects__row:nth-child(6) .projects__row-content {
     order: 2;
   }
 }
