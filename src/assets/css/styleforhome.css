@@ -6,17 +6,10 @@ body {
   color: black;
   background-color: white;
   scroll-behavior: smooth;
-
 }
 footer {
   background-color: #000;
   color: white;
-}
-h1,
-h2 {
-  text-align: center;
-  color: black;
-  padding: 50px;
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -32,8 +25,11 @@ h2 {
   margin-bottom: 20px;
 }
 #about {
+  background-color: #000;
+  color: #fff;
   text-align: justify;
   margin-bottom: 10px;
+  padding-top: 30px;
   text-decoration: none;
 }
 .btn-primary {
@@ -169,7 +165,7 @@ h2 {
   align-items: flex-start;
 }
 .projects__row-content-desc {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: grey;
   max-width: 60rem;
   line-height: 1.7;
@@ -202,21 +198,13 @@ h2 {
   height: 1000px;
 }
 @media (min-width: 940px) {
-  .projects__row:nth-child(2) {
-    flex-direction: row-reverse;
-  }
-  .projects__row:nth-child(2) .projects__row-content {
-    order: 2;
-  }
-  .projects__row:nth-child(4) {
-    flex-direction: row-reverse;
-  }
-  .projects__row:nth-child(4) .projects__row-content {
-    order: 2;
-  }
+  .projects__row:nth-child(2),
+  .projects__row:nth-child(4),
   .projects__row:nth-child(6) {
     flex-direction: row-reverse;
   }
+  .projects__row:nth-child(2) .projects__row-content,
+  .projects__row:nth-child(4) .projects__row-content,
   .projects__row:nth-child(6) .projects__row-content {
     order: 2;
   }
@@ -230,5 +218,28 @@ h2 {
   }
   .projects__row-img {
     padding: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #about {
+    text-align: left; /* Altera a alinhamento do texto para esquerda */
+    margin-bottom: 0; /* Remove a margem inferior */
+  }
+  /* Define a classe das colunas para ocuparem 6/12 de largura, ou seja, 2 em cima e 2 em baixo */
+  .col-lg {
+    flex: 0 0 50%; /* 2 colunas por linha */
+    max-width: 50%; /* 2 colunas por linha */
+    padding: 0 15px; /* Espaçamento entre as colunas */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+  }
+
+  /* Para evitar que as imagens fiquem muito grandes em telas menores, você pode ajustar o tamanho delas */
+  #icones {
+    width: 70px; /* Tamanho menor para as imagens */
+  }
+
+  /* Para manter o texto alinhado ao centro das imagens */
+  .col-lg h2 {
+    text-align: center;
   }
 }
