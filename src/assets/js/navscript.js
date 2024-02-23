@@ -2,7 +2,7 @@ function adicionarNavbarAoDOM() {
     var div = document.createElement('div');
     div.innerHTML = `
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
-        <img src="../img/profile_icons/crow03.png" id="icon" alt="">
+        <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@ function adicionarNavbarAoDOM() {
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../pages/home.html">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#about">Sobre Mim</a>
@@ -22,9 +22,9 @@ function adicionarNavbarAoDOM() {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="projetosDropdown">
                         <a class="dropdown-item" href="../pages/arduino.html">Arduinos</a>
-                        <a class="dropdown-item" href="#aplicativos">Aplicativos</a>
-                        <a class="dropdown-item" href="#games">Games</a>
-                        <a class="dropdown-item" href="#sites">Sites</a>
+                        <a class="dropdown-item" href="../pages/aplicativos.html">Aplicativos</a>
+                        <a class="dropdown-item" href="../pages/games.html">Games</a>
+                        <a class="dropdown-item" href="../pages/sites.html">Sites</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -33,7 +33,7 @@ function adicionarNavbarAoDOM() {
                         Contato
                     </a>
                     <div class="dropdown-menu" aria-labelledby="contatoDropdown">
-                        <a class="dropdown-item" href="#github">GitHub</a>
+                        <a class="dropdown-item" href="https://github.com/EduardoDosSantosFerreira">GitHub</a>
                         <a class="dropdown-item" href="#whatsapp">WhatsApp</a>
                         <a class="dropdown-item" href="#discord">Discord</a>
                         <a class="dropdown-item" href="#email">Email</a>

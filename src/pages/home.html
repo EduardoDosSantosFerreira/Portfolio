@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo S Ferreira</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="icon" type="image" sizes="50x50" href="img/profile_icons/crowico.png">
+    <link rel="stylesheet" href="../assets/css/styleforhome.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</head>
+<body>
+
+
+
+    <div id="about" class="container mt-5" data-aos="fade-up">
+        <h1>Sobre Mim</h1>
+        <p id="sobre">Meu nome é Eduardo Dos Santos Ferreira, sou desenvolvedor.<br><br>Natural de
+            Itanhaém, cidade situada no litoral paulista, atualmente sou aluno do curso de Desenvolvimento de Sistemas
+            na renomada Escola Técnica Estadual.
+            Meu objetivo é aprimorar meus conhecimentos e habilidades na área, almejando ingressar na Faculdade de
+            Tecnologia do Estado de São Paulo para cursar Análise e Desenvolvimento de Sistemas. Com essa formação,
+            pretendo atuar como desenvolvedor e analista de projetos, contribuindo para a evolução e inovação
+            tecnológica em diversas áreas.<br><br>
+            Dedico meu tempo livre ao estudo e prática constante na área de tecnologia, sempre em busca de novos
+            desafios
+            e aprendizados. Desenvolvo projetos de diferentes naturezas, os quais estarão disponíveis para visualização
+            em meu site pessoal e no GitHub, onde compartilho meu trabalho e contribuições com a comunidade de
+            desenvolvimento.</p>
+        <div id="btn-cv" class="mt-4 text-center">
+            <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+        </div>
+        <iframe id="resume-preview" src="./doc/EduardosDosSantosFerreira.pdf">
+        </iframe>
+    </div>
+    <div id="categoria" class="container-fluid" style="align-items: center; text-align: center;"
+        data-aos="fade-down">
+        <h1>Categoria de Projetos</h1>
+        <div class="row">
+            <div class="col-lg" data-aos="fade-top">
+                <a href="#" class="categoria-link" data-categoria="arduinos">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg "
+                        id="icones" alt="Arduinos" title="Arduinos" />
+                </a>
+                <h2 class="fw-normal">Arduinos</h2>
+            </div>
+            <div class="col-lg" data-aos="fade-top">
+                <a href="#" class="categoria-link" data-categoria="aplicativos">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg "
+                        id="icones" alt="Aplicativos" title="Aplicativos" />
+                </a>
+                <h2 class="fw-normal">Aplicativos</h2>
+            </div>
+            <div class="col-lg" data-aos="fade-top">
+                <a href="#" class="categoria-link" data-categoria="games">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Pacman.svg " id="icones" alt="Games"
+                        title="Games">
+                </a>
+                <h2 class="fw-normal">Games</h2>
+            </div>
+            <div class="col-lg" data-aos="fade-top">
+                <a href="#" class="categoria-link" data-categoria="sites">
+                    <img src="../assets/img/profile_icons/crow03.png" id="icones" alt="Web-Sites" title="Web-Sites">
+                </a>
+                <h2 class="fw-normal">Sites</h2>
+            </div>
+        </div>
+    </div>
+    <div id="projetos">
+        <div id="projetos-arduinos" style="display: none;">
+            <h2>Projetos de Arduinos</h2>
+        </div>
+        <div id="projetos-aplicativos" style="display: none;">
+            <h2>Projetos de Aplicativos</h2>
+        </div>
+        <div id="projetos-games" style="display: none;">
+            <h2>Projetos de Games</h2>
+        </div>
+        <div id="projetos-sites" style="display: none;">
+            <h2>Projetos de Sites</h2>
+            <section id="projects" class="projects sec-pad">
+                <div class="main-container" data-aos="fade-down">
+                    <div class="projects__content">
+                        <div class="projects__row" data-aos="fade-top">
+                            <div class="projects__row-img-cont">
+                                <img src="img/sites/etec.png" alt="Software Screenshot" class="projects__row-img"
+                                    loading="lazy" />
+                            </div>
+                            <div class="projects__row-content" data-aos="fade-top">
+                                <h3 class="projects__row-content-title">Etec de Itanhaém</h3>
+                                <p class="projects__row-content-desc">
+                                    Site alternativo destinado a Escola Técnica Estadual de Itanhaém.
+                                </p>
+                                <a href="https://eduardodossantosferreira.github.io/project-etec/" class="comic-button"
+                                    id="btnico" target="_blank">Clique e Veja !</a>
+                            </div>
+                        </div>
+                        <div class="projects__row" data-aos="fade-down">
+                            <div class="projects__row-img-cont">
+                                <img src="img/sites/delmes.png" alt="Software Screenshot" class="projects__row-img"
+                                    loading="lazy" />
+                            </div>
+                            <div class="projects__row-content">
+                                <h3 class="projects__row-content-title">Destiny Monterrey</h3>
+                                <p class="projects__row-content-desc">
+                                    Site de reserva de Viagens e Hoteis
+                                </p>
+                                <a href="https://eduardodossantosferreira.github.io/destino-del-mes/"
+                                    class="comic-button" id="btnico" target="_blank">Faça sua reserva !</a>
+                            </div>
+                        </div>
+                        <div class="projects__row" data-aos="fade-down">
+                            <div class="projects__row-img-cont">
+                                <img id="img3" src="img/sites/barber.png" alt="Software Screenshot"
+                                    class="projects__row-img" loading="lazy" />
+                            </div>
+                            <div class="projects__row-content">
+                                <h3 class="projects__row-content-title">Barber Shop</h3>
+                                <p class="projects__row-content-desc">
+                                    Site para homens dar um tapa no visual, agende seu horário e venha fazer "o corte"
+                                </p>
+                                <a href="https://eduardodossantosferreira.github.io/project-barber/"
+                                    class="comic-button" id="btnico" target="_blank">Acesse Já !</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="btn" class="container" data-aos="fade-down">
+                        <a href="./arduino.html">
+                            <button class="comic-button">Veja mais Projetos!</button>
+                        </a>
+                    </div>
+                    <br>
+            </section>
+        </div>
+    </div>
+    <script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/navscript.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/ftr.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        }
+        );
+    </script>
+</body>
+
+</html>
