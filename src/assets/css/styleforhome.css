@@ -200,12 +200,18 @@ footer {
 @media (min-width: 940px) {
   .projects__row:nth-child(2),
   .projects__row:nth-child(4),
-  .projects__row:nth-child(6) {
+  .projects__row:nth-child(6),
+  .projects__row:nth-child(8),
+  .projects__row:nth-child(10),
+  .projects__row:nth-child(12) {
     flex-direction: row-reverse;
   }
   .projects__row:nth-child(2) .projects__row-content,
   .projects__row:nth-child(4) .projects__row-content,
-  .projects__row:nth-child(6) .projects__row-content {
+  .projects__row:nth-child(6) .projects__row-content,
+  .projects__row:nth-child(8) .projects__row-content,
+  .projects__row:nth-child(10) .projects__row-content,
+  .projects__row:nth-child(12) .projects__row-content {
     order: 2;
   }
 }
