@@ -203,7 +203,9 @@ footer {
   .projects__row:nth-child(6),
   .projects__row:nth-child(8),
   .projects__row:nth-child(10),
-  .projects__row:nth-child(12) {
+  .projects__row:nth-child(12),
+  .projects__row:nth-child(14),  
+  .projects__row:nth-child(16)  {
     flex-direction: row-reverse;
   }
   .projects__row:nth-child(2) .projects__row-content,
@@ -211,7 +213,9 @@ footer {
   .projects__row:nth-child(6) .projects__row-content,
   .projects__row:nth-child(8) .projects__row-content,
   .projects__row:nth-child(10) .projects__row-content,
-  .projects__row:nth-child(12) .projects__row-content {
+  .projects__row:nth-child(12) .projects__row-content,
+  .projects__row:nth-child(14) .projects__row-content,
+  .projects__row:nth-child(16) .projects__row-content {
     order: 2;
   }
 }
