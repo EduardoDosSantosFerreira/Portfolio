@@ -12,31 +12,50 @@
 </head>
 
 <body>
-<div class="container-fluid" style=" filter: grayscale(100%); text-align: center;">
-        <img  src="../assets/../assets/img/profile_icons/TheCrowWallpaperGif.gif" alt="Eduardo">
-    </div>
-<div class="container-fluid" style="background-color: black;">
-    <div id="about" class="container mt-5" data-aos="fade-up">
-        <h1>Sobre Mim</h1>
-        <p id="sobre">Meu nome é Eduardo Dos Santos Ferreira, sou desenvolvedor.<br><br>Natural de
-            Itanhaém, cidade situada no litoral paulista, atualmente sou aluno do curso de Desenvolvimento de Sistemas
-            na renomada Escola Técnica Estadual.
-            Meu objetivo é aprimorar meus conhecimentos e habilidades na área, almejando ingressar na Faculdade de
-            Tecnologia do Estado de São Paulo para cursar Análise e Desenvolvimento de Sistemas. Com essa formação,
-            pretendo atuar como desenvolvedor e analista de projetos, contribuindo para a evolução e inovação
-            tecnológica em diversas áreas.<br><br>
-            Dedico meu tempo livre ao estudo e prática constante na área de tecnologia, sempre em busca de novos
-            desafios
-            e aprendizados. Desenvolvo projetos de diferentes naturezas, os quais estarão disponíveis para visualização
-            em meu site pessoal e no GitHub, onde compartilho meu trabalho e contribuições com a comunidade de
-            desenvolvimento.</p>
-        <div id="btn-cv" class="mt-4 text-center">
-            <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+
+    <div id="intro" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../assets/img/profile_icons/TheCrowWallpaperGif.gif" id="crow-hello" class="img-fluid" alt="Eduardo">
+            </div>
+            <div class="col-md-6">
+                <h3>Seja Bem-vindo!</h3>
+                <p id="sobre">
+                    Este é o meu sítio eletrônico e repositório pessoal, onde se afigura a possibilidade de se familiarizar com
+                    alguns aspectos de minha pessoa e de minha produção, dispostos meticulosamente em categorias. Faço questão de
+                    ressaltar que este sítio é alvo de atualizações periódicas, assegurando, igualmente, que todos os arquivos aqui
+                    alojados sejam objeto de constantes atualizações. Sem mais delongas, expresso minha gratidão por sua
+                    visita!
+                </p>
+            </div>
         </div>
-        <iframe id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf">
-        </iframe>
     </div>
-</div>
+    
+    
+    <div class="container-fluid" style="background-color: black;">
+        <div id="about" class="container mt-5" data-aos="fade-up">
+            <h1>Sobre Mim</h1>
+            <p id="sobre">Meu nome é Eduardo Dos Santos Ferreira, sou desenvolvedor.<br><br>Natural de
+                Itanhaém, cidade situada no litoral paulista, atualmente sou aluno do curso de Desenvolvimento de
+                Sistemas
+                na renomada Escola Técnica Estadual.
+                Meu objetivo é aprimorar meus conhecimentos e habilidades na área, almejando ingressar na Faculdade de
+                Tecnologia do Estado de São Paulo para cursar Análise e Desenvolvimento de Sistemas. Com essa formação,
+                pretendo atuar como desenvolvedor e analista de projetos, contribuindo para a evolução e inovação
+                tecnológica em diversas áreas.<br><br>
+                Dedico meu tempo livre ao estudo e prática constante na área de tecnologia, sempre em busca de novos
+                desafios
+                e aprendizados. Desenvolvo projetos de diferentes naturezas, os quais estarão disponíveis para
+                visualização
+                em meu site pessoal e no GitHub, onde compartilho meu trabalho e contribuições com a comunidade de
+                desenvolvimento.</p>
+            <div id="btn-cv" class="mt-4 text-center">
+                <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+            </div>
+            <iframe id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf">
+            </iframe>
+        </div>
+    </div>
     <div id="categoria" class="container-fluid" style="align-items: center; text-align: center;" data-aos="fade-down">
         <h1>Categoria de Projetos</h1>
         <div class="row">
@@ -63,7 +82,8 @@
             </div>
             <div class="col-lg" data-aos="fade-top">
                 <a href="#" class="categoria-link" data-categoria="sites">
-                    <img src="../assets/../assets/img/profile_icons/crow03.png" id="icones" alt="Web-Sites" title="Web-Sites">
+                    <img src="../assets/../assets/img/profile_icons/crow03.png" id="icones" alt="Web-Sites"
+                        title="Web-Sites">
                 </a>
                 <h2 class="fw-normal">Sites</h2>
             </div>
@@ -71,13 +91,13 @@
     </div>
     <div id="projetos">
         <div id="projetos-arduinos" style="display: none;">
-            <h2>Projetos de Arduinos</h2>
+            <h2 style="text-align: center;">Projetos de Arduinos</h2>
         </div>
         <div id="projetos-aplicativos" style="display: none;">
-            <h2>Projetos de Aplicativos</h2>
+            <h2 style="text-align: center;">Projetos de Aplicativos</h2>
         </div>
         <div id="projetos-games" style="display: none;">
-            <h2>Projetos de Games</h2>
+            <h2 style="text-align: center;">Projetos de Games</h2>
         </div>
         <div id="projetos-sites" style="display: none;">
             <h2 style="text-align: center;">Projetos de Sites</h2>
@@ -86,8 +106,8 @@
                     <div class="projects__content">
                         <div class="projects__row" data-aos="fade-top">
                             <div class="projects__row-img-cont">
-                                <img src="../assets/img/sites/etec.png" alt="Software Screenshot" class="projects__row-img"
-                                    loading="lazy" />
+                                <img src="../assets/img/sites/etec.png" alt="Software Screenshot"
+                                    class="projects__row-img" loading="lazy" />
                             </div>
                             <div class="projects__row-content" data-aos="fade-top">
                                 <h3 class="projects__row-content-title">Etec de Itanhaém</h3>
@@ -100,8 +120,8 @@
                         </div>
                         <div class="projects__row" data-aos="fade-down">
                             <div class="projects__row-img-cont">
-                                <img src="../assets/img/sites/delmes.png" alt="Software Screenshot" class="projects__row-img"
-                                    loading="lazy" />
+                                <img src="../assets/img/sites/delmes.png" alt="Software Screenshot"
+                                    class="projects__row-img" loading="lazy" />
                             </div>
                             <div class="projects__row-content">
                                 <h3 class="projects__row-content-title">Destiny Monterrey</h3>
