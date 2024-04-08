@@ -262,3 +262,8 @@ footer {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.c-item {
+  height: 46.2dvi;
+  position: center;
+  width: 100%;
+}
