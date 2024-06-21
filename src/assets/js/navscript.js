@@ -2,7 +2,7 @@ function adicionarNavbarAoDOM() {
     var div = document.createElement('div');
     div.innerHTML = `
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
-        <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="">
+        <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@ function adicionarNavbarAoDOM() {
                     <a class="nav-link" href="../pages/home.html">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#about">Sobre Mim</a>
+                    <a class="nav-link" href="../pages/home.html#about">Sobre Mim</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="projetosDropdown" role="button"
@@ -37,6 +37,19 @@ function adicionarNavbarAoDOM() {
                         <a class="dropdown-item" href="#whatsapp">WhatsApp</a>
                         <a class="dropdown-item" href="#discord">Discord</a>
                         <a class="dropdown-item" href="#email">Email</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="LanguageDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
+                        <a class="dropdown-item" href="#">Português</a>
+                        <a class="dropdown-item" href="#">Inglês</a>
+                        <a class="dropdown-item" href="#">Espanhol</a>
+                        <a class="dropdown-item" href="#">Chinês</a>
+                        <a class="dropdown-item" href="#">Russo</a>
                     </div>
                 </li>
             </ul>
