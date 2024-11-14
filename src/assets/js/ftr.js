@@ -11,12 +11,12 @@ function adicionarLoginAoDOM() {
                     <hr class="bg-white">
                 </div>
                 <div class="col-md-12">
-                    <a href="http://"><img src="../assets/img/icons/wts.png" alt="Whatsapp" title="Whatsapp" id="ico-ftr"></a>
-                    <a href="http://"><img src="../assets/img/icons/in.png" alt="Linkedin" title="Linkedin" id="ico-ftr"></a>
-                    <a href="http://"><img src="../assets/img/icons/dc.png" alt="Discord" title="Discord" id="ico-ftr"></a>
-                    <a href="http://"><img src="../assets/img/icons/reddit.png" alt="Reddit" title="Reddit" id="ico-ftr"></a>
-                    <a href="http://"><img src="../assets/img/icons/gmail.png" alt="Gmail" title="Gmail" id="ico-ftr"></a>
-                    <a href="http://"><img src="../assets/img/icons/github.png" alt="Github" title="Github" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/wts.png" alt="Whatsapp" title="Whatsapp" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/in.png" alt="Linkedin" title="Linkedin" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/dc.png" alt="Discord" title="Discord" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/reddit.png" alt="Reddit" title="Reddit" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/gmail.png" alt="Gmail" title="Gmail" id="ico-ftr"></a>
+                    <a href="http://" data-aos="fade-down"><img src="../assets/img/icons/github.png" alt="Github" title="Github" id="ico-ftr"></a>
                 </div>
             </div>
             <br>
