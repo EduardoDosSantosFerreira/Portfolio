@@ -1,29 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   padding-top: 100px;
   color: black;
   background-color: white;
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif; /* Importa a fonte Poppins */
 }
+
 footer {
   background-color: #000;
   color: white;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #6a0000;
   border-radius: 0px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #9c00005c;
 }
+
 .card {
   margin-bottom: 20px;
 }
+
 #about {
   background-color: #000;
   color: #fff;
@@ -32,29 +42,36 @@ footer {
   padding-top: 30px;
   text-decoration: none;
 }
+
 .btn-primary {
   background-color: red;
   border-color: rgb(0, 0, 0);
 }
+
 .btn-primary:hover {
   color: rgb(255, 0, 0);
   background-color: black;
   border-color: rgb(255, 0, 0);
 }
+
 #contact {
   background-color: black;
   color: white;
 }
+
 #contato {
   color: white;
 }
+
 #icon {
   width: 90px;
   margin-left: 15px;
 }
+
 #sobre {
   font-size: 20px;
 }
+
 .comic-button {
   text-decoration: none;
   display: inline-block;
@@ -71,6 +88,7 @@ footer {
   cursor: pointer;
   transition: transform 0.3s;
 }
+
 .comic-button:hover {
   background-color: #fff;
   color: #ff0000;
@@ -78,77 +96,60 @@ footer {
   box-shadow: 5px 5px 0px #ff0000;
   transform: scale(1.1);
 }
+
 .comic-button:active {
   background-color: #000000;
   box-shadow: none;
   transform: translateY(4px);
 }
+
 #category {
   padding-bottom: 50px;
 }
-.navbar {
-  background-color: #fff;
-  transition: top 0.3s;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  font-weight: bold;
-  font-size: 20px;
-}
-.navbar-nav .nav-item {
-  margin-right: 25px;
-}
-.navbar.hidden {
-  top: -10000px;
-}
-.navbar .nav-item {
-  transition: opacity 0.3s;
-  opacity: 1;
-}
-.navbar.hidden .nav-item {
-  opacity: 0;
-}
-.nav-link {
-  color: #000;
-}
-.nav-link:hover {
-  color: #b40000;
-}
+
 #btn-cv {
   padding-bottom: 30px;
   text-align: center;
 }
+
 #btn {
   margin-top: 80px;
   text-align: center;
   align-items: center;
 }
+
 #btnico {
   text-decoration: none;
 }
+
 #categoria {
   margin-top: 60px;
   margin-bottom: 60px;
   text-decoration: none;
 }
+
 #icones {
   width: 140px;
 }
+
 .main-container {
   max-width: 120rem;
   margin: auto;
   width: 90%;
 }
+
 .sec-pad {
   padding: 4rem 0;
 }
+
 .projects__row:last-child {
   margin-bottom: 0;
 }
+
 .projects__row-img-cont {
   overflow: hidden;
 }
+
 .projects__row-img {
   display: block;
   object-fit: cover;
@@ -157,6 +158,7 @@ footer {
   width: 800px;
   padding: 50px;
 }
+
 .projects__row-content {
   padding: 2rem 0;
   display: flex;
@@ -164,39 +166,48 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .projects__row-content-desc {
   font-size: 1.4rem;
   color: grey;
   max-width: 60rem;
   line-height: 1.7;
 }
+
 .projects__row {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .projects__row-content-title {
   font-weight: bolder;
 }
+
 #categoria img {
   transition: transform 0.3s;
 }
+
 #categoria img:hover {
   transform: scale(1.1);
 }
+
 #ico-ftr {
   width: 50px;
   margin-right: 10px;
 }
+
 #ico-ftr:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
 #resume-preview {
   display: none;
   width: 100%;
   height: 1000px;
 }
+
 @media (min-width: 940px) {
   .projects__row:nth-child(2),
   .projects__row:nth-child(4),
@@ -221,6 +232,7 @@ footer {
     order: 2;
   }
 }
+
 @media (max-width: 940px) {
   .projects__row {
     flex-direction: column;
@@ -232,6 +244,7 @@ footer {
     padding: 0;
   }
 }
+
 @media only screen and (max-width: 768px) {
   #about {
     text-align: left; /* Altera a alinhamento do texto para esquerda */
@@ -255,18 +268,22 @@ footer {
     text-align: center;
   }
 }
+
 #crow-hello{
   filter: grayscale(100%);
 }
+
 #intro{
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
 .c-item {
   height: 46.2dvi;
   position: center;
   width: 100%;
 }
+
 #categoriadeprojetos{
   padding-bottom: 100px;
 }

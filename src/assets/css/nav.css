@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #fff;
+    transition: top 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 24px; /* Aumentou a fonte da navbar */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 25px;
+}
+
+.navbar.hidden {
+    top: -10000px;
+}
+
+.navbar .nav-item {
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.navbar.hidden .nav-item {
+    opacity: 0;
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link:hover {
+    color: #b40000;
+}
+
+.dropdown-menu {
+    font-size: 24px; /* Aumentou o tamanho da fonte do dropdown */
+    width: 200px; /* Aumentou o tamanho da janela do dropdown */
+    height: auto; /* Deixou os itens do dropdown maiores */
+}
