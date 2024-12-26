@@ -48,11 +48,11 @@ function adicionarNavbarAoDOM() {
                         <i class="fas fa-language"></i> Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
-                        <a class="dropdown-item" href="#"><i class="fas fa-flag-pt"></i> Português</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-flag-us"></i> Inglês</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-flag-es"></i> Espanhol</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-flag-cn"></i> Chinês</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-flag-ru"></i> Russo</a>
+                        <a class="dropdown-item" href="#" onclick="translatePage('pt')"><i class="fas fa-flag-pt"></i> Português</a>
+                        <a class="dropdown-item" href="#" onclick="translatePage('en')"><i class="fas fa-flag-us"></i> Inglês</a>
+                        <a class="dropdown-item" href="#"="#" onclick="translatePage('es')"><i class="fas fa-flag-es"></i> Espanhol</a>
+                        <a class="dropdown-item" href="#" onclick="translatePage('cn')"><i class="fas fa-flag-cn"></i> Chinês</a>
+                        <a class="dropdown-item" href="#" onclick="translatePage('ru')"><i class="fas fa-flag-ru"></i> Russo</a>
                     </div>
                 </li>
             </ul>

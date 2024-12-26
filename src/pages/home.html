@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+    
     <!-- Seção de introdução -->
     <div id="intro" class="container">
         <div class="row">
@@ -265,7 +267,7 @@
     <script src="../assets/js/jquery-3.5.1.slim.min.js"></script> <!-- Script jQuery -->
     <script src="../assets/js/bootstrap.min.js"></script> <!-- Script Bootstrap -->
     <script src="../assets/js/popper.min.js"></script> <!-- Script Popper -->
-    <script src="../assets/js/navscript.js"></script> <!-- Script de navegação -->
+    <script src="../assets/js/navscript.js"></script>
     <script src="../assets/js/main.js"></script> <!-- Script principal -->
     <script src="../assets/js/aos.js"></script> <!-- Script AOS -->
     <script src="../assets/js/ftr.js"></script> <!-- Script adicional -->
@@ -273,6 +275,64 @@
         AOS.init({
             duration: 2000, // Duração da animação AOS
         });
+
+        const translations = {
+            pt: {
+                welcome: "Seja Bem-vindo!",
+                intro: "Este é o meu repositório pessoal. Faço questão de ressaltar que este repositório é alvo de atualizações periódicas, assegurando, igualmente, que todos os arquivos aqui alojados sejam objeto de constantes atualizações. Sem mais delongas, expresso minha gratidão por sua visita!",
+                about: "Sobre Mim",
+                aboutText: "Olá, meu nome é Eduardo dos Santos Ferreira e sou desenvolvedor. Sou natural de Itanhaém, uma cidade localizada no litoral paulista. Atualmente, sou técnico em desenvolvimento de sistemas pela prestigiada escola técnica estadual de Itanhaém. Atuei como desenvolvedor e programador na financeira Ajuda ao Cidadão. Atualmente, estou desenvolvendo sites para pequenas empresas e pequenos comercios da minha cidade.",
+                previewButton: "Pré-visualizar Currículo",
+                projectCategory: "Categoria de Projetos",
+                certificates: "Certificados"
+            },
+            en: {
+                welcome: "Welcome!",
+                intro: "This is my personal repository. I make a point of emphasizing that this repository is subject to periodic updates, ensuring that all files hosted here are constantly updated. Without further ado, I express my gratitude for your visit!",
+                about: "About Me",
+                aboutText: "Hello, my name is Eduardo dos Santos Ferreira and I am a developer. I am from Itanhaém, a city located on the coast of São Paulo. Currently, I am a systems development technician at the prestigious state technical school of Itanhaém. I worked as a developer and programmer at the financial company Ajuda ao Cidadão. Currently, I am developing websites for small businesses and small shops in my city.",
+                previewButton: "Preview Resume",
+                projectCategory: "Project Category",
+                certificates: "Certificates"
+            },
+            es: {
+                welcome: "¡Bienvenido!",
+                intro: "Este es mi repositorio personal. Me aseguro de resaltar que este repositorio está sujeto a actualizaciones periódicas, asegurando que todos los archivos alojados aquí se actualicen constantemente. ¡Sin más preámbulos, expreso mi gratitud por su visita!",
+                about: "Sobre Mí",
+                aboutText: "Hola, mi nombre es Eduardo dos Santos Ferreira y soy desarrollador. Soy de Itanhaém, una ciudad ubicada en la costa de São Paulo. Actualmente, soy técnico en desarrollo de sistemas en la prestigiosa escuela técnica estatal de Itanhaém. Trabajé como desarrollador y programador en la empresa financiera Ajuda ao Cidadão. Actualmente, estoy desarrollando sitios web para pequeñas empresas y pequeños comercios en mi ciudad.",
+                previewButton: "Vista Previa del Currículum",
+                projectCategory: "Categoría de Proyectos",
+                certificates: "Certificados"
+            },
+            cn: {
+                welcome: "欢迎！",
+                intro: "这是我的个人存储库。我强调这个存储库会定期更新，确保这里托管的所有文件都不断更新。事不宜迟，我对您的访问表示感谢！",
+                about: "关于我",
+                aboutText: "你好，我叫爱德华多·多斯桑托斯·费雷拉，我是一名开发人员。我来自圣保罗海岸的伊塔尼亚恩市。目前，我是伊塔尼亚恩州立技术学校的系统开发技术员。我曾在金融公司Ajuda ao Cidadão担任开发人员和程序员。目前，我正在为我所在城市的小企业和小商店开发网站。",
+                previewButton: "预览简历",
+                projectCategory: "项目类别",
+                certificates: "证书"
+            },
+            ru: {
+                welcome: "Добро пожаловать!",
+                intro: "Это мой личный репозиторий. Я подчеркиваю, что этот репозиторий подлежит периодическим обновлениям, обеспечивая постоянное обновление всех размещенных здесь файлов. Без лишних слов, выражаю свою благодарность за ваш визит!",
+                about: "Обо мне",
+                aboutText: "Здравствуйте, меня зовут Эдуардо дос Сантос Феррейра, я разработчик. Я из Итаньяэма, города, расположенного на побережье Сан-Паулу. В настоящее время я техник по разработке систем в престижной государственной технической школе Итаньяэма. Я работал разработчиком и программистом в финансовой компании Ajuda ao Cidadão. В настоящее время я разрабатываю веб-сайты для малого бизнеса и небольших магазинов в моем городе.",
+                previewButton: "Просмотр резюме",
+                projectCategory: "Категория проектов",
+                certificates: "Сертификаты"
+            }
+        };
+
+        function translatePage(language) {
+            document.querySelector('h3').innerText = translations[language].welcome;
+            document.querySelector('#intro p').innerText = translations[language].intro;
+            document.querySelector('#about h1').innerText = translations[language].about;
+            document.querySelector('#about p').innerText = translations[language].aboutText;
+            document.querySelector('#preview-button').innerText = translations[language].previewButton;
+            document.querySelector('#categoriadeprojetos').innerText = translations[language].projectCategory;
+            document.querySelector('h1[style="text-align: center; padding-top: 50px;"]').innerText = translations[language].certificates;
+        }
     </script>
 </body>
 
