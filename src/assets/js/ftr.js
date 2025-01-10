@@ -20,7 +20,7 @@ function adicionarLoginAoDOM() {
                 </div>
             </div>
             <br>
-            <p>&copy; 2024 Eduardo S Ferreira.</p>
+            <p>&copy; 2025 Eduardo S Ferreira.</p>
         </div>
     </footer>
     `;

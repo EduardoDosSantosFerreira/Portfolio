@@ -37,9 +37,9 @@ function adicionarNavbarAoDOM() {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="contatoDropdown">
                         <a class="dropdown-item" href="https://github.com/EduardoDosSantosFerreira"><i class="fab fa-github"></i> GitHub</a>
-                        <a class="dropdown-item" href="#whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a class="dropdown-item" href="#discord"><i class="fab fa-discord"></i> Discord</a>
-                        <a class="dropdown-item" href="#email"><i class="fas fa-envelope"></i> Email</a>
+                        <a class="dropdown-item" href="https://wa.me/5513981492795"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a class="dropdown-item" href="https://discord.com/users/eduardo_dsf"><i class="fab fa-discord"></i> Discord</a>
+                        <a class="dropdown-item" href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
