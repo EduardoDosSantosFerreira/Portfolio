@@ -4,60 +4,61 @@ function adicionarNavbarAoDOM() {
     var div = document.createElement('div');
     // Define o conteúdo HTML da div com suporte para ícones
     div.innerHTML = `
-    <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
-        <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../pages/home.html"><i class="fas fa-home"></i> Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="../pages/home.html#about"><i class="fas fa-user"></i> Sobre Mim</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="projetosDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-folder"></i> Projetos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="projetosDropdown">
-                        <a class="dropdown-item" href="../pages/arduino.html"><i class="fas fa-microchip"></i> Arduinos</a>
-                        <a class="dropdown-item" href="../pages/aplicativos.html"><i class="fas fa-mobile-alt"></i> Aplicativos</a>
-                        <a class="dropdown-item" href="../pages/games.html"><i class="fas fa-gamepad"></i> Games</a>
-                        <a class="dropdown-item" href="../pages/sites.html"><i class="fas fa-globe"></i> Sites</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="contatoDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-envelope"></i> Contato
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="contatoDropdown">
-                        <a class="dropdown-item" href="https://github.com/EduardoDosSantosFerreira"><i class="fab fa-github"></i> GitHub</a>
-                        <a class="dropdown-item" href="https://wa.me/5513981492795"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a class="dropdown-item" href="https://discord.com/users/eduardo_dsf"><i class="fab fa-discord"></i> Discord</a>
-                        <a class="dropdown-item" href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="LanguageDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-language"></i> Language
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
-                        <a class="dropdown-item" href="#" onclick="translatePage('pt')"><i class="fas fa-flag-pt"></i> Português</a>
-                        <a class="dropdown-item" href="#" onclick="translatePage('en')"><i class="fas fa-flag-us"></i> Inglês</a>
-                        <a class="dropdown-item" href="#"="#" onclick="translatePage('es')"><i class="fas fa-flag-es"></i> Espanhol</a>
-                        <a class="dropdown-item" href="#" onclick="translatePage('cn')"><i class="fas fa-flag-cn"></i> Chinês</a>
-                        <a class="dropdown-item" href="#" onclick="translatePage('ru')"><i class="fas fa-flag-ru"></i> Russo</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
+    <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/home.html#about"><i class="fas fa-user"></i> Sobre Mim</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projetosDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-folder"></i> Projetos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="projetosDropdown">
+                    <a class="dropdown-item" href="../pages/arduino.html"><i class="fas fa-microchip"></i> Arduinos</a>
+                    <a class="dropdown-item" href="../pages/aplicativos.html"><i class="fas fa-mobile-alt"></i> Aplicativos</a>
+                    <a class="dropdown-item" href="../pages/games.html"><i class="fas fa-gamepad"></i> Games</a>
+                    <a class="dropdown-item" href="../pages/sites.html"><i class="fas fa-globe"></i> Sites</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="contatoDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-envelope"></i> Contato
+                </a>
+                <div class="dropdown-menu" aria-labelledby="contatoDropdown">
+                    <a class="dropdown-item" href="https://github.com/EduardoDosSantosFerreira"><i class="fab fa-github"></i> GitHub</a>
+                    <a class="dropdown-item" href="https://wa.me/5513981492795"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a class="dropdown-item" href="https://discord.com/users/eduardo_dsf"><i class="fab fa-discord"></i> Discord</a>
+                    <a class="dropdown-item" href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="LanguageDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-language"></i> Idioma
+                </a>
+                <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
+                    <a class="dropdown-item" href="#" onclick="translatePage('pt')"><i class="fas fa-flag"></i> Português</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('en')"><i class="fas fa-flag"></i> Inglês</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('es')"><i class="fas fa-flag"></i> Espanhol</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('cn')"><i class="fas fa-flag"></i> Chinês</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('ru')"><i class="fas fa-flag"></i> Russo</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
     `;
 
     // Adiciona a div ao corpo do documento
