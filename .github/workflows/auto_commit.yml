@@ -17,21 +17,18 @@ jobs:
           git config --global user.name "EduardoDosSantosFerreira"
           git config --global user.email "eduardosferreira69@gmail.com"
 
-      - name: Obter próximo update
+      - name: Verificar se existe a branch update
         id: update
         run: |
-          # Buscar o último update, se houver
-          LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]*')
-
-          # Verificar se o último update existe ou se o comando falhou
-          if [ -z "$LAST_UPDATE" ] || [ "$LAST_UPDATE" == "0" ]; then
-            NEXT_UPDATE=32  # Se não houver update ou se o número for 0, começa de 32
+          # Verificar se existe a branch 'update'
+          git fetch --all
+          if git show-ref --verify --quiet refs/heads/update; then
+            echo "A branch 'update' já existe."
           else
-            NEXT_UPDATE=$((LAST_UPDATE + 1))  # Incrementa o último update
+            echo "A branch 'update' não existe. Criando..."
+            git checkout -b update
+            git push origin update
           fi
-
-          # Salvar a variável para uso posterior
-          echo "NEXT_UPDATE=update_$NEXT_UPDATE" >> $GITHUB_ENV
 
       - name: Commit e Push
         run: |
@@ -42,7 +39,7 @@ jobs:
           git add .
 
           # Fazer commit com a mensagem personalizada
-          git commit -m "Atualização automática: ${{ env.NEXT_UPDATE }} - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git commit -m "Atualização automática: update - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
 
           # Enviar alterações para o repositório
-          git push origin main
+          git push origin update
