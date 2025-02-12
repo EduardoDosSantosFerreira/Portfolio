@@ -17,30 +17,24 @@ jobs:
           git config --global user.name "EduardoDosSantosFerreira"
           git config --global user.email "eduardosferreira69@gmail.com"
 
-      - name: Verificar se existe a branch update
+      - name: Obter próximo update
         id: update
         run: |
-          # Verificar se existe a branch 'update'
-          git fetch --all
-          if git show-ref --verify --quiet refs/heads/update; then
-            echo "A branch 'update' já existe."
+          LAST_UPDATE=$(git branch -r | grep -oE 'update' | sort -V | tail -n1)
+          if [ -z "$LAST_UPDATE" ]; then
+            NEXT_UPDATE="update"  # Começa com "update" se não houver registros
           else
-            echo "A branch 'update' não existe. Criando..."
-            git checkout -b update
-            git push origin update
+            NEXT_UPDATE="update"
           fi
+          echo "NEXT_UPDATE=$NEXT_UPDATE" >> $GITHUB_ENV
+
+      - name: Configurar URL Remota para usar o Token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
 
       - name: Commit e Push
         run: |
-          # Atualizar o repositório
           git pull origin main
-
-          # Adicionar mudanças e realizar commit
           git add .
-
-          # Fazer commit com a mensagem personalizada
-          git commit -m "Atualização automática: update - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
-
-          # Enviar alterações para o repositório usando o token
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
-          git push origin update
+          git commit -m "Atualização automática: ${{ env.NEXT_UPDATE }} - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push origin main
