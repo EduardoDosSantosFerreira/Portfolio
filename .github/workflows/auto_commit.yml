@@ -41,5 +41,6 @@ jobs:
           # Fazer commit com a mensagem personalizada
           git commit -m "Atualização automática: update - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
 
-          # Enviar alterações para o repositório
+          # Enviar alterações para o repositório usando o token
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
           git push origin update
