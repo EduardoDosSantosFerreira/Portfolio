@@ -21,11 +21,11 @@ jobs:
         id: update
         run: |
           # Buscar o último update, se houver
-          LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]+')
+          LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]*')
 
-          # Verificar se o último update existe, e definir o próximo número
-          if [ -z "$LAST_UPDATE" ]; then
-            NEXT_UPDATE=32  # Se não houver update, começa de 32
+          # Verificar se o último update existe ou se o comando falhou
+          if [ -z "$LAST_UPDATE" ] || [ "$LAST_UPDATE" == "0" ]; then
+            NEXT_UPDATE=32  # Se não houver update ou se o número for 0, começa de 32
           else
             NEXT_UPDATE=$((LAST_UPDATE + 1))  # Incrementa o último update
           fi
