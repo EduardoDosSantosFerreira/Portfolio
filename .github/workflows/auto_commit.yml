@@ -1,0 +1,36 @@
+name: Auto Commit
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Executa diariamente à meia-noite UTC
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "EduardoDosSantosFerreira"
+          git config --global user.email "eduardosferreira69@gmail.com"
+
+      - name: Obter próximo update
+        id: update
+        run: |
+          LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]+')
+          if [ -z "$LAST_UPDATE" ]; then
+            NEXT_UPDATE=32  # Começa do update_32 se não houver registros
+          else
+            NEXT_UPDATE=$((LAST_UPDATE + 1))
+          fi
+          echo "NEXT_UPDATE=update_$NEXT_UPDATE" >> $GITHUB_ENV
+
+      - name: Commit e Push
+        run: |
+          git pull origin main
+          git add .
+          git commit -m "Atualização automática: ${{ env.NEXT_UPDATE }} - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push origin main
