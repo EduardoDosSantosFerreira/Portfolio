@@ -22,7 +22,7 @@ jobs:
         run: |
           LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]+')
           if [ -z "$LAST_UPDATE" ]; then
-            NEXT_UPDATE=32  # Começa do update_32 se não houver registros
+            NEXT_UPDATE=32  # Começa do update_34 se não houver registros
           else
             NEXT_UPDATE=$((LAST_UPDATE + 1))
           fi
