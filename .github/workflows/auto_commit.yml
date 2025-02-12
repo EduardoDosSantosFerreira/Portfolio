@@ -20,17 +20,29 @@ jobs:
       - name: Obter próximo update
         id: update
         run: |
+          # Buscar o último update, se houver
           LAST_UPDATE=$(git branch -r | grep -oE 'update_[0-9]+' | sort -V | tail -n1 | grep -oE '[0-9]+')
+
+          # Verificar se o último update existe, e definir o próximo número
           if [ -z "$LAST_UPDATE" ]; then
-            NEXT_UPDATE=32  # Começa do update_34 se não houver registros
+            NEXT_UPDATE=32  # Se não houver update, começa de 32
           else
-            NEXT_UPDATE=$((LAST_UPDATE + 1))
+            NEXT_UPDATE=$((LAST_UPDATE + 1))  # Incrementa o último update
           fi
+
+          # Salvar a variável para uso posterior
           echo "NEXT_UPDATE=update_$NEXT_UPDATE" >> $GITHUB_ENV
 
       - name: Commit e Push
         run: |
+          # Atualizar o repositório
           git pull origin main
+
+          # Adicionar mudanças e realizar commit
           git add .
+
+          # Fazer commit com a mensagem personalizada
           git commit -m "Atualização automática: ${{ env.NEXT_UPDATE }} - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+
+          # Enviar alterações para o repositório
           git push origin main
