@@ -33,17 +33,23 @@ def auto_commit():
     # Puxa as últimas mudanças
     subprocess.run(['git', 'pull', 'origin', 'main'], check=True)
 
-    # Adiciona todas as mudanças
-    subprocess.run(['git', 'add', '.'], check=True)
+    # Verifica se há alterações antes de tentar adicionar e fazer o commit
+    status = run_git_command(['git', 'status', '--porcelain'])
 
-    # Faz o commit
-    commit_message = f'Atualização automática: {next_update} - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
-    subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+    if status:  # Se houver alterações
+        # Adiciona todas as mudanças
+        subprocess.run(['git', 'add', '.'], check=True)
 
-    # Faz o push
-    subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+        # Faz o commit
+        commit_message = f'Atualização automática: {next_update} - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
-    print(f'Commit {next_update} realizado com sucesso!')
+        # Faz o push
+        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+
+        print(f'Commit {next_update} realizado com sucesso!')
+    else:
+        print(f'Nenhuma alteração para o commit {next_update}.')
 
 if __name__ == "__main__":
     # Configuração inicial do Git (somente se necessário)
