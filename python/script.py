@@ -3,18 +3,16 @@ import time
 import subprocess
 from datetime import datetime
 
-def run_git_command(command):
-    """Executa um comando Git e retorna a saída como string."""
+def run_git_command(command, cwd):
+    """Executa um comando Git no diretório especificado e retorna a saída como string."""
     try:
-        return subprocess.check_output(command, stderr=subprocess.DEVNULL).decode().strip()
+        return subprocess.check_output(command, stderr=subprocess.DEVNULL, cwd=cwd).decode().strip()
     except subprocess.CalledProcessError:
         return ""
 
-def get_next_update_branch():
+def get_next_update_branch(cwd):
     """Obtém o próximo número de update baseado nos branches existentes."""
-    os.chdir("E:\\web-sites\\portfolio")  # Garante que o comando será executado no diretório correto
-
-    branches = run_git_command(['git', 'branch', '-r']).split('\n')
+    branches = run_git_command(['git', 'branch', '-r'], cwd).split('\n')
     updates = [b.strip().split('/')[-1] for b in branches if 'update_' in b]
     
     if updates:
@@ -26,36 +24,31 @@ def get_next_update_branch():
     return f'update_{last_update + 1}'
 
 def auto_commit():
-    """Executa o fluxo de commit e push automático."""
-    next_update = get_next_update_branch()
+    """Executa o fluxo de commit e push automático, mesmo sem alterações."""
+    repo_path = "E:/web-sites/portfolio"  # Caminho do seu repositório Git
+    next_update = get_next_update_branch(repo_path)
     print(f'Criando commit para {next_update}')
 
     # Puxa as últimas mudanças
-    subprocess.run(['git', 'pull', 'origin', 'main'], check=True)
+    subprocess.run(['git', 'pull', 'origin', 'main'], check=True, cwd=repo_path)
 
-    # Verifica se há alterações antes de tentar adicionar e fazer o commit
-    status = run_git_command(['git', 'status', '--porcelain'])
+    # Adiciona todas as mudanças (não importa se há ou não)
+    subprocess.run(['git', 'add', '.'], check=True, cwd=repo_path)
 
-    if status:  # Se houver alterações
-        # Adiciona todas as mudanças
-        subprocess.run(['git', 'add', '.'], check=True)
+    # Faz o commit
+    commit_message = f'Atualização automática: {next_update} - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+    subprocess.run(['git', 'commit', '--allow-empty', '-m', commit_message], check=True, cwd=repo_path)  # --allow-empty força o commit
 
-        # Faz o commit
-        commit_message = f'Atualização automática: {next_update} - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
-        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+    # Faz o push
+    subprocess.run(['git', 'push', 'origin', 'main'], check=True, cwd=repo_path)
 
-        # Faz o push
-        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
-
-        print(f'Commit {next_update} realizado com sucesso!')
-    else:
-        print(f'Nenhuma alteração para o commit {next_update}.')
+    print(f'Commit {next_update} realizado com sucesso!')
 
 if __name__ == "__main__":
     # Configuração inicial do Git (somente se necessário)
-    if not run_git_command(['git', 'config', 'user.name']):
+    if not run_git_command(['git', 'config', 'user.name'], cwd="E:/web-sites/portfolio"):
         subprocess.run(['git', 'config', '--global', 'user.name', 'EduardoDosSantosFerreira'], check=True)
-    if not run_git_command(['git', 'config', 'user.email']):
+    if not run_git_command(['git', 'config', 'user.email'], cwd="E:/web-sites/portfolio"):
         subprocess.run(['git', 'config', '--global', 'user.email', 'eduardosferreira69@gmail.com'], check=True)
 
     while True:
