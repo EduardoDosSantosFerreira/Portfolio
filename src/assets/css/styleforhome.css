@@ -30,10 +30,6 @@ footer {
   background-color: #9c00005c;
 }
 
-.card {
-  margin-bottom: 20px;
-}
-
 #about {
   background-color: #000;
   color: #fff;
@@ -279,19 +275,9 @@ footer {
   }
 }
 
-#crow-hello{
-  filter: grayscale(100%);
-}
-
 #intro{
   margin-top: 100px;
   margin-bottom: 100px;
-}
-
-.c-item {
-  height: 46.2dvi;
-  position: center;
-  width: 100%;
 }
 
 #categoriadeprojetos{
