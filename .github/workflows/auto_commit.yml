@@ -17,24 +17,18 @@ jobs:
           git config --global user.name "EduardoDosSantosFerreira"
           git config --global user.email "eduardosferreira69@gmail.com"
 
-      - name: Obter próximo update
-        id: update
-        run: |
-          LAST_UPDATE=$(git branch -r | grep -oE 'update' | sort -V | tail -n1)
-          if [ -z "$LAST_UPDATE" ]; then
-            NEXT_UPDATE="update"  # Começa com "update" se não houver registros
-          else
-            NEXT_UPDATE="update"
-          fi
-          echo "NEXT_UPDATE=$NEXT_UPDATE" >> $GITHUB_ENV
-
       - name: Configurar URL Remota para usar o Token
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
 
+      - name: Atualizar repositório local
+        run: |
+          git fetch --unshallow || true  # Caso seja um clone raso, remove a limitação
+          git pull origin main
+
       - name: Commit e Push
         run: |
-          git pull origin main
           git add .
-          git commit -m "Atualização automática: ${{ env.NEXT_UPDATE }} - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          COMMIT_MESSAGE="auto_update: ($(date +'%Y-%m-%d')) - ($(date +'%H:%M:%S'))"
+          git commit --allow-empty -m "$COMMIT_MESSAGE"
           git push origin main
