@@ -36,7 +36,7 @@ def auto_commit():
     subprocess.run(['git', 'add', '.'], check=True, cwd=repo_path)
 
     # Faz o commit
-    commit_message = f'Atualização automática: {next_update} - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+    commit_message = f'auto_update ({datetime.now().strftime("%Y-%m-%d")}) e ({datetime.now().strftime("%H:%M:%S")})'
     subprocess.run(['git', 'commit', '--allow-empty', '-m', commit_message], check=True, cwd=repo_path)  # --allow-empty força o commit
 
     # Faz o push
