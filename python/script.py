@@ -18,7 +18,7 @@ def auto_commit():
     subprocess.run(['git', 'pull', 'origin', 'main'], check=True, cwd=repo_path)
     subprocess.run(['git', 'add', '.'], check=True, cwd=repo_path)
     
-    commit_message = f'auto_update ({datetime.now().strftime("%Y-%m-%d")}) e ({datetime.now().strftime("%H:%M:%S")})'
+    commit_message = f'auto_update:({datetime.now().strftime("%Y-%m-%d")})-({datetime.now().strftime("%H:%M:%S")})'
     subprocess.run(['git', 'commit', '--allow-empty', '-m', commit_message], check=True, cwd=repo_path)
     subprocess.run(['git', 'push', 'origin', 'main'], check=True, cwd=repo_path)
     
