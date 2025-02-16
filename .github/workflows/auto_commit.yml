@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Garante que todas as referências do histórico sejam baixadas
 
       - name: Configurar Git
         run: |
@@ -19,12 +21,11 @@ jobs:
 
       - name: Configurar URL Remota para usar o Token
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
+          git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/EduardoDosSantosFerreira/Portfolio.git
 
       - name: Atualizar repositório local
         run: |
-          git fetch --unshallow || true  # Caso seja um clone raso, remove a limitação
-          git pull origin main
+          git pull origin main --rebase  # Usa rebase para evitar conflitos desnecessários
 
       - name: Commit e Push
         run: |
