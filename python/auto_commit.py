@@ -1,28 +1,37 @@
-import os
 import subprocess
+from datetime import datetime
 
-def run_command(command):
-    result = subprocess.run(command, capture_output=True, text=True)
-    if result.returncode != 0:
-        print(f"Erro: {result.stderr}")
+def run_git_command(command):
+    """Executa um comando Git e retorna a saída como string."""
+    try:
+        return subprocess.check_output(command, stderr=subprocess.DEVNULL).decode().strip()
+    except subprocess.CalledProcessError:
+        return ""
 
 def auto_commit():
-    repo_path = "E:/web-sites/portfolio"
-    os.chdir(repo_path)
+    """Executa o fluxo de commit e push automático."""
+    print(f'Criando commit...')
 
-    print("Atualizando repositório...")
-    run_command(["git", "pull"])
+    # Puxa as últimas mudanças
+    subprocess.run(['git', 'pull', 'origin', 'main'], check=True)
 
-    print("Adicionando alterações...")
-    run_command(["git", "add", "."])
+    # Adiciona todas as mudanças
+    subprocess.run(['git', 'add', '.'], check=True)
 
-    print("Criando commit...")
-    run_command(["git", "commit", "-m", "Commit automático"])
+    # Faz o commit
+    commit_message = f'Atualização automática: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+    subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 
-    print("Enviando para o repositório remoto...")
-    run_command(["git", "push"])
+    # Faz o push
+    subprocess.run(['git', 'push', 'origin', 'main'], check=True)
 
-    print("Processo concluído.")
+    print(f'Commit realizado com sucesso: {commit_message}')
 
 if __name__ == "__main__":
+    # Configuração inicial do Git (somente se necessário)
+    if not run_git_command(['git', 'config', 'user.name']):
+        subprocess.run(['git', 'config', '--global', 'user.name', 'Seu Nome'], check=True)
+    if not run_git_command(['git', 'config', 'user.email']):
+        subprocess.run(['git', 'config', '--global', 'user.email', 'seuemail@example.com'], check=True)
+
     auto_commit()
