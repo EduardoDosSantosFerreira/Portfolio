@@ -1,45 +1,45 @@
 import os
-import time
 import subprocess
-from datetime import datetime
+import datetime
 
-def run_git_command(command, cwd):
-    """Executa um comando Git no diretório especificado e retorna a saída como string."""
-    try:
-        return subprocess.check_output(command, stderr=subprocess.DEVNULL, cwd=cwd).decode().strip()
-    except subprocess.CalledProcessError:
-        return ""
+# Configurações do Git (caso precise definir nome e e-mail)
+GIT_USERNAME = "EduardoDosSantosFerreira"
+GIT_EMAIL = "eduardosferreira69@gmail.com"
+
+# Caminho do repositório (ajuste para o seu diretório)
+REPO_PATH = r"E:/web-sites/portfolio"
+
+# Mensagem do commit com timestamp
+commit_message = f"Commit automático - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+
+def run_git_command(command):
+    """Executa um comando Git no repositório especificado"""
+    result = subprocess.run(command, cwd=REPO_PATH, shell=True, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"Erro ao executar: {command}")
+        print(result.stderr)
+    else:
+        print(result.stdout)
 
 def auto_commit():
-    """Executa o fluxo de commit e push automático, mesmo sem alterações."""
-    repo_path = "E:/web-sites/portfolio"
-    print('Criando commit automático')
+    """Executa o fluxo completo de commit automático"""
+    print("🔄 Atualizando repositório...")
+    run_git_command("git pull origin main")  # Atualiza antes de commitar
 
-    subprocess.run(['git', 'pull', 'origin', 'main'], check=True, cwd=repo_path)
-    subprocess.run(['git', 'add', '.'], check=True, cwd=repo_path)
-    
-    commit_message = f'auto_update: ({datetime.now().strftime("%Y-%m-%d")}) - ({datetime.now().strftime("%H:%M:%S")})'
-    subprocess.run(['git', 'commit', '--allow-empty', '-m', commit_message], check=True, cwd=repo_path)
-    subprocess.run(['git', 'push', 'origin', 'main'], check=True, cwd=repo_path)
-    
-    print('Commit realizado com sucesso!')
+    print("🔧 Configurando nome e e-mail do Git...")
+    run_git_command(f'git config user.name "{GIT_USERNAME}"')
+    run_git_command(f'git config user.email "{GIT_EMAIL}"')
 
-def configure_git(repo_path):
-    """Configura o usuário do Git, se necessário."""
-    if not run_git_command(['git', 'config', 'user.name'], cwd=repo_path):
-        subprocess.run(['git', 'config', '--global', 'user.name', 'EduardoDosSantosFerreira'], check=True)
-    if not run_git_command(['git', 'config', 'user.email'], cwd=repo_path):
-        subprocess.run(['git', 'config', '--global', 'user.email', 'eduardosferreira69@gmail.com'], check=True)
+    print("📂 Adicionando arquivos...")
+    run_git_command("git add .")
+
+    print("📌 Criando commit...")
+    run_git_command(f'git commit -m "{commit_message}"')
+
+    print("🚀 Enviando para o repositório...")
+    run_git_command("git push origin main")
+
+    print("✅ Processo finalizado!")
 
 if __name__ == "__main__":
-    repo_path = "E:/web-sites/portfolio"
-    configure_git(repo_path)
-    
-    while True:
-        try:
-            auto_commit()
-        except Exception as e:
-            print(f'Erro durante o commit: {e}')
-        
-        print('Aguardando 24 horas para o próximo commit...')
-        time.sleep(86400)
+    auto_commit()
