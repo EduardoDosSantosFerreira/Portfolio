@@ -15,12 +15,12 @@ def auto_commit():
     # Puxa as últimas mudanças
     subprocess.run(['git', 'pull', 'origin', 'main'], check=True)
 
-    # Adiciona todas as mudanças
+    # Adiciona todas as mudanças (se houver) ou mesmo sem mudanças
     subprocess.run(['git', 'add', '.'], check=True)
 
-    # Faz o commit
+    # Faz o commit com --allow-empty para permitir commits sem alterações
     commit_message = f'Atualização automática: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
-    subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+    subprocess.run(['git', 'commit', '--allow-empty', '-m', commit_message], check=True)
 
     # Faz o push
     subprocess.run(['git', 'push', 'origin', 'main'], check=True)
