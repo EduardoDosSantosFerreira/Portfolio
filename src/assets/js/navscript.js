@@ -40,19 +40,6 @@ function adicionarNavbarAoDOM() {
                     <a class="dropdown-item" href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="LanguageDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-language"></i> Idioma
-                </a>
-                <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
-                    <a class="dropdown-item" href="#" onclick="translatePage('pt')"><i class="fas fa-flag"></i> Português</a>
-                    <a class="dropdown-item" href="#" onclick="translatePage('en')"><i class="fas fa-flag"></i> Inglês</a>
-                    <a class="dropdown-item" href="#" onclick="translatePage('es')"><i class="fas fa-flag"></i> Espanhol</a>
-                    <a class="dropdown-item" href="#" onclick="translatePage('cn')"><i class="fas fa-flag"></i> Chinês</a>
-                    <a class="dropdown-item" href="#" onclick="translatePage('ru')"><i class="fas fa-flag"></i> Russo</a>
-                </div>
-            </li>
         </ul>
     </div>
 </nav>

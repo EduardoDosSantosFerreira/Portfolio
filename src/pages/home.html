@@ -132,7 +132,7 @@
                                 <!-- Conteúdo do projeto com animação AOS -->
                                 <h3 class="projects__row-content-title">Etec de Itanhaém</h3> <!-- Título do projeto -->
                                 <p class="projects__row-content-desc"> <!-- Descrição do projeto -->
-                                    Site alternativo destinado a Escola Técnica Estadual de Itanhaém.
+                                    Site alternativo Escola Técnica Estadual de Itanhaém.
                                 </p>
                                 <a href="https://eduardodossantosferreira.github.io/project-etec/src/pages/hme.html"
                                     class="comic-button" id="btnico" target="_blank">Clique e Veja !</a>
@@ -165,7 +165,7 @@
                             <div class="projects__row-content"> <!-- Conteúdo do projeto -->
                                 <h3 class="projects__row-content-title">TaskForm</h3> <!-- Título do projeto -->
                                 <p class="projects__row-content-desc"> <!-- Descrição do projeto -->
-                                    TaskForm é a solução para quem busca simplificar e aprimorar sua rotina.
+                                    TaskForm hub de produtividade.
                                 </p>
                                 <a href="https://eduardodossantosferreira.github.io/TaskForm/" class="comic-button"
                                     id="btnico" target="_blank">Acesse Já !</a> <!-- Link para o projeto -->
@@ -198,121 +198,6 @@
             duration: 2000, // Duração da animação AOS
         });
     </script>
-    <script>
-        // Objeto com as traduções para cada idioma
-        const translations = {
-            pt: {
-                welcome: "Seja Bem-vindo!",
-                intro: "Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua visita!",
-                about: "Sobre",
-                aboutText: `Olá, meu nome é Eduardo dos Santos Ferreira e sou desenvolvedor.
-                            Sou natural de Itanhaém, uma cidade localizada no litoral paulista.
-                            Sou técnico em desenvolvimento de sistemas pela escola técnica estadual de Itanhaém.
-    
-                            Trabalho como desenvolvedor e programador para pequenas e médias empresas da região.
-                            Atualmente, estou desenvolvendo sites para pequenas empresas e pequenos comércios da minha cidade.`,
-                previewButton: "Pré-visualizar Currículo",
-                projectCategories: "Categoria de Projetos",
-                arduinos: "Arduinos",
-                apps: "Software",
-                games: "Games",
-                sites: "Sites",
-            },
-            en: {
-                welcome: "Welcome!",
-                intro: "This is my personal repository where I share my projects and periodic updates. Thank you for visiting!",
-                about: "About",
-                aboutText: `Hi, my name is Eduardo dos Santos Ferreira and I am a developer.
-                            I was born in Itanhaém, a city located on the São Paulo coast.
-                            I am a technical systems development graduate from the Itanhaém State Technical School.
-    
-                            I work as a developer and programmer for small and medium-sized companies in the region.
-                            Currently, I am developing websites for small businesses and local stores in my city.`,
-                previewButton: "Preview Resume",
-                projectCategories: "Project Categories",
-                arduinos: "Arduinos",
-                apps: "Applications",
-                games: "Games",
-                sites: "Websites",
-            },
-            es: {
-                welcome: "¡Bienvenido!",
-                intro: "Este es mi repositorio personal donde comparto mis proyectos y actualizaciones periódicas. ¡Gracias por tu visita!",
-                about: "Acerca de",
-                aboutText: `Hola, mi nombre es Eduardo dos Santos Ferreira y soy desarrollador.
-                            Soy de Itanhaém, una ciudad ubicada en la costa de São Paulo.
-                            Soy técnico en desarrollo de sistemas por la escuela técnica estatal de Itanhaém.
-    
-                            Trabajo como desarrollador y programador para pequeñas y medianas empresas de la región.
-                            Actualmente, estoy desarrollando sitios web para pequeñas empresas y comercios locales en mi ciudad.`,
-                previewButton: "Vista previa del currículum",
-                projectCategories: "Categorías de Proyectos",
-                arduinos: "Arduinos",
-                apps: "Aplicaciones",
-                games: "Juegos",
-                sites: "Sitios Web",
-            },
-            cn: {
-                welcome: "欢迎！",
-                intro: "这是我的个人存储库，我在这里分享我的项目和定期更新。感谢您的访问！",
-                about: "关于",
-                aboutText: `您好，我叫爱德华多·多斯桑托斯·费雷拉，我是一名开发人员。
-                            我来自伊塔尼安，一座位于圣保罗海岸的城市。
-                            我毕业于伊塔尼安州立技术学校的系统开发技术专业。
-    
-                            我为该地区的小型和中型企业担任开发人员和程序员。
-                            目前，我正在为我所在城市的小型企业和本地商店开发网站。`,
-                previewButton: "预览简历",
-                projectCategories: "项目类别",
-                arduinos: "Arduino",
-                apps: "应用程序",
-                games: "游戏",
-                sites: "网站",
-            },
-            ru: {
-                welcome: "Добро пожаловать!",
-                intro: "Это мое личное хранилище, где я делюсь своими проектами и периодическими обновлениями. Спасибо за визит!",
-                about: "Обо мне",
-                aboutText: `Здравствуйте, меня зовут Эдуардо дос Сантос Феррейра, я разработчик.
-                            Я родом из Итаньен, города, расположенного на побережье Сан-Паулу.
-                            Я окончил государственное техническое училище Итаньен по специальности разработка систем.
-    
-                            Я работаю разработчиком и программистом для малых и средних предприятий региона.
-                            В настоящее время я разрабатываю сайты для малых предприятий и местных магазинов в моем городе.`,
-                previewButton: "Предварительный просмотр резюме",
-                projectCategories: "Категории проектов",
-                arduinos: "Ардуино",
-                apps: "Приложения",
-                games: "Игры",
-                sites: "Веб-сайты",
-            },
-        };
-
-        // Função para traduzir a página
-        function translatePage(language) {
-            // Traduções dos elementos da página
-            document.querySelector("h1.display-4").textContent = translations[language].welcome;
-            document.querySelector("#sobre").textContent = translations[language].intro;
-            document.querySelector("h1[data-aos='fade-right']").textContent = translations[language].about;
-            document.querySelector("#about p").textContent = translations[language].aboutText;
-            document.querySelector("#preview-button").textContent = translations[language].previewButton;
-            document.querySelector("#categoriadeprojetos").textContent = translations[language].projectCategories;
-            document.querySelector("h2.fw-normal:nth-child(1)").textContent = translations[language].arduinos;
-            document.querySelector("h2.fw-normal:nth-child(2)").textContent = translations[language].apps;
-            document.querySelector("h2.fw-normal:nth-child(3)").textContent = translations[language].games;
-            document.querySelector("h2.fw-normal:nth-child(4)").textContent = translations[language].sites;
-        }
-
-        // Eventos de clique para a troca de idioma
-        document.querySelectorAll(".dropdown-item").forEach(item => {
-            item.addEventListener("click", function () {
-                const lang = this.getAttribute("onclick").match(/'(\w+)'/)[1];
-                translatePage(lang);
-            });
-        });
-    </script>
-
-
 </body>
 
 </html>
