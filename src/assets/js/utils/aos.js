@@ -2,18 +2,18 @@
   "object" == typeof exports && "undefined" != typeof module
     ? (module.exports = t())
     : "function" == typeof define && define.amd
-    ? define(t)
-    : (e.AOS = t());
+      ? define(t)
+      : (e.AOS = t());
 })(this, function () {
   "use strict";
   var e =
-      "undefined" != typeof window
-        ? window
-        : "undefined" != typeof global
+    "undefined" != typeof window
+      ? window
+      : "undefined" != typeof global
         ? global
         : "undefined" != typeof self
-        ? self
-        : {},
+          ? self
+          : {},
     t = "Expected a function",
     n = NaN,
     o = "[object Symbol]",
@@ -81,7 +81,7 @@
     return (
       (n = w(n) || 0),
       g(o) &&
-        ((l = !!o.leading),
+      ((l = !!o.leading),
         (r = (f = "maxWait" in o) ? m(w(o.maxWait) || 0, n) : r),
         (v = "trailing" in o ? !!o.trailing : v)),
       (O.cancel = function () {
@@ -121,16 +121,16 @@
     return u || c.test(e) ? s(e.slice(2), u ? 2 : 8) : a.test(e) ? n : +e;
   }
   var y = function (e, n, o) {
-      var i = !0,
-        a = !0;
-      if ("function" != typeof e) throw new TypeError(t);
-      return (
-        g(o) &&
-          ((i = "leading" in o ? !!o.leading : i),
-          (a = "trailing" in o ? !!o.trailing : a)),
-        v(e, n, { leading: i, maxWait: n, trailing: a })
-      );
-    },
+    var i = !0,
+      a = !0;
+    if ("function" != typeof e) throw new TypeError(t);
+    return (
+      g(o) &&
+      ((i = "leading" in o ? !!o.leading : i),
+        (a = "trailing" in o ? !!o.trailing : a)),
+      v(e, n, { leading: i, maxWait: n, trailing: a })
+    );
+  },
     h = "Expected a function",
     k = NaN,
     x = "[object Symbol]",
@@ -176,68 +176,68 @@
     return n || N.test(e) ? z(e.slice(2), n ? 2 : 8) : j.test(e) ? k : +e;
   }
   var $ = function (e, t, n) {
-      var o,
-        i,
-        a,
-        r,
-        c,
-        s,
-        u = 0,
-        d = !1,
-        l = !1,
-        f = !0;
-      if ("function" != typeof e) throw new TypeError(h);
-      function m(t) {
-        var n = o,
-          a = i;
-        return (o = i = void 0), (u = t), (r = e.apply(a, n));
-      }
-      function p(e) {
-        var n = e - s;
-        return void 0 === s || n >= t || n < 0 || (l && e - u >= a);
-      }
-      function b() {
-        var e = S();
-        if (p(e)) return v(e);
-        c = setTimeout(
-          b,
-          (function (e) {
-            var n = t - (e - s);
-            return l ? M(n, a - (e - u)) : n;
-          })(e)
-        );
-      }
-      function v(e) {
-        return (c = void 0), f && o ? m(e) : ((o = i = void 0), r);
-      }
-      function g() {
-        var e = S(),
-          n = p(e);
-        if (((o = arguments), (i = this), (s = e), n)) {
-          if (void 0 === c)
-            return (function (e) {
-              return (u = e), (c = setTimeout(b, t)), d ? m(e) : r;
-            })(s);
-          if (l) return (c = setTimeout(b, t)), m(s);
-        }
-        return void 0 === c && (c = setTimeout(b, t)), r;
-      }
-      return (
-        (t = H(t) || 0),
-        D(n) &&
-          ((d = !!n.leading),
-          (a = (l = "maxWait" in n) ? T(H(n.maxWait) || 0, t) : a),
-          (f = "trailing" in n ? !!n.trailing : f)),
-        (g.cancel = function () {
-          void 0 !== c && clearTimeout(c), (u = 0), (o = s = i = c = void 0);
-        }),
-        (g.flush = function () {
-          return void 0 === c ? r : v(S());
-        }),
-        g
+    var o,
+      i,
+      a,
+      r,
+      c,
+      s,
+      u = 0,
+      d = !1,
+      l = !1,
+      f = !0;
+    if ("function" != typeof e) throw new TypeError(h);
+    function m(t) {
+      var n = o,
+        a = i;
+      return (o = i = void 0), (u = t), (r = e.apply(a, n));
+    }
+    function p(e) {
+      var n = e - s;
+      return void 0 === s || n >= t || n < 0 || (l && e - u >= a);
+    }
+    function b() {
+      var e = S();
+      if (p(e)) return v(e);
+      c = setTimeout(
+        b,
+        (function (e) {
+          var n = t - (e - s);
+          return l ? M(n, a - (e - u)) : n;
+        })(e)
       );
-    },
-    W = function () {};
+    }
+    function v(e) {
+      return (c = void 0), f && o ? m(e) : ((o = i = void 0), r);
+    }
+    function g() {
+      var e = S(),
+        n = p(e);
+      if (((o = arguments), (i = this), (s = e), n)) {
+        if (void 0 === c)
+          return (function (e) {
+            return (u = e), (c = setTimeout(b, t)), d ? m(e) : r;
+          })(s);
+        if (l) return (c = setTimeout(b, t)), m(s);
+      }
+      return void 0 === c && (c = setTimeout(b, t)), r;
+    }
+    return (
+      (t = H(t) || 0),
+      D(n) &&
+      ((d = !!n.leading),
+        (a = (l = "maxWait" in n) ? T(H(n.maxWait) || 0, t) : a),
+        (f = "trailing" in n ? !!n.trailing : f)),
+      (g.cancel = function () {
+        void 0 !== c && clearTimeout(c), (u = 0), (o = s = i = c = void 0);
+      }),
+      (g.flush = function () {
+        return void 0 === c ? r : v(S());
+      }),
+      g
+    );
+  },
+    W = function () { };
   function P(e) {
     e &&
       e.forEach(function (e) {
@@ -265,20 +265,20 @@
     );
   }
   var _ = {
-      isSupported: function () {
-        return !!Y();
-      },
-      ready: function (e, t) {
-        var n = window.document,
-          o = new (Y())(P);
-        (W = t),
-          o.observe(n.documentElement, {
-            childList: !0,
-            subtree: !0,
-            removedNodes: !0,
-          });
-      },
+    isSupported: function () {
+      return !!Y();
     },
+    ready: function (e, t) {
+      var n = window.document,
+        o = new (Y())(P);
+      (W = t),
+        o.observe(n.documentElement, {
+          childList: !0,
+          subtree: !0,
+          removedNodes: !0,
+        });
+    },
+  },
     B = function (e, t) {
       if (!(e instanceof t))
         throw new TypeError("Cannot call a class as a function");
@@ -319,54 +319,54 @@
     return navigator.userAgent || navigator.vendor || window.opera || "";
   }
   var U = new ((function () {
-      function e() {
-        B(this, e);
-      }
-      return (
-        F(e, [
-          {
-            key: "phone",
-            value: function () {
-              var e = R();
-              return !(!K.test(e) && !G.test(e.substr(0, 4)));
-            },
+    function e() {
+      B(this, e);
+    }
+    return (
+      F(e, [
+        {
+          key: "phone",
+          value: function () {
+            var e = R();
+            return !(!K.test(e) && !G.test(e.substr(0, 4)));
           },
-          {
-            key: "mobile",
-            value: function () {
-              var e = R();
-              return !(!J.test(e) && !Q.test(e.substr(0, 4)));
-            },
+        },
+        {
+          key: "mobile",
+          value: function () {
+            var e = R();
+            return !(!J.test(e) && !Q.test(e.substr(0, 4)));
           },
-          {
-            key: "tablet",
-            value: function () {
-              return this.mobile() && !this.phone();
-            },
+        },
+        {
+          key: "tablet",
+          value: function () {
+            return this.mobile() && !this.phone();
           },
-          {
-            key: "ie11",
-            value: function () {
-              return (
-                "-ms-scroll-limit" in document.documentElement.style &&
-                "-ms-ime-align" in document.documentElement.style
-              );
-            },
+        },
+        {
+          key: "ie11",
+          value: function () {
+            return (
+              "-ms-scroll-limit" in document.documentElement.style &&
+              "-ms-ime-align" in document.documentElement.style
+            );
           },
-        ]),
-        e
-      );
-    })())(),
+        },
+      ]),
+      e
+    );
+  })())(),
     V = function (e, t) {
       var n = void 0;
       return (
         U.ie11()
           ? (n = document.createEvent("CustomEvent")).initCustomEvent(
-              e,
-              !0,
-              !0,
-              { detail: t }
-            )
+            e,
+            !0,
+            !0,
+            { detail: t }
+          )
           : (n = new CustomEvent(e, { detail: t })),
         document.dispatchEvent(n)
       );
@@ -379,37 +379,37 @@
             i = e.node,
             a =
               (e.data,
-              function () {
-                e.animated &&
-                  ((function (e, t) {
-                    t &&
-                      t.forEach(function (t) {
-                        return e.classList.remove(t);
-                      });
-                  })(i, n.animatedClassNames),
-                  V("aos:out", i),
-                  e.options.id && V("aos:in:" + e.options.id, i),
-                  (e.animated = !1));
-              });
+                function () {
+                  e.animated &&
+                    ((function (e, t) {
+                      t &&
+                        t.forEach(function (t) {
+                          return e.classList.remove(t);
+                        });
+                    })(i, n.animatedClassNames),
+                      V("aos:out", i),
+                      e.options.id && V("aos:in:" + e.options.id, i),
+                      (e.animated = !1));
+                });
           n.mirror && t >= o.out && !n.once
             ? a()
             : t >= o.in
-            ? e.animated ||
+              ? e.animated ||
               ((function (e, t) {
                 t &&
                   t.forEach(function (t) {
                     return e.classList.add(t);
                   });
               })(i, n.animatedClassNames),
-              V("aos:in", i),
-              e.options.id && V("aos:in:" + e.options.id, i),
-              (e.animated = !0))
-            : e.animated && !n.once && a();
+                V("aos:in", i),
+                e.options.id && V("aos:in:" + e.options.id, i),
+                (e.animated = !0))
+              : e.animated && !n.once && a();
         })(e, window.pageYOffset);
       });
     },
     Z = function (e) {
-      for (var t = 0, n = 0; e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop); )
+      for (var t = 0, n = 0; e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop);)
         (t += e.offsetLeft - ("BODY" != e.tagName ? e.scrollLeft : 0)),
           (n += e.offsetTop - ("BODY" != e.tagName ? e.scrollTop : 0)),
           (e = e.offsetParent);
@@ -486,8 +486,8 @@
                     i = e;
                   return (
                     n &&
-                      document.querySelectorAll(n) &&
-                      (i = document.querySelectorAll(n)[0]),
+                    document.querySelectorAll(n) &&
+                    (i = document.querySelectorAll(n)[0]),
                     Z(i).top + i.offsetHeight - o
                   );
                 })(e.node, t.offset),
@@ -531,7 +531,7 @@
         arguments[0] &&
         (ie = !0),
         ie &&
-          ((oe = te(oe, ae)),
+        ((oe = te(oe, ae)),
           X(oe),
           window.addEventListener(
             "scroll",
@@ -569,17 +569,17 @@
         (ae = I(ae, e)),
         (oe = ne()),
         ae.disableMutationObserver ||
-          _.isSupported() ||
-          (console.info(
-            '\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '
-          ),
+        _.isSupported() ||
+        (console.info(
+          '\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '
+        ),
           (ae.disableMutationObserver = !0)),
         ae.disableMutationObserver || _.ready("[data-aos]", se),
         de(ae.disable) || re()
           ? ue()
           : (document
-              .querySelector("body")
-              .setAttribute("data-aos-easing", ae.easing),
+            .querySelector("body")
+            .setAttribute("data-aos-easing", ae.easing),
             document
               .querySelector("body")
               .setAttribute("data-aos-duration", ae.duration),
@@ -588,14 +588,14 @@
               .setAttribute("data-aos-delay", ae.delay),
             -1 === ["DOMContentLoaded", "load"].indexOf(ae.startEvent)
               ? document.addEventListener(ae.startEvent, function () {
-                  ce(!0);
-                })
+                ce(!0);
+              })
               : window.addEventListener("load", function () {
-                  ce(!0);
-                }),
+                ce(!0);
+              }),
             "DOMContentLoaded" === ae.startEvent &&
-              ["complete", "interactive"].indexOf(document.readyState) > -1 &&
-              ce(!0),
+            ["complete", "interactive"].indexOf(document.readyState) > -1 &&
+            ce(!0),
             window.addEventListener("resize", $(ce, ae.debounceDelay, !0)),
             window.addEventListener(
               "orientationchange",
