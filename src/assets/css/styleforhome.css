@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
 
 body {
   padding-top: 100px;
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif; /* Importa a fonte Poppins */
+  font-family: 'Poppins', sans-serif
 }
 
 footer {
   background-color: #000;
-  color: white;
+  color: #fff
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 12px
 }
 
 ::-webkit-scrollbar-thumb {
   background: #6a0000;
-  border-radius: 0px;
+  border-radius: 0
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #9c00005c;
+  background-color: #9c00005c
 }
 
 #about {
@@ -36,36 +36,32 @@ footer {
   text-align: justify;
   margin-bottom: 10px;
   padding-top: 30px;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .btn-primary {
   background-color: red;
-  border-color: rgb(0, 0, 0);
+  border-color: #000
 }
 
 .btn-primary:hover {
-  color: rgb(255, 0, 0);
-  background-color: black;
-  border-color: rgb(255, 0, 0);
+  color: red;
+  background-color: #000;
+  border-color: red
 }
 
 #contact {
-  background-color: black;
-  color: white;
-}
-
-#contato {
-  color: white;
+  background-color: #000;
+  color: #fff
 }
 
 #icon {
   width: 90px;
-  margin-left: 15px;
+  margin-left: 15px
 }
 
 #sobre {
-  font-size: 20px;
+  font-size: 20px
 }
 
 .comic-button {
@@ -73,213 +69,110 @@ footer {
   display: inline-block;
   padding: 10px 20px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   color: #fff;
-  background-color: #ff0000;
+  background-color: red;
   border: 2px solid #000;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px #000;
-  transition: all 0.3s ease;
+  box-shadow: 5px 5px 0 #000;
+  transition: all .3s ease;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform .3s
 }
 
 .comic-button:hover {
   background-color: #fff;
-  color: #ff0000;
-  border: 2px solid #ff0000;
-  box-shadow: 5px 5px 0px #ff0000;
-  transform: scale(1.1);
+  color: red;
+  border: 2px solid red;
+  box-shadow: 5px 5px 0 red;
+  transform: scale(1.1)
 }
 
 .comic-button:active {
-  background-color: #000000;
+  background-color: #000;
   box-shadow: none;
-  transform: translateY(4px);
+  transform: translateY(4px)
 }
 
 #category {
-  padding-bottom: 50px;
+  padding-bottom: 50px
 }
 
 #btn-cv {
   padding-bottom: 30px;
-  text-align: center;
+  text-align: center
 }
 
 #btn {
   margin-top: 80px;
   text-align: center;
-  align-items: center;
+  align-items: center
 }
 
 #btnico {
-  text-decoration: none;
+  text-decoration: none
 }
 
 #categoria {
   margin-top: 60px;
   margin-bottom: 60px;
-  text-decoration: none;
+  text-decoration: none
 }
 
 #icones {
-  width: 140px;
+  width: 140px
 }
 
 .main-container {
   max-width: 120rem;
   margin: auto;
-  width: 90%;
-}
-
-.sec-pad {
-  padding: 4rem 0;
-}
-
-.projects__row:last-child {
-  margin-bottom: 0;
-}
-
-.projects__row-img-cont {
-  overflow: hidden;
-}
-
-.projects__row-img {
-  display: block;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  width: 800px;
-  padding: 50px;
-}
-
-.projects__row-content {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.projects__row-content-desc {
-  font-size: 1.4rem;
-  color: grey;
-  max-width: 60rem;
-  line-height: 1.7;
-}
-
-.projects__row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects__row-content-title {
-  font-weight: bolder;
-}
-
-#categoria img {
-  transition: transform 0.3s;
-}
-
-#categoria img:hover {
-  transform: scale(1.1);
+  width: 90%
 }
 
 #ico-ftr {
   width: 50px;
-  margin-right: 10px;
+  margin-right: 10px
 }
 
 #ico-ftr:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
+  transition: transform .3s ease
 }
 
 #resume-preview {
   display: none;
   width: 100%;
-  height: 1000px;
+  height: 1000px
 }
 
-@media (min-width: 940px) {
-  .projects__row:nth-child(2),
-  .projects__row:nth-child(4),
-  .projects__row:nth-child(6),
-  .projects__row:nth-child(8),
-  .projects__row:nth-child(10),
-  .projects__row:nth-child(12),
-  .projects__row:nth-child(14),
-  .projects__row:nth-child(16),
-  .projects__row:nth-child(18),
-  .projects__row:nth-child(20),
-  .projects__row:nth-child(22),
-  .projects__row:nth-child(24),
-  .projects__row:nth-child(26),
-  .projects__row:nth-child(28) {
-    flex-direction: row-reverse;
-  }
-  .projects__row:nth-child(2) .projects__row-content,
-  .projects__row:nth-child(4) .projects__row-content,
-  .projects__row:nth-child(6) .projects__row-content,
-  .projects__row:nth-child(8) .projects__row-content,
-  .projects__row:nth-child(10) .projects__row-content,
-  .projects__row:nth-child(12) .projects__row-content,
-  .projects__row:nth-child(14) .projects__row-content,
-  .projects__row:nth-child(16) .projects__row-content,
-  .projects__row:nth-child(18) .projects__row-content,
-  .projects__row:nth-child(20) .projects__row-content,
-  .projects__row:nth-child(22) .projects__row-content,
-  .projects__row:nth-child(24) .projects__row-content,
-  .projects__row:nth-child(26) .projects__row-content,
-  .projects__row:nth-child(28) .projects__row-content {
-    order: 2;
-  }
-}
-
-@media (max-width: 940px) {
-  .projects__row {
-    flex-direction: column;
-  }
-  .projects__row-img-cont {
-    margin-right: 0;
-  }
-  .projects__row-img {
-    padding: 0;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:768px) {
   #about {
-    text-align: left; /* Altera a alinhamento do texto para esquerda */
-    margin-bottom: 0; /* Remove a margem inferior */
+    text-align: left;
+    margin-bottom: 0
   }
-  /* Define a classe das colunas para ocuparem 6/12 de largura, ou seja, 2 em cima e 2 em baixo */
+
   .col-lg {
-    flex: 0 0 50%; /* 2 colunas por linha */
-    max-width: 50%; /* 2 colunas por linha */
-    padding: 0 15px; /* Espaçamento entre as colunas */
-    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    margin-bottom: 20px
   }
 
-  /* Para evitar que as imagens fiquem muito grandes em telas menores, você pode ajustar o tamanho delas */
   #icones {
-    width: 70px; /* Tamanho menor para as imagens */
+    width: 70px
   }
 
-  /* Para manter o texto alinhado ao centro das imagens */
   .col-lg h2 {
-    text-align: center;
+    text-align: center
   }
 }
 
-#intro{
+#intro {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 100px
 }
 
-#categoriadeprojetos{
-  padding-bottom: 100px;
+#categoriadeprojetos {
+  padding-bottom: 100px
 }

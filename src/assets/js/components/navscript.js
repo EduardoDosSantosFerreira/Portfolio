@@ -5,7 +5,9 @@ function adicionarNavbarAoDOM() {
     // Define o conteúdo HTML da div com suporte para ícones
     div.innerHTML = `
 <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
-    <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
+    <a href="../../../index.html">
+        <img src="../assets/img/profile_icons/crow03.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
