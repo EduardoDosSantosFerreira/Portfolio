@@ -12,38 +12,89 @@
         body {
             margin: 0;
             padding: 0;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
+            overflow-x: hidden;
         }
 
-        .container {
+        .video-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #main-video {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .button-container {
+            margin-top: 30px;
             text-align: center;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        .comic-button {
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            background-color: #000;
+            border: 2px solid #808080;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #312b2b;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        button {
-            margin-top: 50px;
+        .comic-button:hover {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+            box-shadow: 5px 5px 0px #000;
+            transform: scale(1.1);
         }
 
-        #crow {
-            width: 300px;
+        .comic-button:active {
+            background-color: #808080;
+            box-shadow: none;
+            transform: translateY(4px);
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                padding: 10px;
+            }
+            
+            .comic-button {
+                font-size: 20px;
+                padding: 12px 24px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <img id="crow" src="./src/assets/img/profile_icons/crow03.png" alt="Placeholder Image">
-        <a href="./src/pages/home.html"><button class="comic-button">Seja Bem-Vindo!</button></a>
+    <div class="video-container">
+        <video id="main-video" autoplay muted loop playsinline>
+            <source src="./src/assets/img/gifs/Apresentação Básica Simples Manchas Pastel.mp4" type="video/mp4">
+        </video>
     </div>
+
+    <div class="button-container">
+        <a href="./src/pages/home.html">
+            <button class="comic-button">Seja Bem-Vindo!</button>
+        </a>
+    </div>
+
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
