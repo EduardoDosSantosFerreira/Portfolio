@@ -34,6 +34,11 @@
     color: #b40000;
 }
 
+#icon {
+    width: 150px;
+    margin-left: 15px
+  }
+
 .dropdown-menu {
     font-size: 24px; /* Aumentou o tamanho da fonte do dropdown */
     width: 200px; /* Aumentou o tamanho da janela do dropdown */

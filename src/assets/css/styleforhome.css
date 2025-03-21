@@ -54,11 +54,6 @@ footer {
   color: #fff
 }
 
-#icon {
-  width: 90px;
-  margin-left: 15px
-}
-
 #sobre {
   font-size: 20px
 }
@@ -256,4 +251,19 @@ footer {
 
 #title {
   font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.skill-icon {
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* Aumenta o tamanho para 110% */
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 10px;
 }
