@@ -99,18 +99,6 @@
                     </div>
                 </a>
             </div>
-
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://eduardodossantosferreira.github.io/destino-del-mes/" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/sites/delmes.png" alt="Página inicial do Destiny Monterrey - Site de reservas de viagens" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Destiny Monterrey</h3>
-                        <p>Site de reserva de Viagens e Hoteis</p>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 
@@ -198,6 +186,10 @@
         color: inherit;
     }
 
+    .projeto-link:focus, .projeto-link:hover {
+        text-decoration: none;
+    }
+
     .img-container {
         position: relative;
         overflow: hidden;
@@ -238,12 +230,14 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
     @media (max-width: 768px) {
         .grid-container {
             grid-template-columns: 1fr;
         }
     }
 </style>
+
 
 
     <!-- Scripts -->
