@@ -73,29 +73,32 @@
             box-shadow: none;
             transform: translateY(4px);
         }
-
     </style>
 </head>
 
 <body>
-    
+
+    <!-- Class Video -->
     <div class="container" id="video">
-        <video id="main-video" autoplay muted loop playsinline>
+        <video id="main-video" autoplay muted loop playsinline data-aos="fade-top">
             <source src="./src/assets/img/gifs//CrowScreen.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="button-container">
+    <!-- Class Button -->
+    <div class="button-container" data-aos="fade-down">
         <a href="./src/pages/home.html">
             <button class="comic-button">Bem-Vindo!</button>
         </a>
     </div>
 
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/aos.js"></script>
+    <!-- Scripts -->
+    <script src="./src/assets/js/main.js"></script>
+    <script src="./src/assets/js/utils/aos.js"></script>
+    <script src="./src/assets/js/utils/popper.min.js"></script>
+    <script src="./src/assets/js/utils/bootstrap.min.js"></script>
+    <script src="./src/assets/js/utils/jquery-3.5.1.slim.min.js"></script>
+
     <script>
         AOS.init({
             duration: 2000,
