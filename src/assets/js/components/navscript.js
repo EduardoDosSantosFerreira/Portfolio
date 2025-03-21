@@ -21,16 +21,6 @@ function adicionarNavbarAoDOM() {
                 <a class="nav-link" href="../pages/home.html#about"><i class="fas fa-user"></i> Sobre Mim</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="projetosDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-folder"></i> Projetos
-                </a>
-                <div class="dropdown-menu" aria-labelledby="projetosDropdown">
-<a class="dropdown-item" href="../pages/softwares.html"><i class="fab fa-windows"></i> Softwares</a>
-                    <a class="dropdown-item" href="../pages/sites.html"><i class="fas fa-globe"></i> Sites</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="contatoDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-envelope"></i> Contato
