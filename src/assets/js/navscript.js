@@ -24,7 +24,7 @@ function adicionarNavbarAoDOM() {
                     <i class="fas fa-folder"></i> Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="projetosDropdown">
-<a class="dropdown-item" href="../pages/software.html"><i class="fab fa-windows"></i> Softwares</a>
+<a class="dropdown-item" href="../pages/softwares.html"><i class="fab fa-windows"></i> Softwares</a>
                     <a class="dropdown-item" href="../pages/sites.html"><i class="fas fa-globe"></i> Sites</a>
                 </div>
             </li>
