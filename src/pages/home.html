@@ -32,16 +32,25 @@
     <!-- Seção sobre mim -->
     <div class="container-fluid" style="background-color: black;">
         <div id="about" class="container mt-5">
-            <h1 data-aos="fade-right">Sobre</h1> <!-- Título da seção -->
-            <p id="sobre" data-aos="fade-top"> <!-- Parágrafo sobre mim -->
-                Olá, meu nome é Eduardo dos Santos Ferreira e sou desenvolvedor.
-                Sou natural de Itanhaém, uma cidade localizada no litoral paulista.
-                Sou técnico em desenvolvimento de sistemas pela escola técnica estadual de Itanhaém.
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 data-aos="fade-right">Sobre</h1> <!-- Título da seção -->
+                    <p id="sobre" data-aos="fade-top"> <!-- Parágrafo sobre mim -->
+                        Olá, meu nome é Eduardo dos Santos Ferreira e sou desenvolvedor.
+                        Sou natural de Itanhaém, uma cidade localizada no litoral paulista.
+                        Sou técnico em desenvolvimento de sistemas pela escola técnica estadual de Itanhaém.
 
-                Trabalho como desenvolvedor e programador para pequenas e médias empresas da região.
-            </p>
-            <div id="btn-cv" class="mt-4 text-center"> <!-- Botão para pré-visualizar currículo -->
-                <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+                        Trabalho como desenvolvedor e programador para pequenas e médias empresas da região.
+                    </p>
+                    <div id="btn-cv" class="mt-4"> <!-- Botão para pré-visualizar currículo -->
+                        <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-image-container" data-aos="fade-down" style="text-align: center;">
+                        <img src="../assets/img/gifs/edu.gif" alt="Foto de Perfil" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+                    </div>
+                </div>
             </div>
             <iframe id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf"></iframe>
             <!-- Iframe para pré-visualização do currículo -->
