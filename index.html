@@ -5,33 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" sizes="50x50" href="./src/assets/img/profile_icons/crowico.png">
-    <link rel="stylesheet" href="./src/assets/css/styleforhome.css">
     <link rel="stylesheet" href="./src/assets/css/aos.css">
+    <link rel="stylesheet" href="./src/assets/css/bootstrap.min.css">
     <title>Seja Bem-Vindo</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow-x: hidden;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e3e3e3e3;
         }
 
-        .video-container {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1500px;
+            padding: 0 15px;
         }
 
         #main-video {
             width: 100%;
             height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
         }
 
         .button-container {
@@ -69,21 +74,12 @@
             transform: translateY(4px);
         }
 
-        @media (max-width: 768px) {
-            .video-container {
-                padding: 10px;
-            }
-            
-            .comic-button {
-                font-size: 20px;
-                padding: 12px 24px;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <div class="video-container">
+    
+    <div class="container" id="video">
         <video id="main-video" autoplay muted loop playsinline>
             <source src="./src/assets/img/gifs//CrowScreen.mp4" type="video/mp4">
         </video>
@@ -91,7 +87,7 @@
 
     <div class="button-container">
         <a href="./src/pages/home.html">
-            <button class="comic-button">Seja Bem-Vindo!</button>
+            <button class="comic-button">Bem-Vindo!</button>
         </a>
     </div>
 
