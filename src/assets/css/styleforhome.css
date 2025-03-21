@@ -33,7 +33,6 @@ footer {
 #about {
   background-color: #000;
   color: #fff;
-  text-align: justify;
   margin-bottom: 10px;
   padding-top: 30px;
   text-decoration: none
@@ -173,6 +172,88 @@ footer {
   margin-bottom: 100px
 }
 
-#categoriadeprojetos {
-  padding-bottom: 100px
+
+.projeto-grid {
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.projeto-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 350px;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+}
+
+.projeto-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projeto-link:focus,
+.projeto-link:hover {
+  text-decoration: none;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover .img-container img {
+  transform: scale(1.1);
+}
+
+.projeto-info {
+  padding: 1.5rem;
+}
+
+.projeto-info h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.projeto-info p {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
 }

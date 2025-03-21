@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio profissional de Eduardo S Ferreira - Desenvolvedor Web e Programador. Conheça meus projetos e habilidades.">
-    <meta name="keywords" content="desenvolvedor, programador, portfolio, web developer, Eduardo S Ferreira, sites, software">
+    <meta name="description"
+        content="Portfólio profissional de Eduardo S Ferreira - Desenvolvedor Web e Programador. Conheça meus projetos e habilidades.">
+    <meta name="keywords"
+        content="desenvolvedor, programador, portfolio, web developer, Eduardo S Ferreira, sites, software">
     <meta name="author" content="Eduardo dos Santos Ferreira">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Eduardo S Ferreira - Desenvolvedor Web">
-    <meta property="og:description" content="Portfólio profissional com projetos e trabalhos em desenvolvimento web e software">
+    <meta property="og:description"
+        content="Portfólio profissional com projetos e trabalhos em desenvolvimento web e software">
     <meta property="og:image" content="../assets/img/profile_icons/crowico.png">
     <meta property="og:url" content="https://eduardodossantosferreira.github.io/portfolio/">
     <meta name="theme-color" content="#000000">
@@ -27,217 +30,193 @@
 
     <!-- Seção de introdução -->
     <div class="container-fluid text-center py-5" style="background-color: #f8f9fa;">
-        <img src="../assets/img/profile_icons/crowtola.gif" width="120" alt="Logo animado do portfólio - Corvo em movimento">
-        <h1 class="display-4" data-aos="fade-down">Seja Bem-vindo!</h1>
-        <p id="sobre" data-aos="fade-up" style="font-size: 1.5rem;">
+        <img src="../assets/img/profile_icons/crowtola.gif" width="120"
+            alt="Logo animado do portfólio - Corvo em movimento">
+        <h1 id="title" class="display-4" data-aos="fade-down">Seja Bem-vindo!</h1>
+        <p id="sobre" data-aos="fade-up">
             Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua
             visita!
         </p>
     </div>
 
     <!-- Seção sobre mim -->
-    <div class="container-fluid" style="background-color: black;">
-        <div id="about" class="container mt-5">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 data-aos="fade-right">Sobre</h1>
-                    <p id="sobre" data-aos="fade-top">
-                        Olá, meu nome é Eduardo dos Santos Ferreira e sou desenvolvedor.
-                        Sou natural de Itanhaém, uma cidade localizada no litoral paulista.
-                        Sou técnico em desenvolvimento de sistemas pela escola técnica estadual de Itanhaém.
+    <div class="container-fluid text-white py-5" style="background-color: black;">
+        <div id="about" class="container">
+            <div class="row align-items-center">
+                <!-- Imagem de perfil -->
+                <div class="col-md-4 text-center" data-aos="fade-down">
+                    <img src="../assets/img/gifs/edu.gif"
+                        alt="Foto de perfil do desenvolvedor Eduardo dos Santos Ferreira"
+                        class="img-fluid rounded-circle border border-light shadow"
+                        style="width: 300px; height: 300px; object-fit: cover;">
+                </div>
 
+                <!-- Descrição sobre o desenvolvedor e informações adicionais -->
+                <div class="col-md-8" data-aos="fade-right">
+                    <h1 id="title" class="fw-bold">Sobre</h1>
+                    <p>
+                        Olá, meu nome é <strong>Eduardo dos Santos Ferreira</strong> e sou desenvolvedor.<br>
+                        Sou natural de Itanhaém, uma cidade localizada no litoral paulista.<br>
+                        Sou técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual de Itanhaém.<br>
                         Trabalho como desenvolvedor e programador para pequenas e médias empresas da região.
                     </p>
-                    <div id="btn-cv" class="mt-4">
-                        <button class="comic-button" id="preview-button">Pré-visualizar Currículo</button>
+
+                    <!-- Cursos e certificações lado a lado -->
+                    <div class="row mt-4">
+                        <!-- Cursos -->
+                        <div class="col-md-6" data-aos="fade-up">
+                            <h2 class="h5">Cursos</h2>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success"></i> Técnico em Desenvolvimento de
+                                    Sistemas - ETEC Itanhaém</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Desenvolvimento Web - Udemy</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Introdução ao Cloud Computing - edX
+                                </li>
+                                <li><i class="fas fa-check-circle text-success"></i> JavaScript Completo - Alura</li>
+                            </ul>
+                        </div>
+
+                        <!-- Certificações -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="h5">Certificações</h2>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-certificate text-warning"></i> Inglês - Intermediário</li>
+                                <li><i class="fas fa-certificate text-warning"></i> Python - Profissional</li>
+                                <li><i class="fas fa-certificate text-warning"></i> JavaScript -
+                                    FreeCodeCamp</li>
+                                <li><i class="fas fa-certificate text-warning"></i> Desenvolvimento Web
+                                    - Udemy</li>
+                                <li><i class="fas fa-certificate text-warning"></i> Cloud Fundamentals - Microsoft Learn</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="profile-image-container" data-aos="fade-down" style="text-align: center;">
-                        <img src="../assets/img/gifs/edu.gif" alt="Foto de perfil do desenvolvedor Eduardo dos Santos Ferreira" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+
+                    <!-- Botão para visualizar o currículo -->
+                    <div class="text-center mt-4">
+                        <button class="comic-button" id="preview-button">Pré-visualizar
+                            Currículo</button>
                     </div>
                 </div>
             </div>
-            <iframe id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf" title="Visualização do currículo em PDF"></iframe>
+
+            <!-- Visualização do currículo -->
+            <div class="text-center mt-4">
+                <iframe id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf"
+                    title="Visualização do currículo em PDF" class="w-100"
+                     border: none;"></iframe>
+            </div>
         </div>
-        <br>
     </div>
+    <div class="espaco" style="padding-bottom: 35px;"></div>
 
     <!-- Seção de categorias de projetos -->
     <div id="categoria" class="container" style="align-items: center; text-align: center;" data-aos="fade-down">
-        <h1 id="categoriadeprojetos">Categoria de Projetos</h1>
+        <h1 id="title">Categoria de Projetos</h1>
+        <div class="espaco" style="padding-bottom: 55px;"></div>
+
         <div class="row">
             <div class="col-lg" data-aos="fade-top">
                 <a href="#" class="categoria-link" data-categoria="software">
-                    <img src="https://img.icons8.com/color/100/windows-11.png" id="icones" alt="Ícone do Windows representando a categoria de Softwares" title="Software" />
+                    <img src="https://img.icons8.com/color/100/windows-11.png" id="icones"
+                        alt="Ícone do Windows representando a categoria de Softwares" title="Software" />
                 </a>
                 <h2 class="fw-normal">Softwares</h2>
             </div>
             <div class="col-lg" data-aos="fade-top">
                 <a href="#" class="categoria-link" data-categoria="sites">
-                    <img src="../assets/../assets/img/profile_icons/crow03.png" id="icones" alt="Ícone de corvo representando a categoria de Web-Sites" title="Web-Sites">
+                    <img src="../assets/../assets/img/profile_icons/crow03.png" id="icones"
+                        alt="Ícone de corvo representando a categoria de Web-Sites" title="Web-Sites">
                 </a>
                 <h2 class="fw-normal">Sites</h2>
             </div>
         </div>
     </div>
 
-<!-- Seção de projetos -->
-<div id="projetos">
-    <!-- Projetos de Software -->
-    <div id="projetos-software" class="projeto-grid" style="display: none;">
-        <h1 class="text-center mb-5">Projetos de Software</h1>
-        <div class="grid-container" data-aos="fade-down">
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://cleancrow.vercel.app/" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/apps/cleancrow.png" alt="Interface do software CleanCrow - Ferramenta de otimização para Windows" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>CleanCrow</h3>
-                        <p>O software para limpeza, otimização e atualização do sistema operacional Windows.</p>
-                    </div>
-                </a>
+    <!-- Seção de projetos -->
+    <div id="projetos">
+        <!-- Projetos de Software -->
+        <div id="projetos-software" class="projeto-grid" style="display: none;">
+            <h1 id="title" class="text-center mb-5">Projetos de Software</h1>
+            <div class="grid-container" data-aos="fade-down">
+                <div class="projeto-card" data-aos="fade-up">
+                    <a href="https://cleancrow.vercel.app/" target="_blank" class="projeto-link">
+                        <div class="img-container">
+                            <img src="../assets/img/apps/cleancrow.png"
+                                alt="Interface do software CleanCrow - Ferramenta de otimização para Windows"
+                                loading="lazy" />
+                        </div>
+                        <div class="projeto-info">
+                            <h3>CleanCrow</h3>
+                            <p>O software para limpeza, otimização e atualização do sistema operacional Windows.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projetos de Sites -->
+        <div id="projetos-sites" class="projeto-grid" style="display: none;">
+            <h1 id="title" class="text-center mb-5">Projetos de Sites</h1>
+            <div class="grid-container" data-aos="fade-down">
+                <div class="projeto-card" data-aos="fade-up">
+                    <a href="https://ajudacidadao.com.br/" target="_blank" class="projeto-link">
+                        <div class="img-container">
+                            <img src="../assets/img/sites/ajuda.png"
+                                alt="Página inicial do site Ajuda Cidadão - Serviços financeiros" loading="lazy" />
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Ajuda Cidadão</h3>
+                            <p>Site Oficial da financeira Ajuda Cidadão.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto-card" data-aos="fade-up">
+                    <a href="https://eduardodossantosferreira.github.io/project-etec/src/pages/hme.html" target="_blank"
+                        class="projeto-link">
+                        <div class="img-container">
+                            <img src="../assets/img/sites/etec.png"
+                                alt="Interface do site alternativo da ETEC Itanhaém - Portal educacional"
+                                loading="lazy" />
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Etec de Itanhaém</h3>
+                            <p>Site alternativo Escola Técnica Estadual de Itanhaém.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto-card" data-aos="fade-up">
+                    <a href="https://eduardodossantosferreira.github.io/destino-del-mes/" target="_blank"
+                        class="projeto-link">
+                        <div class="img-container">
+                            <img src="../assets/img/sites/delmes.png"
+                                alt="Página inicial do Destiny Monterrey - Site de reservas de viagens"
+                                loading="lazy" />
+                        </div>
+                        <div class="projeto-info">
+                            <h3>Destiny Monterrey</h3>
+                            <p>Site de reserva de Viagens e Hoteis</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto-card" data-aos="fade-up">
+                    <a href="https://eduardodossantosferreira.github.io/TaskForm/" target="_blank" class="projeto-link">
+                        <div class="img-container">
+                            <img src="../assets/img/sites/taskform.png"
+                                alt="Interface do TaskForm - Plataforma de produtividade e gestão de tarefas"
+                                loading="lazy" />
+                        </div>
+                        <div class="projeto-info">
+                            <h3>TaskForm</h3>
+                            <p>TaskForm hub de produtividade.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Projetos de Sites -->
-    <div id="projetos-sites" class="projeto-grid" style="display: none;">
-        <h1 class="text-center mb-5">Projetos de Sites</h1>
-        <div class="grid-container" data-aos="fade-down">
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://ajudacidadao.com.br/" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/sites/ajuda.png" alt="Página inicial do site Ajuda Cidadão - Serviços financeiros" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Ajuda Cidadão</h3>
-                        <p>Site Oficial da financeira Ajuda Cidadão.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://eduardodossantosferreira.github.io/project-etec/src/pages/hme.html" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/sites/etec.png" alt="Interface do site alternativo da ETEC Itanhaém - Portal educacional" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Etec de Itanhaém</h3>
-                        <p>Site alternativo Escola Técnica Estadual de Itanhaém.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://eduardodossantosferreira.github.io/destino-del-mes/" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/sites/delmes.png" alt="Página inicial do Destiny Monterrey - Site de reservas de viagens" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Destiny Monterrey</h3>
-                        <p>Site de reserva de Viagens e Hoteis</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="projeto-card" data-aos="fade-up">
-                <a href="https://eduardodossantosferreira.github.io/TaskForm/" target="_blank" class="projeto-link">
-                    <div class="img-container">
-                        <img src="../assets/img/sites/taskform.png" alt="Interface do TaskForm - Plataforma de produtividade e gestão de tarefas" loading="lazy" />
-                    </div>
-                    <div class="projeto-info">
-                        <h3>TaskForm</h3>
-                        <p>TaskForm hub de produtividade.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .projeto-grid {
-        padding: 2rem;
-    }
-    
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        padding: 1rem;
-    }
-
-    .projeto-card {
-        background: #1a1a1a;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        min-height: 350px;
-    }
-
-    .projeto-card:hover {
-        transform: translateY(-10px);
-    }
-
-    .projeto-link {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .projeto-link:focus, .projeto-link:hover {
-        text-decoration: none;
-    }
-
-    .img-container {
-        position: relative;
-        overflow: hidden;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    }
-
-    .img-container img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .projeto-card:hover .img-container img {
-        transform: scale(1.1);
-    }
-
-    .projeto-info {
-        padding: 1.5rem;
-    }
-
-    .projeto-info h3 {
-        color: #fff;
-        margin-bottom: 0.5rem;
-    }
-
-    .projeto-info p {
-        color: #888;
-        font-size: 0.9rem;
-        margin: 0;
-    }
-
-    @media (max-width: 1024px) {
-        .grid-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .grid-container {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
 
 
     <!-- Scripts -->
