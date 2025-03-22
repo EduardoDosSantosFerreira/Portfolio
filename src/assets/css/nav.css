@@ -37,24 +37,48 @@
 #icon {
     width: 150px;
     margin-left: 15px;
+    transition: all 0.3s ease-in-out; /* Suaviza a transição de tamanho */
 }
 
-/* Para telas menores que 768px (dispositivos móveis) */
+/* Tablets e dispositivos médios (até 1024px) */
+@media (max-width: 1024px) {
+    #icon {
+        width: 130px;
+        margin-left: 12px;
+    }
+}
+
+/* Dispositivos móveis padrão (até 768px) */
 @media (max-width: 768px) {
     #icon {
-        width: 120px; /* Ajuste o tamanho para telas menores */
-        margin-left: 10px; /* Menor espaçamento */
+        width: 110px;
+        margin-left: 10px;
     }
 }
 
-/* Para telas menores que 480px (telas bem pequenas, como smartphones) */
-@media (max-width: 480px) {
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
     #icon {
-        width: 100px; /* Ajuste para uma largura ainda menor */
-        margin-left: 5px; /* Reduza o espaçamento */
+        width: 90px;
+        margin-left: 5px;
     }
 }
 
+/* Telas muito pequenas (até 400px) */
+@media (max-width: 400px) {
+    #icon {
+        width: 75px;
+        margin-left: 3px;
+    }
+}
+
+/* Ajuste especial para telas muito largas (>1440px), como monitores grandes */
+@media (min-width: 1440px) {
+    #icon {
+        width: 180px;
+        margin-left: 20px;
+    }
+}
 
 .dropdown-menu {
     font-size: 24px; /* Aumentou o tamanho da fonte do dropdown */
