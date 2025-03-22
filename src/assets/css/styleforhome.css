@@ -119,11 +119,13 @@ footer {
 }
 
 #icones {
-  transition: transform 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease;
+  /* Transição suave */
 }
 
 #icones:hover {
-  transform: scale(1.1); /* Aumenta o tamanho para 110% */
+  transform: scale(1.1);
+  /* Aumenta o tamanho para 110% */
 }
 
 
@@ -263,17 +265,113 @@ footer {
 }
 
 .skill-icon {
-  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave */
 }
 
 .skill-icon:hover {
-  transform: scale(1.1); /* Aumenta o tamanho para 110% */
+  transform: scale(1.1);
+  /* Aumenta o tamanho para 110% */
 }
-
 
 .skill-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 10px;
 }
+
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+/* Remove o sublinhado e o outline ao passar o mouse */
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* Transição suave do cabeçalho do acordeão */
+.card-header {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-header:hover {
+  background-color: #f00;
+  /* Altera a cor de fundo do cabeçalho ao passar o mouse */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Aumenta o tamanho do card para 105% */
+}
+
+/* Animação de aumento no acordeão ao passar o mouse */
+.card {
+  transition: transform 0.3s ease;
+  /* Adiciona uma transição suave */
+}
+
+    
+    .accordion-button {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .accordion-button:hover {
+            background-color: #f00;
+            color: #fff;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .accordion-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .accordion-card-header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .accordion-card-header .btn-link {
+            color: #fff;
+        }
+
+        .accordion-card-header .btn-link:hover {
+            color: #f00;
+        }
+
+        .accordion .card {
+            margin-bottom: 10px;
+        }
+
+        .accordion .card-header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .accordion .card-header button {
+            color: #fff;
+        }
+
+        .accordion .card-header button:focus {
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .accordion .card-body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
