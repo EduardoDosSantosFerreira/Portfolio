@@ -36,8 +36,25 @@
 
 #icon {
     width: 150px;
-    margin-left: 15px
-  }
+    margin-left: 15px;
+}
+
+/* Para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+    #icon {
+        width: 120px; /* Ajuste o tamanho para telas menores */
+        margin-left: 10px; /* Menor espaçamento */
+    }
+}
+
+/* Para telas menores que 480px (telas bem pequenas, como smartphones) */
+@media (max-width: 480px) {
+    #icon {
+        width: 100px; /* Ajuste para uma largura ainda menor */
+        margin-left: 5px; /* Reduza o espaçamento */
+    }
+}
+
 
 .dropdown-menu {
     font-size: 24px; /* Aumentou o tamanho da fonte do dropdown */
