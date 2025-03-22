@@ -115,8 +115,17 @@ footer {
 }
 
 #icones {
-  width: 140px
+  width: 190px
 }
+
+#icones {
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+#icones:hover {
+  transform: scale(1.1); /* Aumenta o tamanho para 110% */
+}
+
 
 .main-container {
   max-width: 120rem;
@@ -260,6 +269,7 @@ footer {
 .skill-icon:hover {
   transform: scale(1.1); /* Aumenta o tamanho para 110% */
 }
+
 
 .skill-icon {
     width: 80px;
