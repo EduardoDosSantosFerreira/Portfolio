@@ -54,8 +54,37 @@ footer {
   color: #fff
 }
 
-#sobre {
+#int {
   font-size: 20px
+}
+
+#sobre {
+  font-size: 23px;
+}
+
+@media (max-width: 480px) {
+  #sobre {
+      font-size: 18px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #sobre {
+      font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #sobre {
+      font-size: 23px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #sobre {
+      font-size: 21px;
+      text-align: justify;
+  }
 }
 
 .comic-button {

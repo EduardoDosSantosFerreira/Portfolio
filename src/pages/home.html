@@ -26,14 +26,15 @@
 </head>
 
 <body>
-    <div class="espaco" style="padding-bottom: 35px;"></div>
+
+    <div class="space" id="space" style="margin-bottom: 90px;"></div>
 
     <!-- Seção de introdução -->
     <div class="container-fluid text-center py-5" style="background-color: #f8f9fa;">
         <img src="../assets/img/profile_icons/crowtola.gif" width="120"
             alt="Logo animado do portfólio - Corvo em movimento">
         <h1 id="title" class="display-4" data-aos="fade-down">Seja Bem-vindo!</h1>
-        <p id="sobre" data-aos="fade-up">
+        <p id="int" data-aos="fade-up">
             Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua
             visita!
         </p>
@@ -54,13 +55,12 @@
                 <!-- Descrição sobre o desenvolvedor e informações adicionais -->
                 <div class="col-md-8" data-aos="fade-right">
                     <h1 id="title" class="fw-bold">Sobre</h1>
-                    <h4>
-                        Olá, meu nome é <strong>Eduardo dos Santos Ferreira</strong> e sou desenvolvedor.<br>
+                    <p id="sobre">
+                        Olá, meu nome é <strong>Eduardo dos Santos Ferreira</strong> e sou desenvolvedor.
                         Sou natural de Itanhaém, uma cidade localizada no litoral paulista.<br>
-                        Sou técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual de Itanhaém.<br>
+                        Sou técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual de Itanhaém.
                         Trabalho como desenvolvedor e programador para pequenas e médias empresas da região.
-                    </h4>
-
+                    </p>
                     <!-- Cursos e certificações lado a lado -->
                     <div class="row mt-4">
                         <!-- Cursos -->
@@ -410,41 +410,41 @@
                     <button class="btn btn-warning btn-block font-weight-bold">Contratar</button>
                 </div>
             </div>
-    
-        <!-- Card 2: Desenvolvimento Web -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
-            <div class="card-web p-4 shadow h-100 mx-auto">
-                <i class="fas fa-laptop-code fa-3x mb-3 text-info"></i>
-                <h5 class="card-title font-weight-bold">Desenvolvimento Web</h5>
-                <p class="card-text">Desenvolvimento de sites modernos e responsivos.</p>
-                <h4 class="text-info font-weight-bold">R$ 700</h4>
-                <ul class="list-unstyled">
-                    <li>&#8226; Sites responsivos e interativos</li>
-                    <li>&#8226; Integração com APIs e sistemas</li>
-                    <li>&#8226; SEO otimizado performático</li>
-                    <li>&#8226; Análise e teste de performance</li>
-                </ul>
-                <button class="btn btn-info btn-block font-weight-bold">Contratar</button>
+
+            <!-- Card 2: Desenvolvimento Web -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
+                <div class="card-web p-4 shadow h-100 mx-auto">
+                    <i class="fas fa-laptop-code fa-3x mb-3 text-info"></i>
+                    <h5 class="card-title font-weight-bold">Desenvolvimento Web</h5>
+                    <p class="card-text">Desenvolvimento de sites modernos e responsivos.</p>
+                    <h4 class="text-info font-weight-bold">R$ 700</h4>
+                    <ul class="list-unstyled">
+                        <li>&#8226; Sites responsivos e interativos</li>
+                        <li>&#8226; Integração com APIs e sistemas</li>
+                        <li>&#8226; SEO otimizado performático</li>
+                        <li>&#8226; Análise e teste de performance</li>
+                    </ul>
+                    <button class="btn btn-info btn-block font-weight-bold">Contratar</button>
+                </div>
             </div>
-        </div>
-    
-        <!-- Card 3: E-commerce -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
-            <div class="card-ecommerce p-4 shadow h-100 mx-auto">
-                <i class="fas fa-store fa-3x mb-3 text-success"></i>
-                <h5 class="card-title font-weight-bold">E-commerce</h5>
-                <p class="card-text">Criação de lojas virtuais completas e seguras.</p>
-                <h4 class="text-success font-weight-bold">R$ 1200</h4>
-                <ul class="list-unstyled">
-                    <li>&#8226; Integração de pagamento</li>
-                    <li>&#8226; Design personalizado e interativo</li>
-                    <li>&#8226; Carrinho de compras funcional</li>
-                    <li>&#8226; Gerenciamento de estoque</li>
-                </ul>
-                <button class="btn btn-success btn-block font-weight-bold">Contratar</button>
+
+            <!-- Card 3: E-commerce -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
+                <div class="card-ecommerce p-4 shadow h-100 mx-auto">
+                    <i class="fas fa-store fa-3x mb-3 text-success"></i>
+                    <h5 class="card-title font-weight-bold">E-commerce</h5>
+                    <p class="card-text">Criação de lojas virtuais completas e seguras.</p>
+                    <h4 class="text-success font-weight-bold">R$ 1200</h4>
+                    <ul class="list-unstyled">
+                        <li>&#8226; Integração de pagamento</li>
+                        <li>&#8226; Design personalizado e interativo</li>
+                        <li>&#8226; Carrinho de compras funcional</li>
+                        <li>&#8226; Gerenciamento de estoque</li>
+                    </ul>
+                    <button class="btn btn-success btn-block font-weight-bold">Contratar</button>
+                </div>
             </div>
-        </div>
-    
+
             <!-- Card 4: SEO -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
                 <div class="card-seo p-4 shadow h-100 mx-auto">
@@ -461,7 +461,7 @@
                     <button class="btn btn-danger btn-block font-weight-bold">Contratar</button>
                 </div>
             </div>
-    
+
             <!-- Card 5: Marketing Digital -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
                 <div class="card-marketing p-4 shadow h-100 mx-auto">
@@ -478,7 +478,7 @@
                     <button class="btn btn-primary btn-block font-weight-bold">Contratar</button>
                 </div>
             </div>
-    
+
             <!-- Card 6: Suporte Técnico -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
                 <div class="card-suporte p-4 shadow h-100 mx-auto">
@@ -495,10 +495,10 @@
                     <button class="btn btn-secondary btn-block font-weight-bold">Contratar</button>
                 </div>
             </div>
-    
+
         </div>
     </div>
-    
+
     <style>
         /* Estilos específicos para os cards */
         .card-consultoria,
@@ -511,7 +511,7 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             padding: 20px;
         }
-    
+
         /* Efeito hover */
         .card-consultoria:hover,
         .card-web:hover,
@@ -522,38 +522,38 @@
             transform: translateY(-8px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
         }
-    
+
         /* Cores individuais */
         .card-consultoria {
             background-color: #fff8e5;
             border: 2px solid #ffcc00;
         }
-    
+
         .card-web {
             background-color: #e5f0ff;
             border: 2px solid #17a2b8;
         }
-    
+
         .card-ecommerce {
             background-color: #e5ffe5;
             border: 2px solid #28a745;
         }
-    
+
         .card-seo {
             background-color: #ffe5e5;
             border: 2px solid #dc3545;
         }
-    
+
         .card-marketing {
             background-color: #e6f7ff;
             border: 2px solid #007bff;
         }
-    
+
         .card-suporte {
             background-color: #f7f7f7;
             border: 2px solid #6c757d;
         }
-    
+
         /* Botões */
         .btn {
             border-radius: 25px;
@@ -561,43 +561,43 @@
             padding: 10px 15px;
             transition: background 0.3s ease-in-out;
         }
-    
+
         /* Ajustando botões para corresponder aos cards */
         .card-consultoria .btn {
             background-color: #ffcc00;
             color: white;
         }
-    
+
         .card-web .btn {
             background-color: #17a2b8;
             color: white;
         }
-    
+
         .card-ecommerce .btn {
             background-color: #28a745;
             color: white;
         }
-    
+
         .card-seo .btn {
             background-color: #dc3545;
             color: white;
         }
-    
+
         .card-marketing .btn {
             background-color: #007bff;
             color: white;
         }
-    
+
         .card-suporte .btn {
             background-color: #6c757d;
             color: white;
         }
-    
+
         /* Efeito hover nos botões */
         .btn:hover {
             opacity: 0.8;
         }
-    
+
         /* Responsividade - Centraliza os cards corretamente */
         @media (max-width: 991px) {
             .row {
@@ -605,14 +605,14 @@
                 gap: 20px;
                 /* Adiciona espaçamento horizontal */
             }
-    
+
             .col-12 {
                 display: flex;
                 justify-content: center;
             }
         }
     </style>
-    
+
     <div class="espaco" style="padding-bottom: 35px;"></div>
 
     <!-- Seção de categorias de projetos -->
