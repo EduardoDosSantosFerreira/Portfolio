@@ -613,6 +613,33 @@
         }
     </style>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Seleciona todos os botões de contratação
+        const buttons = document.querySelectorAll(".btn-block");
+    
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                // Obtém o nome do serviço associado ao botão
+                const serviceName = this.closest("div").querySelector(".card-title").textContent.trim();
+                
+                // Número do WhatsApp
+                const phoneNumber = "5513981492795";
+                
+                // Mensagem personalizada
+                const message = `Olá! Estou interessado no plano de serviço ${serviceName}. Poderia me fornecer mais informações?`;
+                
+                // Criando o link do WhatsApp com a mensagem codificada corretamente
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+                // Redireciona para o WhatsApp
+                window.open(whatsappUrl, "_blank");
+            });
+        });
+    });
+    </script>
+    
+
     <div class="espaco" style="padding-bottom: 35px;"></div>
 
     <!-- Seção de categorias de projetos -->
