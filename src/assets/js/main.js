@@ -125,3 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+document.querySelector('.form-contact').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Mensagem enviada com sucesso!');
+});

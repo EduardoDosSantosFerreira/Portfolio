@@ -32,23 +32,34 @@ function adicionarNavbarAoDOM() {
                     <a class="dropdown-item" href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </li>
+                        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="LanguageDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-language"></i> Idioma
+                </a>
+                <div class="dropdown-menu" aria-labelledby="LanguageDropdown">
+                    <a class="dropdown-item" href="#" onclick="translatePage('pt')"><i class="fas fa-flag"></i> Português</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('en')"><i class="fas fa-flag"></i> Inglês</a>
+                    <a class="dropdown-item" href="#" onclick="translatePage('es')"><i class="fas fa-flag"></i> Espanhol</a>
+                </div>
+            </li>
         </ul>
+        <label class="switch">
+          <input checked="true" id="checkbox" type="checkbox" />
+          <span class="slider">
+            <div class="star star_1"></div>
+            <div class="star star_2"></div>
+            <div class="star star_3"></div>
+            <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+              <path
+                transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+                fill="#fff"
+                d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+              ></path>
+            </svg>
+          </span>
+        </label>
     </div>
-    <label class="switch">
-  <input checked="true" id="checkbox" type="checkbox" />
-  <span class="slider">
-    <div class="star star_1"></div>
-    <div class="star star_2"></div>
-    <div class="star star_3"></div>
-    <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-      <path
-        transform="matrix(.77976 0 0 .78395-299.99-418.63)"
-        fill="#fff"
-        d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
-      ></path>
-    </svg>
-  </span>
-</label>
 </nav>
 
     `;
@@ -90,8 +101,26 @@ document.addEventListener('DOMContentLoaded', adicionarNavbarAoDOM);
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("checkbox");
-    
+
+    // Verifica se o usuário tem uma preferência salva no localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        checkbox.checked = false;  // Modo escuro: checkbox desmarcado
+    } else {
+        document.body.classList.remove("dark-mode");
+        checkbox.checked = true;  // Modo claro: checkbox marcado
+    }
+
     checkbox.addEventListener("click", function () {
+        // Alterna a classe "dark-mode" no body
         document.body.classList.toggle("dark-mode");
+
+        // Salva a preferência do usuário no localStorage
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.removeItem("dark-mode");
+        }
     });
 });
+

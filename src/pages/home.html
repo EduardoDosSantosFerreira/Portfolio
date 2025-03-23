@@ -27,8 +27,6 @@
 
 <body>
 
-    <br>
-    <br>
     <!-- Seção de introdução -->
     <div class="container-fluid text-center py-5">
         <img src="../assets/img/profile_icons/crowtola.gif" width="120"
@@ -689,6 +687,34 @@
         </div>
     </div>
 
+    <section id="contact" class="py-5" style="background-color: #000; color: #fff;">
+        <div class="container text-center">
+            <h2 class="display-4 mb-4 text-danger">Contato</h2>
+            <p>Entre em contato comigo para mais informações, dúvidas ou colaborações.</p>
+    
+            <form action="#" method="post" class="form-contact">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
+            </form>
+            </div>
+
+    <!-- libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="../assets/js/utils/jquery-3.5.1.slim.min.js"></script>
@@ -698,6 +724,10 @@
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/utils/aos.js"></script>
     <script src="../assets/js/components/ftr.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script>
         AOS.init({
             duration: 2000,
