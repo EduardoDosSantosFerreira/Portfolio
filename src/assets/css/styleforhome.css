@@ -9,8 +9,33 @@ body {
   color: #000;
   background-color: #fff;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+/* Modo Escuro */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #1e90ff;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode input, 
+.dark-mode textarea {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
 
 footer {
   background-color: #000;
@@ -64,26 +89,26 @@ footer {
 
 @media (max-width: 480px) {
   #sobre {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   #sobre {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #sobre {
-      font-size: 23px;
+    font-size: 23px;
   }
 }
 
 @media (min-width: 1025px) {
   #sobre {
-      font-size: 21px;
-      text-align: justify;
+    font-size: 21px;
+    text-align: justify;
   }
 }
 
@@ -193,7 +218,7 @@ footer {
   }
 
   #icones {
-    width: 70px
+    width: 170px
   }
 
   .col-lg h2 {
@@ -342,64 +367,189 @@ a:focus {
   /* Adiciona uma transição suave */
 }
 
-    
-    .accordion-button {
-            background-color: #333;
-            color: #fff;
-            border: 1px solid #ccc;
-        }
 
-        .accordion-button:hover {
-            background-color: #f00;
-            color: #fff;
-        }
+.accordion-button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #ccc;
+}
 
-        .accordion-button:focus {
-            box-shadow: none;
-        }
+.accordion-button:hover {
+  background-color: #f00;
+  color: #fff;
+}
 
-        .accordion-body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
+.accordion-button:focus {
+  box-shadow: none;
+}
 
-        .accordion-card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+.accordion-body {
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-        .accordion-card-header {
-            background-color: #333;
-            color: #fff;
-        }
+.accordion-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-        .accordion-card-header .btn-link {
-            color: #fff;
-        }
+.accordion-card-header {
+  background-color: #333;
+  color: #fff;
+}
 
-        .accordion-card-header .btn-link:hover {
-            color: #f00;
-        }
+.accordion-card-header .btn-link {
+  color: #fff;
+}
 
-        .accordion .card {
-            margin-bottom: 10px;
-        }
+.accordion-card-header .btn-link:hover {
+  color: #f00;
+}
 
-        .accordion .card-header {
-            background-color: #333;
-            color: #fff;
-        }
+.accordion .card {
+  margin-bottom: 10px;
+}
 
-        .accordion .card-header button {
-            color: #fff;
-        }
+.accordion .card-header {
+  background-color: #333;
+  color: #fff;
+}
 
-        .accordion .card-header button:focus {
-            color: #fff;
-            box-shadow: none;
-        }
+.accordion .card-header button {
+  color: #fff;
+}
 
-        .accordion .card-body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
+.accordion .card-header button:focus {
+  color: #fff;
+  box-shadow: none;
+}
+
+.accordion .card-body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Estilos específicos para os cards */
+.card-consultoria,
+.card-web,
+.card-ecommerce,
+.card-seo,
+.card-marketing,
+.card-suporte {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  color: #000;
+}
+
+/* Efeito hover */
+.card-consultoria:hover,
+.card-web:hover,
+.card-ecommerce:hover,
+.card-seo:hover,
+.card-marketing:hover,
+.card-suporte:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cores individuais */
+.card-consultoria {
+  background-color: #fff8e5;
+  border: 2px solid #ffcc00;
+}
+
+.card-web {
+  background-color: #e5f0ff;
+  border: 2px solid #17a2b8;
+}
+
+.card-ecommerce {
+  background-color: #e5ffe5;
+  border: 2px solid #28a745;
+}
+
+.card-seo {
+  background-color: #ffe5e5;
+  border: 2px solid #dc3545;
+}
+
+.card-marketing {
+  background-color: #e6f7ff;
+  border: 2px solid #007bff;
+}
+
+.card-suporte {
+  background-color: #f7f7f7;
+  border: 2px solid #6c757d;
+}
+
+/* Botões */
+.btn {
+  border-radius: 25px;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Ajustando botões para corresponder aos cards */
+.card-consultoria .btn {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.card-web .btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.card-ecommerce .btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.card-seo .btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.card-marketing .btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.card-suporte .btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Efeito hover nos botões */
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Responsividade - Centraliza os cards corretamente */
+@media (max-width: 991px) {
+  .row {
+    justify-content: center !important;
+    gap: 20px;
+    /* Adiciona espaçamento horizontal */
+  }
+
+  .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}

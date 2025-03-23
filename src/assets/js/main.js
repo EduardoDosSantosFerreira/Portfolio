@@ -62,3 +62,66 @@ categoriaLinks.forEach(link => {
         });
     });
 });
+
+// Botões de Contratação:
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todos os botões de contratação
+    const buttons = document.querySelectorAll(".btn-block");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Obtém o nome do serviço associado ao botão
+            const serviceName = this.closest("div").querySelector(".card-title").textContent.trim();
+
+            // Número do WhatsApp
+            const phoneNumber = "5513981492795";
+
+            // Mensagem personalizada
+            const message = `Olá! Estou interessado no plano de serviço ${serviceName}. Poderia me fornecer mais informações?`;
+
+            // Criando o link do WhatsApp com a mensagem codificada corretamente
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Redireciona para o WhatsApp
+            window.open(whatsappUrl, "_blank");
+        });
+    });
+});
+
+// Info Tecnologias usadas no modal:
+document.addEventListener("DOMContentLoaded", function () {
+    // Objeto com informações das tecnologias
+    const techInfo = {
+        "JavaScript": "JavaScript é uma linguagem de programação usada para criar interatividade em sites.",
+        "React": "React é uma biblioteca JavaScript para criar interfaces de usuário dinâmicas.",
+        "Vue.js": "Vue.js é um framework JavaScript progressivo para construção de interfaces.",
+        "Angular": "Angular é uma plataforma para desenvolvimento de aplicações web dinâmicas.",
+        "Bootstrap": "Bootstrap é um framework CSS para criar layouts responsivos.",
+        "HTML5": "HTML5 é a linguagem de marcação usada para estruturar páginas da web.",
+        "CSS3": "CSS3 é a linguagem de estilos usada para estilizar páginas web.",
+        "Node.js": "Node.js é um ambiente de execução para JavaScript no servidor.",
+        "PHP": "PHP é uma linguagem de programação usada para desenvolvimento web.",
+        "Python": "Python é uma linguagem de programação versátil, usada em diversos contextos.",
+        "C++": "C++ é uma linguagem poderosa usada em software de alto desempenho.",
+        "C": "C é uma linguagem de programação de baixo nível, usada em sistemas operacionais.",
+        "C#": "C# é uma linguagem usada no desenvolvimento de aplicações .NET.",
+        "MySQL": "MySQL é um sistema de gerenciamento de banco de dados relacional.",
+        "Firebase": "Firebase é uma plataforma de banco de dados e serviços em nuvem do Google."
+    };
+
+    // Seleciona todas as imagens das tecnologias
+    document.querySelectorAll(".skill-icon").forEach(icon => {
+        icon.addEventListener("click", function () {
+            const techName = this.getAttribute("data-tech");
+            const techDesc = techInfo[techName] || "Descrição não disponível.";
+
+            // Atualiza o modal
+            document.getElementById("techModalLabel").textContent = techName;
+            document.getElementById("techIcon").src = this.src;
+            document.getElementById("techDescription").textContent = techDesc;
+
+            // Exibe o modal
+            $('#techModal').modal('show');
+        });
+    });
+});

@@ -6,7 +6,7 @@ function adicionarLoginAoDOM() {
         <div class="container text-center">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-12">
-                    <img src="../assets/img/profile_icons/crow04.png" id="footer-icon" alt="corvo" style="width: 50px;"
+                    <img src="../assets/img/profile_icons/crowico.png" id="footer-icon" alt="corvo" style="width: 50px;"
                         class="footer-logo">
                     <hr class="bg-white">
                 </div>
