@@ -97,6 +97,7 @@
     height: 2.2em;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
   }
   
   /* Hide default HTML checkbox */
@@ -211,5 +212,11 @@
 }
 
 #toggler{
+  background-color: #c70000;
+  border-radius: 15%;
+  margin-right: 30px;
+}
+
+.dark-mode #toggler{
   background-color: white;
 }
