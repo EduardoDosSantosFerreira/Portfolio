@@ -92,25 +92,25 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     // Objeto com informações das tecnologias
     const techInfo = {
-        "JavaScript": "JavaScript é uma linguagem de programação usada para criar interatividade em sites.",
-        "React": "React é uma biblioteca JavaScript para criar interfaces de usuário dinâmicas.",
-        "Vue.js": "Vue.js é um framework JavaScript progressivo para construção de interfaces.",
-        "Angular": "Angular é uma plataforma para desenvolvimento de aplicações web dinâmicas.",
-        "Bootstrap": "Bootstrap é um framework CSS para criar layouts responsivos.",
-        "HTML5": "HTML5 é a linguagem de marcação usada para estruturar páginas da web.",
-        "CSS3": "CSS3 é a linguagem de estilos usada para estilizar páginas web.",
-        "Tailwind CSS": "Tailwind CSS é um framework CSS utilitário para construção rápida de interfaces modernas.",
-        "Sass": "Sass é um pré-processador CSS que adiciona funcionalidades como variáveis e mixins.",
-        "Node.js": "Node.js é um ambiente de execução para JavaScript no servidor.",
-        "PHP": "PHP é uma linguagem de programação usada para desenvolvimento web.",
-        "Python": "Python é uma linguagem de programação versátil, usada em diversos contextos.",
-        "C++": "C++ é uma linguagem poderosa usada em software de alto desempenho.",
-        "C": "C é uma linguagem de programação de baixo nível, usada em sistemas operacionais.",
-        "C#": "C# é uma linguagem usada no desenvolvimento de aplicações .NET.",
-        "MySQL": "MySQL é um sistema de gerenciamento de banco de dados relacional.",
-        "Firebase": "Firebase é uma plataforma de banco de dados e serviços em nuvem do Google.",
-        "MongoDB": "MongoDB é um banco de dados NoSQL orientado a documentos, utilizado para armazenar grandes volumes de dados não estruturados.",
-        "TeX": "TeX é um sistema de preparação de documentos de alta qualidade, amplamente utilizado para a criação de textos científicos e matemáticos."
+        "JavaScript": "JavaScript é uma linguagem de programação essencial para o desenvolvimento web, permitindo criar interatividade e dinamismo em páginas da internet.",
+        "React": "React é uma biblioteca JavaScript de código aberto para a construção de interfaces de usuário reativas e eficientes, baseada em componentes.",
+        "Vue.js": "Vue.js é um framework JavaScript progressivo e acessível, ideal para a construção de interfaces dinâmicas e aplicações de página única (SPA).",
+        "Angular": "Angular é um framework robusto e escalável do Google para o desenvolvimento de aplicações web modernas e dinâmicas.",
+        "Bootstrap": "Bootstrap é um framework CSS popular que facilita a criação de layouts responsivos e estilizados, acelerando o desenvolvimento front-end.",
+        "HTML5": "HTML5 é a versão mais recente da linguagem de marcação utilizada para estruturar e exibir conteúdos na web.",
+        "CSS3": "CSS3 é a tecnologia responsável pelo design e estilização de páginas web, oferecendo recursos avançados como animações e layouts responsivos.",
+        "Tailwind CSS": "Tailwind CSS é um framework CSS baseado em classes utilitárias, permitindo a construção rápida e personalizada de interfaces modernas.",
+        "Sass": "Sass é um pré-processador CSS que adiciona funcionalidades como variáveis, aninhamento e mixins, otimizando a escrita de estilos.",
+        "Node.js": "Node.js é um ambiente de execução para JavaScript no lado do servidor, permitindo a construção de aplicações escaláveis e de alto desempenho.",
+        "PHP": "PHP é uma linguagem de programação amplamente utilizada no desenvolvimento web, especialmente para a criação de sites dinâmicos e integração com bancos de dados.",
+        "Python": "Python é uma linguagem de programação versátil e poderosa, usada em desenvolvimento web, análise de dados, automação, IA e muito mais.",
+        "C++": "C++ é uma linguagem de alto desempenho usada no desenvolvimento de sistemas, jogos, softwares embarcados e aplicações que exigem eficiência.",
+        "C": "C é uma linguagem de programação de baixo nível, altamente eficiente, utilizada em sistemas operacionais, drivers e aplicações embarcadas.",
+        "C#": "C# é uma linguagem moderna e orientada a objetos, amplamente utilizada para o desenvolvimento de aplicações .NET e jogos com Unity.",
+        "MySQL": "MySQL é um dos bancos de dados relacionais mais populares do mundo, conhecido por sua confiabilidade e eficiência na manipulação de dados.",
+        "Firebase": "Firebase é uma plataforma de desenvolvimento do Google que oferece banco de dados em tempo real, autenticação, hospedagem e outras soluções para apps.",
+        "MongoDB": "MongoDB é um banco de dados NoSQL orientado a documentos, ideal para armazenar e gerenciar grandes volumes de dados não estruturados.",
+        "TeX": "TeX é um sistema avançado para composição de textos científicos e matemáticos, amplamente usado na produção de artigos acadêmicos e livros técnicos."
 
     };
 
