@@ -1,16 +1,24 @@
+
+
 # **Eduardo Dos Santos Ferreira**  
 
-👋 Olá! Meu nome é **Eduardo Dos Santos Ferreira**, sou **técnico em desenvolvimento de sistemas** com especialização em **desenvolvimento front-end**. Também possuo experiência em **back-end**, oferecendo suporte e integração entre tecnologias.  
+👋 Olá! Sou **Eduardo Dos Santos Ferreira**, um **técnico em desenvolvimento de sistemas** apaixonado por criar soluções inovadoras com foco em **desenvolvimento front-end**. Com experiência também em **back-end**, meu objetivo é integrar tecnologias de forma eficiente e eficaz.  
 
-💡 Sou apaixonado por tecnologia e estou sempre explorando novas ferramentas, linguagens e frameworks para aprimorar minhas habilidades e criar soluções inovadoras.  
+🔍 Sempre em busca de novos desafios, estou constantemente explorando e aprendendo sobre novas ferramentas, linguagens e frameworks para expandir minhas habilidades e entregar resultados cada vez melhores.  
 
-## 🚀 **Habilidades**  
-✔️ **Front-end:** HTML, CSS, JavaScript, TypeScript, React, Vue.js  
-✔️ **Back-end:** Node.js, Express, APIs REST  
-✔️ **Banco de Dados:** MySQL, MongoDB, Firebase  
-✔️ **Ferramentas & Versionamento:** Git, GitHub, Figma, Vercel  
+## 🚀 **Habilidades Técnicas**  
+**Front-end:**  
+✔️ HTML, CSS, JavaScript, TypeScript  
+✔️ React, Vue.js
+
+**Back-end:**  
+✔️ Node.js, Express, APIs REST
+
+**Banco de Dados:**  
+✔️ MySQL, MongoDB, Firebase
+
+**Ferramentas & Versionamento:**  
+✔️ Git, GitHub, Figma, Vercel  
 
 ## 🌎 **Onde me encontrar?**  
 🔗 [LinkedIn](#) | 🔗 [Portfólio](#) | 📧 **eduardo@email.com**  
-
----
