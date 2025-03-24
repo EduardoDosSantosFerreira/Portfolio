@@ -99,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bootstrap": "Bootstrap é um framework CSS para criar layouts responsivos.",
         "HTML5": "HTML5 é a linguagem de marcação usada para estruturar páginas da web.",
         "CSS3": "CSS3 é a linguagem de estilos usada para estilizar páginas web.",
+        "Tailwind CSS": "Tailwind CSS é um framework CSS utilitário para construção rápida de interfaces modernas.",
+        "Sass": "Sass é um pré-processador CSS que adiciona funcionalidades como variáveis e mixins.",
         "Node.js": "Node.js é um ambiente de execução para JavaScript no servidor.",
         "PHP": "PHP é uma linguagem de programação usada para desenvolvimento web.",
         "Python": "Python é uma linguagem de programação versátil, usada em diversos contextos.",
@@ -127,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Mensagem Contato
 document.querySelector('.form-contact').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Mensagem enviada com sucesso!');

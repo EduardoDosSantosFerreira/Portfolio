@@ -668,3 +668,22 @@ a:focus {
 #contact footer a:hover {
   color: #dc3545;
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Alterado para o lado esquerdo */
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
