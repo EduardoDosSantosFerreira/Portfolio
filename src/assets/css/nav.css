@@ -209,3 +209,7 @@
 .dark-mode .dropdown-menu a:hover {
   background-color: #3a3a3a;
 }
+
+#toggler{
+  background-color: white;
+}

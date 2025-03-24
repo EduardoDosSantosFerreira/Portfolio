@@ -4854,6 +4854,7 @@ input[type="submit"].btn-block {
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5002,7 +5003,7 @@ input[type="submit"].btn-block {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1102px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
