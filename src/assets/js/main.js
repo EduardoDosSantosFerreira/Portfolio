@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "C#": "C# é uma linguagem usada no desenvolvimento de aplicações .NET.",
         "MySQL": "MySQL é um sistema de gerenciamento de banco de dados relacional.",
         "Firebase": "Firebase é uma plataforma de banco de dados e serviços em nuvem do Google.",
-        "MongoDB": "MongoDB é um banco de dados NoSQL orientado a documentos, utilizado para armazenar grandes volumes de dados não estruturados."
+        "MongoDB": "MongoDB é um banco de dados NoSQL orientado a documentos, utilizado para armazenar grandes volumes de dados não estruturados.",
+        "TeX": "TeX é um sistema de preparação de documentos de alta qualidade, amplamente utilizado para a criação de textos científicos e matemáticos."
 
-        
     };
 
     // Seleciona todas as imagens das tecnologias
