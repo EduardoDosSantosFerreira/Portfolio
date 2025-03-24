@@ -1,37 +1,40 @@
-.navbar {
-    background-color: #fff;
-    transition: top 0.3s;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    font-weight: bold;
-    font-size: 30px; /* Aumentou a fonte da navbar */
+#nav {
+  background-color: #fff;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .navbar-nav .nav-item {
-    margin-right: 25px;
+  margin-right: 25px;
 }
 
-.navbar.hidden {
-    top: -10000px;
+#nav.hidden {
+  opacity: 0; /* Desaparece a navbar */
+  transform: translateY(-100%); /* Move a navbar para fora da tela */
 }
 
 .navbar .nav-item {
-    transition: opacity 0.3s;
-    opacity: 1;
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 
-.navbar.hidden .nav-item {
-    opacity: 0;
+#nav.hidden .nav-item {
+  opacity: 0;
 }
 
 .nav-link {
-    color: #000;
+  color: #000;
 }
 
 .nav-link:hover {
-    color: #b40000;
+  color: #b40000;
 }
 
 #icon {
@@ -184,11 +187,11 @@
     opacity: 1;
   }
   
-  /* Modo Escuro para a Navbar */
-.dark-mode .navbar {
-  background-color: #1c1c1c;
-  color: #ffffff;
-}
+  .dark-mode #nav {
+    background-color: #1c1c1c; /* Cor de fundo para o modo escuro */
+    color: #ffffff; /* Cor do texto para o modo escuro */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
 
 .dark-mode .nav-link {
   color: #ffffff;

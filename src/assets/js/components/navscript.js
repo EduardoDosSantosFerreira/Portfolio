@@ -4,7 +4,7 @@ function adicionarNavbarAoDOM() {
     var div = document.createElement('div');
     // Define o conteúdo HTML da div com suporte para ícones
     div.innerHTML = `
-<nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down">
+<nav class="navbar navbar-expand-lg fixed-top" id="nav" data-aos="fade-down">
     <a href="../../../index.html">
         <img src="../assets/img/profile_icons/crowico.png" id="icon" alt="Logomarca EduardoDosSantosFerreira">
     </a>
@@ -123,4 +123,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
