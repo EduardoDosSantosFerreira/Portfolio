@@ -23,7 +23,7 @@ function adicionarLoginAoDOM() {
         </div>
     </footer>
     `;
-    
+
     document.body.appendChild(div);
 }
 

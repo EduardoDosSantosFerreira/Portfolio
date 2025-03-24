@@ -64,12 +64,12 @@ categoriaLinks.forEach(link => {
 });
 
 // Botões de Contratação:
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Seleciona todos os botões de contratação
     const buttons = document.querySelectorAll(".btn-block");
 
     buttons.forEach(button => {
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function() {
             // Obtém o nome do serviço associado ao botão
             const serviceName = this.closest("div").querySelector(".card-title").textContent.trim();
 
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Info Tecnologias usadas no modal:
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Objeto com informações das tecnologias
     const techInfo = {
         "JavaScript": "JavaScript é uma linguagem de programação essencial para o desenvolvimento web, permitindo criar interatividade e dinamismo em páginas da internet.",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Seleciona todas as imagens das tecnologias
     document.querySelectorAll(".skill-icon").forEach(icon => {
-        icon.addEventListener("click", function () {
+        icon.addEventListener("click", function() {
             const techName = this.getAttribute("data-tech");
             const techDesc = techInfo[techName] || "Descrição não disponível.";
 
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Mensagem Contato
-document.querySelector('.form-contact').addEventListener('submit', function (e) {
+document.querySelector('.form-contact').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Mensagem enviada com sucesso!');
 });

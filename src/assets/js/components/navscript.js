@@ -99,19 +99,19 @@ window.addEventListener("scroll", function() {
 document.addEventListener('DOMContentLoaded', adicionarNavbarAoDOM);
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const checkbox = document.getElementById("checkbox");
 
     // Verifica se o usuário tem uma preferência salva no localStorage
     if (localStorage.getItem("dark-mode") === "enabled") {
         document.body.classList.add("dark-mode");
-        checkbox.checked = false;  // Modo escuro: checkbox desmarcado
+        checkbox.checked = false; // Modo escuro: checkbox desmarcado
     } else {
         document.body.classList.remove("dark-mode");
-        checkbox.checked = true;  // Modo claro: checkbox marcado
+        checkbox.checked = true; // Modo claro: checkbox marcado
     }
 
-    checkbox.addEventListener("click", function () {
+    checkbox.addEventListener("click", function() {
         // Alterna a classe "dark-mode" no body
         document.body.classList.toggle("dark-mode");
 

@@ -1,432 +1,432 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 html {
-  scroll-behavior: smooth
+    scroll-behavior: smooth
 }
 
 body {
-  margin-top: 200px;
-  color: #000;
-  background-color: #fff;
-  scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+    margin-top: 200px;
+    color: #000;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Modo Escuro */
 .dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 .dark-mode a {
-  color: #1e90ff;
+    color: #1e90ff;
 }
 
 .dark-mode button {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
 }
 
-.dark-mode input, 
+.dark-mode input,
 .dark-mode textarea {
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
 }
 
 
 footer {
-  background-color: #000;
-  color: #fff
+    background-color: #000;
+    color: #fff
 }
 
 ::-webkit-scrollbar {
-  width: 12px
+    width: 12px
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6a0000;
-  border-radius: 0
+    background: #6a0000;
+    border-radius: 0
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #9c00005c
+    background-color: #9c00005c
 }
 
 #about {
-  background-color: #000;
-  color: #fff;
-  margin-bottom: 10px;
-  padding-top: 30px;
-  text-decoration: none
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    text-decoration: none
 }
 
 .btn-primary {
-  background-color: red;
-  border-color: #000
+    background-color: red;
+    border-color: #000
 }
 
 .btn-primary:hover {
-  color: red;
-  background-color: #000;
-  border-color: red
+    color: red;
+    background-color: #000;
+    border-color: red
 }
 
 #contact {
-  background-color: #000;
-  color: #fff
+    background-color: #000;
+    color: #fff
 }
 
 #int {
-  font-size: 20px
+    font-size: 20px
 }
 
 #sobre {
-  font-size: 23px;
+    font-size: 23px;
 }
 
 @media (max-width: 480px) {
-  #sobre {
-    font-size: 18px;
-  }
+    #sobre {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  #sobre {
-    font-size: 20px;
-  }
+    #sobre {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  #sobre {
-    font-size: 23px;
-  }
+    #sobre {
+        font-size: 23px;
+    }
 }
 
 @media (min-width: 1025px) {
-  #sobre {
-    font-size: 21px;
-    text-align: justify;
-  }
+    #sobre {
+        font-size: 21px;
+        text-align: justify;
+    }
 }
 
 .comic-button {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  color: #fff;
-  background-color: red;
-  border: 2px solid #000;
-  border-radius: 10px;
-  box-shadow: 5px 5px 0 #000;
-  transition: all .3s ease;
-  cursor: pointer;
-  transition: transform .3s
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 #000;
+    transition: all .3s ease;
+    cursor: pointer;
+    transition: transform .3s
 }
 
 .comic-button:hover {
-  background-color: #fff;
-  color: red;
-  border: 2px solid red;
-  box-shadow: 5px 5px 0 red;
-  transform: scale(1.1)
+    background-color: #fff;
+    color: red;
+    border: 2px solid red;
+    box-shadow: 5px 5px 0 red;
+    transform: scale(1.1)
 }
 
 .comic-button:active {
-  background-color: #000;
-  box-shadow: none;
-  transform: translateY(4px)
+    background-color: #000;
+    box-shadow: none;
+    transform: translateY(4px)
 }
 
 #category {
-  padding-bottom: 50px
+    padding-bottom: 50px
 }
 
 #btn-cv {
-  padding-bottom: 30px;
-  text-align: center
+    padding-bottom: 30px;
+    text-align: center
 }
 
 #btn {
-  margin-top: 80px;
-  text-align: center;
-  align-items: center
+    margin-top: 80px;
+    text-align: center;
+    align-items: center
 }
 
 #btnico {
-  text-decoration: none
+    text-decoration: none
 }
 
 #categoria {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  text-decoration: none
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-decoration: none
 }
 
 #icones {
-  width: 190px
+    width: 190px
 }
 
 #icones {
-  transition: transform 0.3s ease;
-  /* Transição suave */
+    transition: transform 0.3s ease;
+    /* Transição suave */
 }
 
 #icones:hover {
-  transform: scale(1.1);
-  /* Aumenta o tamanho para 110% */
+    transform: scale(1.1);
+    /* Aumenta o tamanho para 110% */
 }
 
 .main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 90%
+    max-width: 120rem;
+    margin: auto;
+    width: 90%
 }
 
 #ico-ftr {
-  width: 50px;
-  margin-right: 10px
+    width: 50px;
+    margin-right: 10px
 }
 
 #ico-ftr:hover {
-  transform: scale(1.1);
-  transition: transform .3s ease
+    transform: scale(1.1);
+    transition: transform .3s ease
 }
 
 #resume-preview {
-  display: none;
-  width: 100%;
-  height: 1000px
+    display: none;
+    width: 100%;
+    height: 1000px
 }
 
 @media only screen and (max-width:768px) {
-  #about {
-    text-align: left;
-    margin-bottom: 0
-  }
+    #about {
+        text-align: left;
+        margin-bottom: 0
+    }
 
-  .col-lg {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 15px;
-    margin-bottom: 20px
-  }
+    .col-lg {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+        margin-bottom: 20px
+    }
 
-  #icones {
-    width: 170px
-  }
+    #icones {
+        width: 170px
+    }
 
-  .col-lg h2 {
-    text-align: center
-  }
+    .col-lg h2 {
+        text-align: center
+    }
 }
 
 #intro {
-  margin-top: 100px;
-  margin-bottom: 100px
+    margin-top: 100px;
+    margin-bottom: 100px
 }
 
 
 .projeto-grid {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 1rem;
 }
 
 .projeto-card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  min-height: 350px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 350px;
 }
 
 .projeto-card:hover {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .projeto-link {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .projeto-link:focus,
 .projeto-link:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .img-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-  /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
 }
 
 .img-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .projeto-card:hover .img-container img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .projeto-info {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .projeto-info h3 {
-  color: #fff;
-  margin-bottom: 0.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 .projeto-info p {
-  color: #888;
-  font-size: 0.9rem;
-  margin: 0;
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 @media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 #title {
-  font-size: clamp(2rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
 .skill-icon {
-  transition: transform 0.3s ease;
-  /* Adiciona uma transição suave */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
 }
 
 .skill-icon:hover {
-  transform: scale(1.1);
-  /* Aumenta o tamanho para 110% */
+    transform: scale(1.1);
+    /* Aumenta o tamanho para 110% */
 }
 
 .skill-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 10px;
 }
 
 .accordion-item {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Remove o sublinhado e o outline ao passar o mouse */
 a:hover,
 a:focus {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
 /* Transição suave do cabeçalho do acordeão */
 .card-header {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .card-header:hover {
-  background-color: #f00;
-  /* Altera a cor de fundo do cabeçalho ao passar o mouse */
+    background-color: #f00;
+    /* Altera a cor de fundo do cabeçalho ao passar o mouse */
 }
 
 .card:hover {
-  transform: scale(1.05);
-  /* Aumenta o tamanho do card para 105% */
+    transform: scale(1.05);
+    /* Aumenta o tamanho do card para 105% */
 }
 
 /* Animação de aumento no acordeão ao passar o mouse */
 .card {
-  transition: transform 0.3s ease;
-  /* Adiciona uma transição suave */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
 }
 
 
 .accordion-button {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #ccc;
 }
 
 .accordion-button:hover {
-  background-color: #f00;
-  color: #fff;
+    background-color: #f00;
+    color: #fff;
 }
 
 .accordion-button:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .accordion-body {
-  background-color: #f9f9f9;
-  color: #333;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .accordion-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .accordion-card-header {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 .accordion-card-header .btn-link {
-  color: #fff;
+    color: #fff;
 }
 
 .accordion-card-header .btn-link:hover {
-  color: #f00;
+    color: #f00;
 }
 
 .accordion .card {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .accordion .card-header {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 .accordion .card-header button {
-  color: #fff;
+    color: #fff;
 }
 
 .accordion .card-header button:focus {
-  color: #fff;
-  box-shadow: none;
+    color: #fff;
+    box-shadow: none;
 }
 
 .accordion .card-body {
-  background-color: #f9f9f9;
-  color: #333;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 /* Estilos específicos para os cards */
@@ -436,10 +436,10 @@ a:focus {
 .card-seo,
 .card-marketing,
 .card-suporte {
-  border-radius: 12px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  padding: 20px;
-  color: #000;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    color: #000;
 }
 
 /* Efeito hover */
@@ -449,97 +449,97 @@ a:focus {
 .card-seo:hover,
 .card-marketing:hover,
 .card-suporte:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Cores individuais */
 .card-consultoria {
-  background-color: #fff8e5;
-  border: 2px solid #ffcc00;
+    background-color: #fff8e5;
+    border: 2px solid #ffcc00;
 }
 
 .card-web {
-  background-color: #e5f0ff;
-  border: 2px solid #17a2b8;
+    background-color: #e5f0ff;
+    border: 2px solid #17a2b8;
 }
 
 .card-ecommerce {
-  background-color: #e5ffe5;
-  border: 2px solid #28a745;
+    background-color: #e5ffe5;
+    border: 2px solid #28a745;
 }
 
 .card-seo {
-  background-color: #ffe5e5;
-  border: 2px solid #dc3545;
+    background-color: #ffe5e5;
+    border: 2px solid #dc3545;
 }
 
 .card-marketing {
-  background-color: #e6f7ff;
-  border: 2px solid #007bff;
+    background-color: #e6f7ff;
+    border: 2px solid #007bff;
 }
 
 .card-suporte {
-  background-color: #f7f7f7;
-  border: 2px solid #6c757d;
+    background-color: #f7f7f7;
+    border: 2px solid #6c757d;
 }
 
 /* Botões */
 .btn {
-  border-radius: 25px;
-  font-size: 1rem;
-  padding: 10px 15px;
-  transition: background 0.3s ease-in-out;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Ajustando botões para corresponder aos cards */
 .card-consultoria .btn {
-  background-color: #ffcc00;
-  color: white;
+    background-color: #ffcc00;
+    color: white;
 }
 
 .card-web .btn {
-  background-color: #17a2b8;
-  color: white;
+    background-color: #17a2b8;
+    color: white;
 }
 
 .card-ecommerce .btn {
-  background-color: #28a745;
-  color: white;
+    background-color: #28a745;
+    color: white;
 }
 
 .card-seo .btn {
-  background-color: #dc3545;
-  color: white;
+    background-color: #dc3545;
+    color: white;
 }
 
 .card-marketing .btn {
-  background-color: #007bff;
-  color: white;
+    background-color: #007bff;
+    color: white;
 }
 
 .card-suporte .btn {
-  background-color: #6c757d;
-  color: white;
+    background-color: #6c757d;
+    color: white;
 }
 
 /* Efeito hover nos botões */
 .btn:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 /* Responsividade - Centraliza os cards corretamente */
 @media (max-width: 991px) {
-  .row {
-    justify-content: center !important;
-    gap: 20px;
-    /* Adiciona espaçamento horizontal */
-  }
+    .row {
+        justify-content: center !important;
+        gap: 20px;
+        /* Adiciona espaçamento horizontal */
+    }
 
-  .col-12 {
-    display: flex;
-    justify-content: center;
-  }
+    .col-12 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .skill-icon {
@@ -556,134 +556,135 @@ a:focus {
 
 /* Estilo padrão do modal */
 .modal-content {
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .modal-title {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .modal-body {
-  padding: 20px;
+    padding: 20px;
 }
 
 .modal-body img {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .modal-body p {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
 /* Botão de fechar */
 .close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #000;
-  cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
 }
 
 .close:hover {
-  color: #b40000;
+    color: #b40000;
 }
 
 /* Modo Escuro do Modal */
 .dark-mode .modal-content {
-  background-color: #1e1e1e;
-  color: #ffffff;
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 .dark-mode .modal-header {
-  border-bottom: 1px solid #444;
+    border-bottom: 1px solid #444;
 }
 
 .dark-mode .modal-body p {
-  color: #dddddd;
+    color: #dddddd;
 }
 
 .dark-mode .close {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .dark-mode .close:hover {
-  color: #ff6b6b;
+    color: #ff6b6b;
 }
 
 
 #contact {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 #contact .btn-danger {
-  background-color: #dc3545;
-  border: none;
+    background-color: #dc3545;
+    border: none;
 }
 
 #contact .social-links {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #contact .social-icon {
-  width: 40px;
-  margin: 10px;
-  transition: transform 0.3s;
+    width: 40px;
+    margin: 10px;
+    transition: transform 0.3s;
 }
 
 #contact .social-icon:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #contact footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
 }
 
 #contact footer .footer-logo {
-  width: 50px;
+    width: 50px;
 }
 
 #contact footer .social-icon {
-  width: 30px;
-  margin: 10px;
+    width: 30px;
+    margin: 10px;
 }
 
 #contact footer a {
-  color: #fff;
-  margin: 0 10px;
-  transition: color 0.3s;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
 #contact footer a:hover {
-  color: #dc3545;
+    color: #dc3545;
 }
 
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  left: 20px; /* Alterado para o lado esquerdo */
-  z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    /* Alterado para o lado esquerdo */
+    z-index: 1000;
 }
 
 .whatsapp-float img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
 .whatsapp-float img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }

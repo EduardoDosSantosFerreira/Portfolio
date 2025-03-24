@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" sizes="50x50" href="./src/assets/img/profile_icons/crowico.png">
-    <link rel="stylesheet" href="./src/assets/css/aos.css">
-    <link rel="stylesheet" href="./src/assets/css/bootstrap.min.css">
-    <title>Seja Bem-Vindo</title>
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="./src/assets/img/profile_icons/crowico.png" rel="icon" sizes="50x50" type="image"/>
+  <link href="./src/assets/css/aos.css" rel="stylesheet"/>
+  <link href="./src/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>
+   Seja Bem-Vindo
+  </title>
+  <style>
+   body {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -68,37 +69,38 @@
             box-shadow: none;
             transform: translateY(4px);
         }
-    </style>
-</head>
-
-<body>
-
-    <!-- Class Video -->
-    <div class="container" id="video">
-        <video id="main-video" autoplay muted loop playsinline data-aos="fade-top">
-            <source src="./src/assets/img/video/portscreen.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Class Button -->
-    <div class="button-container" data-aos="fade-down">
-        <a href="./src/pages/home.html">
-            <button class="comic-button">Bem-Vindo!</button>
-        </a>
-    </div>
-
-    <!-- Scripts -->
-    <script src="./src/assets/js/main.js"></script>
-    <script src="./src/assets/js/utils/aos.js"></script>
-    <script src="./src/assets/js/utils/popper.min.js"></script>
-    <script src="./src/assets/js/utils/bootstrap.min.js"></script>
-    <script src="./src/assets/js/utils/jquery-3.5.1.slim.min.js"></script>
-
-    <script>
-        AOS.init({
+  </style>
+ </head>
+ <body>
+  <!-- Class Video -->
+  <div class="container" id="video">
+   <video autoplay="" data-aos="fade-top" id="main-video" loop="" muted="" playsinline="">
+    <source src="./src/assets/img/video/portscreen.mp4" type="video/mp4"/>
+   </video>
+  </div>
+  <!-- Class Button -->
+  <div class="button-container" data-aos="fade-down">
+   <a href="./src/pages/home.html">
+    <button class="comic-button">
+     Bem-Vindo!
+    </button>
+   </a>
+  </div>
+  <!-- Scripts -->
+  <script src="./src/assets/js/main.js">
+  </script>
+  <script src="./src/assets/js/utils/aos.js">
+  </script>
+  <script src="./src/assets/js/utils/popper.min.js">
+  </script>
+  <script src="./src/assets/js/utils/bootstrap.min.js">
+  </script>
+  <script src="./src/assets/js/utils/jquery-3.5.1.slim.min.js">
+  </script>
+  <script>
+   AOS.init({
             duration: 2000,
         });
-    </script>
-</body>
-
+  </script>
+ </body>
 </html>
