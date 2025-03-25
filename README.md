@@ -1,5 +1,3 @@
-
-
 # **Eduardo Dos Santos Ferreira**  
 
 👋 Olá! Sou **Eduardo Dos Santos Ferreira**, um **técnico em desenvolvimento de sistemas** apaixonado por criar soluções inovadoras com foco em **desenvolvimento front-end**. Com experiência também em **back-end**, meu objetivo é integrar tecnologias de forma eficiente e eficaz.  
@@ -21,4 +19,4 @@
 ✔️ Git, GitHub, Figma, Vercel  
 
 ## 🌎 **Onde me encontrar?**  
-🔗 [LinkedIn](#) | 🔗 [Portfólio](#) | 📧 **eduardo@email.com**  
+🔗 [LinkedIn](#) | 🔗 [Portfólio](#) | 📧 **eduardosferreira69@gmail.com**  
