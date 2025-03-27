@@ -10,94 +10,66 @@
     opacity: 1;
     transform: translateY(0);
 }
-
 .navbar-nav .nav-item {
     margin-right: 25px;
 }
-
 #nav.hidden {
     opacity: 0;
-    /* Desaparece a navbar */
     transform: translateY(-100%);
-    /* Move a navbar para fora da tela */
 }
-
 .navbar .nav-item {
     transition: opacity 0.3s;
     opacity: 1;
 }
-
 #nav.hidden .nav-item {
     opacity: 0;
 }
-
 .nav-link {
     color: #000;
 }
-
 .nav-link:hover {
     color: #b40000;
 }
-
 #icon {
     width: 150px;
     margin-left: 15px;
     transition: all 0.3s ease-in-out;
-    /* Suaviza a transição de tamanho */
 }
-
-/* Tablets e dispositivos médios (até 1024px) */
 @media (max-width: 1024px) {
     #icon {
         width: 130px;
         margin-left: 12px;
     }
 }
-
-/* Dispositivos móveis padrão (até 768px) */
 @media (max-width: 768px) {
     #icon {
         width: 110px;
         margin-left: 10px;
     }
 }
-
-/* Smartphones pequenos (até 576px) */
 @media (max-width: 576px) {
     #icon {
         width: 90px;
         margin-left: 5px;
     }
 }
-
-/* Telas muito pequenas (até 400px) */
 @media (max-width: 400px) {
     #icon {
         width: 75px;
         margin-left: 3px;
     }
 }
-
-/* Ajuste especial para telas muito largas (>1440px), como monitores grandes */
 @media (min-width: 1440px) {
     #icon {
         width: 180px;
         margin-left: 20px;
     }
 }
-
 .dropdown-menu {
     font-size: 27px;
-    /* Aumentou o tamanho da fonte do dropdown */
     width: 220px;
-    /* Aumentou o tamanho da janela do dropdown */
     height: 200px;
-    /* Deixou os itens do dropdown maiores */
 }
-
-/* From Uiverse.io by JustCode14 */
-/* Theme Switch */
-/* The switch - the box around the slider */
 .switch {
     font-size: 17px;
     position: relative;
@@ -108,15 +80,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 30px;
 }
-
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -129,7 +97,6 @@
     border-radius: 30px;
     overflow: hidden;
 }
-
 .slider:before {
     position: absolute;
     content: "";
@@ -142,16 +109,13 @@
     transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
     box-shadow: inset 8px -4px 0px 0px #fff;
 }
-
 .switch input:checked+.slider {
     background-color: #00a6ff;
 }
-
 .switch input:checked+.slider:before {
     transform: translateX(1.8em);
     box-shadow: inset 15px -4px 0px 15px #ffcf48;
 }
-
 .star {
     background-color: #fff;
     border-radius: 50%;
@@ -160,26 +124,21 @@
     transition: all 0.4s;
     height: 5px;
 }
-
 .star_1 {
     left: 2.5em;
     top: 0.5em;
 }
-
 .star_2 {
     left: 2.2em;
     top: 1.2em;
 }
-
 .star_3 {
     left: 3em;
     top: 0.9em;
 }
-
 .switch input:checked~.slider .star {
     opacity: 0;
 }
-
 .cloud {
     width: 3.5em;
     position: absolute;
@@ -188,46 +147,35 @@
     opacity: 0;
     transition: all 0.4s;
 }
-
 .switch input:checked~.slider .cloud {
     opacity: 1;
 }
-
 .dark-mode #nav {
     background-color: #1c1c1c;
-    /* Cor de fundo para o modo escuro */
     color: #ffffff;
-    /* Cor do texto para o modo escuro */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
 .dark-mode .nav-link {
     color: #ffffff;
 }
-
 .dark-mode .nav-link:hover {
     color: #ff6b6b;
 }
-
 .dark-mode .dropdown-menu {
     background-color: #2a2a2a;
     color: #ffffff;
 }
-
 .dark-mode .dropdown-menu a {
     color: #ffffff;
 }
-
 .dark-mode .dropdown-menu a:hover {
     background-color: #3a3a3a;
 }
-
 #toggler {
     background-color: #c70000;
     border-radius: 15%;
     margin-right: 30px;
 }
-
 .dark-mode #toggler {
     background-color: white;
 }

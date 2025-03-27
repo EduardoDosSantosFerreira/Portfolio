@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // Mensagem Contato
 document.querySelector('.form-contact').addEventListener('submit', function(e) {
     e.preventDefault();
