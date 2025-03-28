@@ -6,95 +6,97 @@
   <link href="./src/assets/img/profile_icons/crowico.png" rel="icon" sizes="50x50" type="image"/>
   <link href="./src/assets/css/aos.css" rel="stylesheet"/>
   <link href="./src/assets/css/bootstrap.min.css" rel="stylesheet"/>
-  <title>
-   Seja Bem-Vindo
-  </title>
+  <title> Seja Bem-Vindo </title>
   <style>
    body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #e3e3e3;
-        }
-
-        .container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-            max-width: 1500px;
-            padding: 0 15px;
-        }
-
-        #main-video {
-            width: 100%;
-            height: auto;
-        }
-
-        .button-container {
-    position: absolute;
-    bottom: 5%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    max-width: 600px;
-}
-
-/* Para tablets e telas menores */
-@media (max-width: 1024px) {
-    .button-container {
-        bottom: 10px;
-        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #e3e3e3;
     }
-}
 
-/* Para celulares */
-@media (max-width: 768px) {
-    .button-container {
-        position: static;
-        transform: none;
-        margin-top: 20px;
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
-        padding: 0 10px;
+        max-width: 1500px;
+        padding: 0 15px;
     }
-}
 
+    #main-video {
+        width: 100%;
+        height: auto;
+    }
 
-        .comic-button {
-            text-decoration: none;
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            color: #fff;
-            background-color: #000;
-            border: 2px solid #808080;
-            border-radius: 10px;
-            box-shadow: 5px 5px 0px #312b2b;
-            transition: all 0.3s ease;
-            cursor: pointer;
+    .button-container {
+        position: absolute;
+        bottom: 5%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        max-width: 600px;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Para tablets e telas menores */
+    @media (max-width: 1024px) {
+        .button-container {
+            bottom: 10px;
+            width: 95%;
         }
+    }
 
-        .comic-button:hover {
-            background-color: #fff;
-            color: #000;
-            border: 2px solid #000;
-            box-shadow: 5px 5px 0px #000;
-            transform: scale(1.1);
+    /* Para celulares */
+    @media (max-width: 768px) {
+        .button-container {
+            position: relative;
+            bottom: auto;
+            transform: none;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
         }
+    }
 
-        .comic-button:active {
-            background-color: #808080;
-            box-shadow: none;
-            transform: translateY(4px);
-        }
+    .comic-button {
+        text-decoration: none;
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #808080;
+        border-radius: 10px;
+        box-shadow: 5px 5px 0px #312b2b;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .comic-button:hover {
+        background-color: #fff;
+        color: #000;
+        border: 2px solid #000;
+        box-shadow: 5px 5px 0px #000;
+        transform: scale(1.1);
+    }
+
+    .comic-button:active {
+        background-color: #808080;
+        box-shadow: none;
+        transform: translateY(4px);
+    }
   </style>
  </head>
  <body>
@@ -106,27 +108,21 @@
    <!-- Class Button -->
    <div class="button-container" data-aos="fade-down">
     <a href="./src/pages/home.html">
-     <button class="comic-button">
-      Bem-Vindo!
-     </button>
+     <button class="comic-button"> Bem-Vindo! </button>
     </a>
    </div>
   </div>
   <!-- Scripts -->
-  <script src="./src/assets/js/main.js">
-  </script>
-  <script src="./src/assets/js/utils/aos.js">
-  </script>
-  <script src="./src/assets/js/utils/popper.min.js">
-  </script>
-  <script src="./src/assets/js/utils/bootstrap.min.js">
-  </script>
-  <script src="./src/assets/js/utils/jquery-3.5.1.slim.min.js">
-  </script>
+  <script src="./src/assets/js/main.js"></script>
+  <script src="./src/assets/js/utils/aos.js"></script>
+  <script src="./src/assets/js/utils/popper.min.js"></script>
+  <script src="./src/assets/js/utils/bootstrap.min.js"></script>
+  <script src="./src/assets/js/utils/jquery-3.5.1.slim.min.js"></script>
   <script>
    AOS.init({
-            duration: 2000,
-        });
+        duration: 2000,
+        once: true
+    });
   </script>
  </body>
 </html>
