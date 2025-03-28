@@ -32,15 +32,15 @@
     #main-video {
         width: 100%;
         height: auto;
+        display: block;
     }
 
     .button-container {
         position: absolute;
-        bottom: 5%;
-        transform: translateX(-50%);
+        bottom: 10%;
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 100%;
         max-width: 600px;
         opacity: 1 !important;
         visibility: visible !important;
@@ -49,22 +49,16 @@
     /* Para tablets e telas menores */
     @media (max-width: 1024px) {
         .button-container {
-            bottom: 10px;
-            width: 95%;
+            bottom: 8%;
         }
     }
 
     /* Para celulares */
     @media (max-width: 768px) {
         .button-container {
-            position: relative;
-            bottom: auto;
-            transform: none;
-            margin-top: 20px;
+            bottom: 5%;
             width: 100%;
             padding: 10px;
-            display: flex;
-            justify-content: center;
         }
     }
 
