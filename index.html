@@ -37,21 +37,34 @@
         }
 
         .button-container {
-            position: absolute;
-            bottom: 20px;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
+    position: absolute;
+    bottom: 5%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+}
 
-        @media (max-width: 800px) {
-            .button-container {
-                position: static;
-                transform: none;
-                margin-top: 20px;
-            }
-        }
+/* Para tablets e telas menores */
+@media (max-width: 1024px) {
+    .button-container {
+        bottom: 10px;
+        width: 95%;
+    }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+    .button-container {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
 
         .comic-button {
             text-decoration: none;
