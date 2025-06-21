@@ -200,75 +200,7 @@ a:focus {
 .card {
     transition: transform 0.3s ease;
 }
-.card-consultoria,
-.card-web,
-.card-ecommerce,
-.card-seo,
-.card-marketing,
-.card-suporte {
-    border-radius: 12px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 20px;
-    color: #000;
-}
-.card-consultoria:hover,
-.card-web:hover,
-.card-ecommerce:hover,
-.card-seo:hover,
-.card-marketing:hover,
-.card-suporte:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-}
-.card-consultoria {
-    background-color: #fff8e5;
-    border: 2px solid #ffcc00;
-}
-.card-web {
-    background-color: #e5f0ff;
-    border: 2px solid #17a2b8;
-}
-.card-ecommerce {
-    background-color: #e5ffe5;
-    border: 2px solid #28a745;
-}
-.card-seo {
-    background-color: #ffe5e5;
-    border: 2px solid #dc3545;
-}
-.card-marketing {
-    background-color: #e6f7ff;
-    border: 2px solid #007bff;
-}
-.card-suporte {
-    background-color: #f7f7f7;
-    border: 2px solid #6c757d;
-}
 
-.card-consultoria .btn {
-    background-color: #ffcc00;
-    color: white;
-}
-.card-web .btn {
-    background-color: #17a2b8;
-    color: white;
-}
-.card-ecommerce .btn {
-    background-color: #28a745;
-    color: white;
-}
-.card-seo .btn {
-    background-color: #dc3545;
-    color: white;
-}
-.card-marketing .btn {
-    background-color: #007bff;
-    color: white;
-}
-.card-suporte .btn {
-    background-color: #6c757d;
-    color: white;
-}
 .btn {
     border-radius: 25px;
     font-size: 1rem;
@@ -297,7 +229,6 @@ a:focus {
     position: fixed;
     bottom: 20px;
     left: 20px;
-   
     z-index: 1000;
 }
 .whatsapp-float img {
