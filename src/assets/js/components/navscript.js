@@ -1,8 +1,5 @@
-// Função para adicionar a navbar ao DOM com suporte para ícones
 function adicionarNavbarAoDOM() {
-    // Cria um elemento div
     var div = document.createElement('div');
-    // Define o conteúdo HTML da div com suporte para ícones
     div.innerHTML = `
 <nav class="navbar navbar-expand-lg fixed-top" id="nav" data-aos="fade-down">
     <a href="../../../index.html">
@@ -53,10 +50,8 @@ function adicionarNavbarAoDOM() {
 
     `;
 
-    // Adiciona a div ao corpo do documento
     document.body.appendChild(div);
 
-    // Adiciona event listener para esconder a navbar quando clicar em dropdown-item ou nav-link
     document.querySelectorAll('.dropdown-item, .nav-item active').forEach(item => {
         item.addEventListener('click', () => {
             document.querySelector(".navbar").classList.add("hidden");
@@ -64,47 +59,36 @@ function adicionarNavbarAoDOM() {
     });
 }
 
-// Variável para armazenar a última posição de scroll
 let lastScrollTop = 0;
 
-// Adiciona event listener para o evento de scroll
 window.addEventListener("scroll", function() {
-    // Obtém a posição atual do scroll
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
-        // Scroll para baixo
         document.querySelector(".navbar").classList.add("hidden");
     } else {
-        // Scroll para cima
         document.querySelector(".navbar").classList.remove("hidden");
     }
 
-    // Atualiza a última posição de scroll
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para tratar o caso de scroll no topo
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
-// Chama a função ao adicionar ao DOM
 document.addEventListener('DOMContentLoaded', adicionarNavbarAoDOM);
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const checkbox = document.getElementById("checkbox");
 
-    // Verifica se o usuário tem uma preferência salva no localStorage
     if (localStorage.getItem("dark-mode") === "enabled") {
         document.body.classList.add("dark-mode");
-        checkbox.checked = false; // Modo escuro: checkbox desmarcado
+        checkbox.checked = false;
     } else {
         document.body.classList.remove("dark-mode");
-        checkbox.checked = true; // Modo claro: checkbox marcado
+        checkbox.checked = true;
     }
 
     checkbox.addEventListener("click", function() {
-        // Alterna a classe "dark-mode" no body
         document.body.classList.toggle("dark-mode");
 
-        // Salva a preferência do usuário no localStorage
         if (document.body.classList.contains("dark-mode")) {
             localStorage.setItem("dark-mode", "enabled");
         } else {

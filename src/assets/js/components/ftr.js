@@ -1,4 +1,3 @@
-// Função para adicionar o HTML ao DOM
 function adicionarLoginAoDOM() {
     var div = document.createElement('div');
     div.innerHTML = `
