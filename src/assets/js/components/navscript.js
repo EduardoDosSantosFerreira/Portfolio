@@ -61,7 +61,7 @@ function adicionarNavbarAoDOM() {
 
 let lastScrollTop = 0;
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
@@ -75,7 +75,7 @@ window.addEventListener("scroll", function() {
 
 document.addEventListener('DOMContentLoaded', adicionarNavbarAoDOM);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("checkbox");
 
     if (localStorage.getItem("dark-mode") === "enabled") {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         checkbox.checked = true;
     }
 
-    checkbox.addEventListener("click", function() {
+    checkbox.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
