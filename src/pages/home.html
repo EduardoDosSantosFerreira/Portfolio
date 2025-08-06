@@ -26,28 +26,227 @@
 </head>
 
 <body>
-    <!-- Seção de introdução -->
-    <div class="container-fluid text-center py-5">
-        <img src="../assets/img/profile_icons/crowtola.gif" alt="Logo animado do portfólio - Corvo em movimento"
-            width="120" />
-        <h1 class="display-4" id="title" data-aos="fade-down">Seja Bem-vindo!</h1>
-        <p id="int" data-aos="fade-up">
-            Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua
-            visita!
-        </p>
+    <!-- Seção de introdução aprimorada -->
+    <div class="container-fluid text-center py-5 intro-section"
+        style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); position: relative; overflow: hidden;">
+        <!-- Partículas de fundo -->
+        <div class="particles"></div>
+
+        <!-- Efeito de brilho -->
+        <div class="glow-effect"></div>
+
+        <!-- Conteúdo principal -->
+        <div class="content-wrapper" style="position: relative; z-index: 2;">
+            <img src="../assets/img/profile_icons/crowtola.gif" alt="Logo animado do portfólio - Corvo em movimento"
+                width="120" class="hover-float" data-aos="zoom-in" data-aos-delay="100" />
+
+            <h1 class="display-4 text-white mb-4" id="title" data-aos="fade-down" data-aos-delay="300"
+                style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); font-weight: 700; letter-spacing: 1px;">
+                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </h1>
+
+            <p id="int" class="text-white-50 lead mb-5 mx-auto" style="max-width: 600px;" data-aos="fade-up"
+                data-aos-delay="500">
+                Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua
+                visita!
+            </p>
+
+            <div data-aos="fade-up" data-aos-delay="700">
+                <a href="#categoria" class="btn btn-outline-danger btn-lg px-4 py-2 pulse-hover">
+                    Explorar Projetos <i class="fas fa-arrow-down ms-2"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
+    <!-- CSS adicional -->
+    <style>
+        /* Animação de flutuação para o logo */
+        .hover-float {
+            transition: transform 0.5s ease;
+            filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
+        }
+
+        .hover-float:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        /* Efeito de partículas */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#ff000033 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: particlesMove 60s linear infinite;
+            z-index: 1;
+        }
+
+        /* Efeito de brilho */
+        .glow-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+            animation: glowRotate 20s linear infinite;
+            z-index: 1;
+        }
+
+        /* Botão com efeito de pulso */
+        .pulse-hover {
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .pulse-hover:hover {
+            background-color: #ff0000;
+            color: white;
+            transform: scale(1.05);
+            animation: none;
+        }
+
+        /* Cursor digitando */
+        .cursor {
+            display: inline-block;
+            background-color: #ff0000;
+            margin-left: 2px;
+            width: 3px;
+            animation: blink 1s infinite;
+        }
+
+        .cursor.typing {
+            animation: none;
+        }
+
+        /* Animações */
+        @keyframes particlesMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 1000px 1000px;
+            }
+        }
+
+        @keyframes glowRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <!-- JavaScript adicional para efeito de digitação -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Efeito de digitação
+            const typedTextSpan = document.querySelector('.typed-text');
+            const cursorSpan = document.querySelector('.cursor');
+            const textArray = ["Seja Bem-vindo!", "Welcome!", "Bienvenido!", "Willkommen!"];
+            const typingDelay = 100;
+            const erasingDelay = 50;
+            const newTextDelay = 2000;
+            let textArrayIndex = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < textArray[textArrayIndex].length) {
+                    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingDelay);
+                } else {
+                    cursorSpan.classList.remove('typing');
+                    setTimeout(erase, newTextDelay);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingDelay);
+                } else {
+                    cursorSpan.classList.add('typing');
+                    textArrayIndex++;
+                    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                    setTimeout(type, typingDelay + 100);
+                }
+            }
+
+            // Inicia o efeito
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+    </script>
+
     <!-- Seção sobre mim -->
-    <div class="container-fluid text-white py-5" style="background-color: black;">
+    <div class="container-fluid text-black py-5">
         <div class="container" id="about">
             <div class="row align-items-center">
                 <!-- Imagem de perfil -->
                 <div class="col-md-4 text-center" data-aos="fade-down">
                     <img src="../assets/img/gifs/edu.gif"
                         alt="Foto de perfil do desenvolvedor Eduardo dos Santos Ferreira"
-                        class="img-fluid rounded-circle border border-light shadow"
+                        class="img-fluid rounded-circle border border-dark shadow floating-image"
                         style="width: 300px; object-fit: cover;" />
                 </div>
+                
+                <style>
+                    .floating-image {
+                        animation: float 6s ease-in-out infinite;
+                        transform: translateY(0px);
+                    }
+                    
+                    @keyframes float {
+                        0% {
+                            transform: translateY(0px);
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+                        }
+                        50% {
+                            transform: translateY(-20px);
+                            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1);
+                        }
+                        100% {
+                            transform: translateY(0px);
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+                        }
+                    }
+                </style>
                 <!-- Descrição sobre o desenvolvedor e informações adicionais -->
                 <div class="col-md-8" data-aos="fade-right">
                     <h1 class="fw-bold" id="title">Sobre</h1>
@@ -83,6 +282,7 @@
             </div>
         </div>
     </div>
+
     <br>
     <br>
 
@@ -414,14 +614,12 @@
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Django"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                        alt="Django" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" />
                     <span class="tooltip-text">Django</span>
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Flask"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-                        alt="Flask" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />
                     <span class="tooltip-text">Flask</span>
                 </div>
                 <div class="icon-tooltip">
@@ -471,22 +669,26 @@
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="PostgreSQL"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="PostgreSQL" />
                     <span class="tooltip-text">PostgreSQL</span>
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="SQLite"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                        alt="SQLite" />
                     <span class="tooltip-text">SQLite</span>
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Oracle"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                        alt="Oracle" />
                     <span class="tooltip-text">Oracle</span>
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="SQL Server"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                        alt="SQL Server" />
                     <span class="tooltip-text">SQL Server</span>
                 </div>
                 <div class="icon-tooltip">
@@ -503,8 +705,7 @@
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Redis"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                        alt="Redis" />
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" />
                     <span class="tooltip-text">Redis</span>
                 </div>
                 <div class="icon-tooltip">
@@ -546,12 +747,14 @@
             <div class="icon-grid">
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Windows 1.0"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Windows_logo_-_1985-1989.svg/2560px-Windows_logo_-_1985-1989.svg.png" alt="Windows 1.0" />
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Windows_logo_-_1985-1989.svg/2560px-Windows_logo_-_1985-1989.svg.png"
+                        alt="Windows 1.0" />
                     <span class="tooltip-text">Windows 1.0</span>
                 </div>
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Windows 3.1"
-                        src="https://cdn2.steamgriddb.com/icon/37d0b499fb84a552c17fcbb1442d7895.ico" alt="Windows 3.1" />
+                        src="https://cdn2.steamgriddb.com/icon/37d0b499fb84a552c17fcbb1442d7895.ico"
+                        alt="Windows 3.1" />
                     <span class="tooltip-text">Windows 3.1</span>
                 </div>
                 <div class="icon-tooltip">
@@ -560,8 +763,8 @@
                     <span class="tooltip-text">Windows 95</span>
                 </div>
                 <div class="icon-tooltip">
-                    <img class="skill-icon" data-tech="Windows ME"
-                        src="../assets/img/icons/windowsme.png" alt="Windows ME" />
+                    <img class="skill-icon" data-tech="Windows ME" src="../assets/img/icons/windowsme.png"
+                        alt="Windows ME" />
                     <span class="tooltip-text">Windows ME</span>
                 </div>
                 <div class="icon-tooltip">
@@ -991,7 +1194,6 @@
     <style>
         /* Estilos Gerais */
         #categoria {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -1449,71 +1651,317 @@
         </div>
     </div>
 
-    <section class="py-5" id="contact">
+    <section class="py-5 contact-section" id="contact"
+        style="background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);">
         <div class="container text-center">
-            <h2 class="display-4 mb-4 text-danger">Contato</h2>
-            <p>
+            <!-- Título com efeito de digitação -->
+            <h2 class="display-4 mb-4 text-white" data-aos="fade-down"
+                style="font-weight: 700; position: relative; display: inline-block;">
+                <span class="text-danger">C</span>ontato
+                <span class="title-underline"></span>
+            </h2>
+
+            <!-- Subtítulo com animação -->
+            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;" data-aos="fade-up"
+                data-aos-delay="100">
                 Entre em contato comigo para mais informações, dúvidas ou colaborações.
+                <span class="contact-icon pulse" style="margin-left: 10px;">✉️</span>
             </p>
-            <form class="form-contact" action="#" method="post">
+
+            <!-- Formulário estilizado -->
+            <form class="form-contact mx-auto" action="#" method="post" style="max-width: 800px;" data-aos="zoom-in"
+                data-aos-delay="200">
                 <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Nome" required />
+                    <div class="col-md-6 mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg input-glow" id="name"
+                                placeholder="Nome" required
+                                style="background-color: rgba(255,255,255,0.1); border: 1px solid #333; color: white;">
+                            <div class="input-icon">
+                                <i class="fas fa-user text-danger"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Email" required />
+                    <div class="col-md-6 mb-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-lg input-glow" id="email"
+                                placeholder="Email" required
+                                style="background-color: rgba(255,255,255,0.1); border: 1px solid #333; color: white;">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope text-danger"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <textarea class="form-control" id="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                <div class="mb-4">
+                    <div class="input-group">
+                        <textarea class="form-control form-control-lg input-glow" id="message"
+                            placeholder="Sua Mensagem" rows="5" required
+                            style="background-color: rgba(255,255,255,0.1); border: 1px solid #333; color: white;"></textarea>
+                        <div class="input-icon">
+                            <i class="fas fa-comment-dots text-danger"></i>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
+                <button type="submit" class="btn btn-danger btn-lg px-5 py-3 mt-3 send-button"
+                    style="font-weight: 600; letter-spacing: 1px; position: relative; overflow: hidden;">
+                    <span class="button-text">Enviar Mensagem</span>
+                    <i class="fas fa-paper-plane ms-2"></i>
+                    <span class="button-wave"></span>
+                </button>
             </form>
-        </div>
-        <!-- libras -->
-        <div class="enabled" vw>
-            <div class="active" vw-access-button></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
+
+            <!-- Efeito decorativo -->
+            <div class="contact-decoration">
+                <div class="decoration-circle decoration-circle-1"></div>
+                <div class="decoration-circle decoration-circle-2"></div>
+                <div class="decoration-line"></div>
             </div>
         </div>
-
-        <!-- Whatsapp Icon -->
-        <a class="whatsapp-float" href="https://wa.me/5513981492795" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-        </a>
-
-        <!-- Crisp -->
-        <script type="text/javascript">
-            window.$crisp = [];
-            window.CRISP_WEBSITE_ID = "e206f4ad-1d7c-4080-ac60-77fcc477710a";
-            (function () {
-                d = document;
-                s = d.createElement("script");
-                s.src = "https://client.crisp.chat/l.js";
-                s.async = 1;
-                d.getElementsByTagName("head")[0].appendChild(s);
-            })();
-        </script>
-        <!-- Scripts -->
-        <script src="../assets/js/utils/jquery-3.5.1.slim.min.js"></script>
-        <script src="../assets/js/utils/bootstrap.min.js"></script>
-        <script src="../assets/js/utils/popper.min.js"></script>
-        <script src="../assets/js/components/navscript.js"></script>
-        <script src="../assets/js/main.js"></script>
-        <script src="../assets/js/utils/aos.js"></script>
-        <script src="../assets/js/components/ftr.js"></script>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script src="../assets/js/components/translation.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-        <script>
-            AOS.init({
-                duration: 2000,
-            });
-        </script>
     </section>
+
+    <!-- CSS adicional -->
+    <style>
+        .contact-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Estilo do título */
+        .title-underline {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #ff0000 50%, transparent 100%);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.5s ease;
+        }
+
+        h2:hover .title-underline {
+            transform: scaleX(1);
+        }
+
+        /* Estilo dos inputs */
+        .input-glow {
+            transition: all 0.3s ease;
+        }
+
+        .input-glow:focus {
+            border-color: #ff0000 !important;
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+        }
+
+        /* Estilo do botão */
+        .send-button {
+            transition: all 0.4s ease;
+            border: none;
+        }
+
+        .send-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .send-button:active {
+            transform: translateY(0);
+        }
+
+        .button-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+
+        .send-button:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+
+        /* Efeito de pulsação no ícone de email */
+        .pulse {
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+
+        /* Elementos decorativos */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 0, 0, 0.1);
+            z-index: 0;
+        }
+
+        .decoration-circle-1 {
+            width: 200px;
+            height: 200px;
+            top: -50px;
+            right: -50px;
+        }
+
+        .decoration-circle-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -30px;
+            left: -30px;
+        }
+
+        .decoration-line {
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent 0%, #ff0000 10%, #ff0000 90%, transparent 100%);
+            right: 10%;
+            top: 0;
+            opacity: 0.2;
+        }
+
+        /* Animações */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 1;
+            }
+
+            20% {
+                transform: scale(25, 25);
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .input-icon {
+                font-size: 1rem;
+                right: 10px;
+            }
+
+            .send-button {
+                padding: 10px 20px !important;
+            }
+        }
+    </style>
+
+    <!-- JavaScript para efeitos interativos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Efeito de onda no botão
+            const buttons = document.querySelectorAll('.send-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Reset animation
+                    const wave = this.querySelector('.button-wave');
+                    wave.style.animation = 'none';
+                    wave.offsetHeight; /* trigger reflow */
+                    wave.style.animation = 'ripple 1s ease-out';
+
+                    // Efeito de envio
+                    const buttonText = this.querySelector('.button-text');
+                    const icon = this.querySelector('.fa-paper-plane');
+
+                    buttonText.textContent = 'Enviando...';
+                    icon.classList.remove('fa-paper-plane');
+                    icon.classList.add('fa-spinner', 'fa-spin');
+
+                    // Simular envio (remover em produção)
+                    setTimeout(() => {
+                        buttonText.textContent = 'Mensagem Enviada!';
+                        icon.classList.remove('fa-spinner', 'fa-spin');
+                        icon.classList.add('fa-check');
+                        this.classList.add('btn-success');
+                        this.classList.remove('btn-danger');
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+
+    <!-- libras -->
+    <div class="enabled" vw>
+        <div class="active" vw-access-button></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Whatsapp Icon -->
+    <a class="whatsapp-float" href="https://wa.me/5513981492795" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+
+    <!-- Crisp -->
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "e206f4ad-1d7c-4080-ac60-77fcc477710a";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    <!-- Scripts -->
+    <script src="../assets/js/utils/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/js/utils/bootstrap.min.js"></script>
+    <script src="../assets/js/utils/popper.min.js"></script>
+    <script src="../assets/js/components/navscript.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/utils/aos.js"></script>
+    <script src="../assets/js/components/ftr.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="../assets/js/components/translation.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+    </script>
 </body>
 
 </html>

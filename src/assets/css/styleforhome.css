@@ -32,11 +32,13 @@ footer {
 }
 
 #about {
-    background-color: #000;
-    color: #fff;
     margin-bottom: 10px;
     padding-top: 30px;
-    text-decoration: none
+    text-decoration: none;
+}
+
+#about p {
+    font-size: 20px;
 }
 
 .btn-primary {
