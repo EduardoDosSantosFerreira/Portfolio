@@ -8,7 +8,7 @@ Bem-vindo ao meu portfólio profissional! Sou Desenvolvedor Full Stack e Arquite
 ## 🚀 Sobre Mim
 
 **Eduardo dos Santos Ferreira**  
-📍 São Paulo - SP | 💻 5+ anos de experiência em TI
+📍 Itaquaquecetuba - SP | 💻 5+ anos de experiência em TI
 
 Atuação profissional:
 - **Engenheiro de Software** | **Arquiteto de Software**
