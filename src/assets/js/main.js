@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Back-End
         "Node.js": "Node.js é um ambiente de execução para JavaScript no lado do servidor, permitindo a construção de aplicações escaláveis e de alto desempenho.",
         "Express": "Express é um framework minimalista para Node.js, utilizado para criar APIs e aplicações web de forma rápida e flexível.",
+        "Express.js": "Express.js é um framework web para Node.js, amplamente utilizado para criar APIs e aplicações web de maneira simples, rápida e flexível.",
         "NestJS": "NestJS é um framework Node.js progressivo para construção de aplicações eficientes, escaláveis e testáveis, utilizando TypeScript.",
         "Python": "Python é uma linguagem de programação versátil e poderosa, usada em desenvolvimento web, análise de dados, automação, IA e muito mais.",
         "Django": "Django é um framework web de alto nível para Python, que incentiva o desenvolvimento rápido e limpo de aplicações web.",
@@ -96,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "Symfony": "Symfony é um framework PHP flexível e reutilizável para desenvolvimento de aplicações web complexas.",
         "Ruby": "Ruby é uma linguagem de programação dinâmica e de código aberto, conhecida por sua sintaxe elegante e legibilidade.",
         "Ruby on Rails": "Ruby on Rails é um framework web para Ruby que facilita o desenvolvimento rápido de aplicações web com convenções inteligentes.",
+        "Spring Boot": "Spring Boot é um framework Java que simplifica a criação de aplicações web e APIs robustas, oferecendo configuração automática e integração fácil com o ecossistema Spring.",
+        ".NET": ".NET é uma plataforma de desenvolvimento da Microsoft para a criação de aplicações web, desktop, mobile e serviços, suportando múltiplas linguagens como C# e F# e oferecendo alta performance, segurança e integração com o ecossistema Microsoft.",
         "C++": "C++ é uma linguagem de alto desempenho usada no desenvolvimento de sistemas, jogos, softwares embarcados e aplicações que exigem eficiência.",
         "C": "C é uma linguagem de programação de baixo nível, altamente eficiente, utilizada em sistemas operacionais, drivers e aplicações embarcadas.",
         "Go": "Go (Golang) é uma linguagem de programação desenvolvida pelo Google, conhecida por sua simplicidade, desempenho e concorrência eficiente.",

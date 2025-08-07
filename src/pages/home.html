@@ -59,119 +59,6 @@
         </div>
     </div>
 
-    <!-- CSS adicional -->
-    <style>
-        /* Animação de flutuação para o logo */
-        .hover-float {
-            transition: transform 0.5s ease;
-            filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
-        }
-
-        .hover-float:hover {
-            transform: translateY(-8px) scale(1.05);
-        }
-
-        /* Efeito de partículas */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(#ff000033 1px, transparent 1px);
-            background-size: 20px 20px;
-            animation: particlesMove 60s linear infinite;
-            z-index: 1;
-        }
-
-        /* Efeito de brilho */
-        .glow-effect {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
-            animation: glowRotate 20s linear infinite;
-            z-index: 1;
-        }
-
-        /* Botão com efeito de pulso */
-        .pulse-hover {
-            animation: pulse 2s infinite;
-            transition: all 0.3s ease;
-        }
-
-        .pulse-hover:hover {
-            background-color: #ff0000;
-            color: white;
-            transform: scale(1.05);
-            animation: none;
-        }
-
-        /* Cursor digitando */
-        .cursor {
-            display: inline-block;
-            background-color: #ff0000;
-            margin-left: 2px;
-            width: 3px;
-            animation: blink 1s infinite;
-        }
-
-        .cursor.typing {
-            animation: none;
-        }
-
-        /* Animações */
-        @keyframes particlesMove {
-            0% {
-                background-position: 0 0;
-            }
-
-            100% {
-                background-position: 1000px 1000px;
-            }
-        }
-
-        @keyframes glowRotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-            }
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
-
     <!-- JavaScript adicional para efeito de digitação -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -225,25 +112,27 @@
                         class="img-fluid rounded-circle border border-dark shadow floating-image"
                         style="width: 300px; object-fit: cover;" />
                 </div>
-                
+
                 <style>
                     .floating-image {
                         animation: float 6s ease-in-out infinite;
                         transform: translateY(0px);
                     }
-                    
+
                     @keyframes float {
                         0% {
                             transform: translateY(0px);
-                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+                            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
                         }
+
                         50% {
                             transform: translateY(-20px);
-                            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1);
+                            box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
                         }
+
                         100% {
                             transform: translateY(0px);
-                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+                            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
                         }
                     }
                 </style>
