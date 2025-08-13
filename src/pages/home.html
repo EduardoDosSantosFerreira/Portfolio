@@ -93,29 +93,6 @@
                         class="img-fluid rounded-circle border border-dark shadow floating-image"
                         style="width: 300px; object-fit: cover;" />
                 </div>
-                <style>
-                    .floating-image {
-                        animation: float 6s ease-in-out infinite;
-                        transform: translateY(0px);
-                    }
-
-                    @keyframes float {
-                        0% {
-                            transform: translateY(0px);
-                            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
-                        }
-
-                        50% {
-                            transform: translateY(-20px);
-                            box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
-                        }
-
-                        100% {
-                            transform: translateY(0px);
-                            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
-                        }
-                    }
-                </style>
                 <div class="col-md-8" data-aos="fade-right">
                     <h1 class="fw-bold" id="title">Sobre</h1>
                     <p id="sobre">
@@ -1307,7 +1284,6 @@
         </div>
     </section>
     <style>
-        /* Estilos Gerais */
         #categoria {
             position: relative;
             overflow: hidden;
@@ -1328,7 +1304,6 @@
             position: relative;
         }
 
-        /* Cards de Categoria */
         .categoria-link {
             text-decoration: none;
             color: #212529;
@@ -1349,7 +1324,6 @@
             background: rgba(255, 255, 255, 0.9);
         }
 
-        /* Ícones */
         .icon-hover-wrapper {
             position: relative;
             width: 190px;
@@ -1371,7 +1345,6 @@
             filter: grayscale(0%) brightness(1);
         }
 
-        /* Elementos Decorativos */
         .categoria-title {
             position: relative;
             transition: all 0.3s ease;
@@ -1393,7 +1366,6 @@
             width: 50px;
         }
 
-        /* Efeito de Destaque */
         .categoria-link::after {
             content: "";
             position: absolute;
@@ -1412,7 +1384,6 @@
             opacity: 1;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
@@ -1863,163 +1834,6 @@
             </div>
         </div>
     </section>
-    <!-- CSS adicional -->
-    <style>
-        .contact-section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Estilo do título */
-        .title-underline {
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent 0%, #ff0000 50%, transparent 100%);
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.5s ease;
-        }
-
-        h2:hover .title-underline {
-            transform: scaleX(1);
-        }
-
-        /* Estilo dos inputs */
-        .input-glow {
-            transition: all 0.3s ease;
-        }
-
-        .input-glow:focus {
-            border-color: #ff0000 !important;
-            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
-            background-color: rgba(255, 255, 255, 0.15) !important;
-        }
-
-        .input-group {
-            position: relative;
-        }
-
-        .input-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.2rem;
-        }
-
-        /* Estilo do botão */
-        .send-button {
-            transition: all 0.4s ease;
-            border: none;
-        }
-
-        .send-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
-        }
-
-        .send-button:active {
-            transform: translateY(0);
-        }
-
-        .button-wave {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
-        }
-
-        .send-button:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-            display: inline-block;
-        }
-
-        .decoration-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 0, 0, 0.1);
-            z-index: 0;
-        }
-
-        .decoration-circle-1 {
-            width: 200px;
-            height: 200px;
-            top: -50px;
-            right: -50px;
-        }
-
-        .decoration-circle-2 {
-            width: 150px;
-            height: 150px;
-            bottom: -30px;
-            left: -30px;
-        }
-
-        .decoration-line {
-            position: absolute;
-            height: 100%;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent 0%, #ff0000 10%, #ff0000 90%, transparent 100%);
-            right: 10%;
-            top: 0;
-            opacity: 0.2;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 1;
-            }
-
-            20% {
-                transform: scale(25, 25);
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(40, 40);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .input-icon {
-                font-size: 1rem;
-                right: 10px;
-            }
-
-            .send-button {
-                padding: 10px 20px !important;
-            }
-        }
-    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('.send-button');
