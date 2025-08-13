@@ -26,31 +26,22 @@
 </head>
 
 <body>
-    <!-- Seção de introdução aprimorada -->
     <div class="container-fluid text-center py-5 intro-section"
         style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); position: relative; overflow: hidden;">
-        <!-- Partículas de fundo -->
         <div class="particles"></div>
-
-        <!-- Efeito de brilho -->
         <div class="glow-effect"></div>
-
-        <!-- Conteúdo principal -->
         <div class="content-wrapper" style="position: relative; z-index: 2;">
             <img src="../assets/img/profile_icons/crowtola.gif" alt="Logo animado do portfólio - Corvo em movimento"
                 width="120" class="hover-float" data-aos="zoom-in" data-aos-delay="100" />
-
             <h1 class="display-4 text-white mb-4" id="title" data-aos="fade-down" data-aos-delay="300"
                 style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); font-weight: 700; letter-spacing: 1px;">
                 <span class="typed-text"></span><span class="cursor">&nbsp;</span>
             </h1>
-
             <p id="int" class="text-white-50 lead mb-5 mx-auto" style="max-width: 600px;" data-aos="fade-up"
                 data-aos-delay="500">
                 Este é o meu repositório pessoal, onde compartilho meus projetos e atualizações periódicas. Agradeço sua
                 visita!
             </p>
-
             <div data-aos="fade-up" data-aos-delay="700">
                 <a href="#categoria" class="btn btn-outline-danger btn-lg px-4 py-2 pulse-hover">
                     Explorar Projetos <i class="fas fa-arrow-down ms-2"></i>
@@ -58,11 +49,8 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript adicional para efeito de digitação -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Efeito de digitação
             const typedTextSpan = document.querySelector('.typed-text');
             const cursorSpan = document.querySelector('.cursor');
             const textArray = ["Seja Bem-vindo!", "Welcome!", "Bienvenido!", "Willkommen!"];
@@ -71,7 +59,6 @@
             const newTextDelay = 2000;
             let textArrayIndex = 0;
             let charIndex = 0;
-
             function type() {
                 if (charIndex < textArray[textArrayIndex].length) {
                     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
@@ -82,7 +69,6 @@
                     setTimeout(erase, newTextDelay);
                 }
             }
-
             function erase() {
                 if (charIndex > 0) {
                     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
@@ -95,24 +81,18 @@
                     setTimeout(type, typingDelay + 100);
                 }
             }
-
-            // Inicia o efeito
             if (textArray.length) setTimeout(type, newTextDelay + 250);
         });
     </script>
-
-    <!-- Seção sobre mim -->
     <div class="container-fluid text-black py-5">
         <div class="container" id="about">
             <div class="row align-items-center">
-                <!-- Imagem de perfil -->
                 <div class="col-md-4 text-center" data-aos="fade-down">
                     <img src="../assets/img/gifs/edu.gif"
                         alt="Foto de perfil do desenvolvedor Eduardo dos Santos Ferreira"
                         class="img-fluid rounded-circle border border-dark shadow floating-image"
                         style="width: 300px; object-fit: cover;" />
                 </div>
-
                 <style>
                     .floating-image {
                         animation: float 6s ease-in-out infinite;
@@ -136,7 +116,6 @@
                         }
                     }
                 </style>
-                <!-- Descrição sobre o desenvolvedor e informações adicionais -->
                 <div class="col-md-8" data-aos="fade-right">
                     <h1 class="fw-bold" id="title">Sobre</h1>
                     <p id="sobre">
@@ -156,7 +135,6 @@
                         Como profissional da área de software, possuo experiência em desenvolvimento web, automação de
                         processos e integração de sistemas.
                     </p>
-                    <!-- Botão para visualizar o currículo -->
                     <div class="text-center mt-4">
                         <button class="comic-button" id="preview-button">
                             Pré-visualizar Currículo
@@ -164,18 +142,14 @@
                     </div>
                 </div>
             </div>
-            <!-- Visualização do currículo -->
             <div class="text-center mt-4">
                 <iframe class="w-100" id="resume-preview" src="../docs/EduardosDosSantosFerreira.pdf"
                     title="Visualização do currículo em PDF"></iframe>
             </div>
         </div>
     </div>
-
     <br>
     <br>
-
-    <!-- Seção de dúvidas frequentes -->
     <div class="container">
         <h1 class="display-4" id="title" data-aos="fade-down">
             Alguma
@@ -185,7 +159,6 @@
         <br>
         <div class="row">
             <div class="col-md-6">
-                <!-- Acordeão 1 -->
                 <div class="accordion" id="accordion1">
                     <div class="card">
                         <a href="#collapseOne" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
@@ -204,7 +177,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 2 -->
                 <div class="accordion" id="accordion2">
                     <div class="card">
                         <a href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
@@ -223,7 +195,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 3 -->
                 <div class="accordion" id="accordion3">
                     <div class="card">
                         <a href="#collapseThree" data-toggle="collapse" aria-expanded="false"
@@ -243,7 +214,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 4 -->
                 <div class="accordion" id="accordion4">
                     <div class="card">
                         <a href="#collapseFour" data-toggle="collapse" aria-expanded="false"
@@ -268,7 +238,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <!-- Acordeão 5 -->
                 <div class="accordion" id="accordion5">
                     <div class="card">
                         <a href="#collapseFive" data-toggle="collapse" aria-expanded="true"
@@ -288,7 +257,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 6 -->
                 <div class="accordion" id="accordion6">
                     <div class="card">
                         <a href="#collapseSix" data-toggle="collapse" aria-expanded="false" aria-controls="collapseSix">
@@ -307,7 +275,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 7 -->
                 <div class="accordion" id="accordion7">
                     <div class="card">
                         <a href="#collapseSeven" data-toggle="collapse" aria-expanded="false"
@@ -327,7 +294,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Acordeão 8 -->
                 <div class="accordion" id="accordion8">
                     <div class="card">
                         <a href="#collapseEight" data-toggle="collapse" aria-expanded="false"
@@ -350,10 +316,7 @@
             </div>
         </div>
     </div>
-
     <br>
-
-    <!-- Modal -->
     <div class="modal fade" id="techModal" tabindex="-1" aria-labelledby="techModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -370,19 +333,15 @@
             </div>
         </div>
     </div>
-
     <br>
     <br>
-
     <div class="container text-center py-4">
         <h1 class="mb-4" id="title" data-aos="fade-up">
             <span style="color: rgb(173, 0, 0);">Habilidades</span>
             Técnicas
         </h1>
     </div>
-
     <div class="skills-container">
-        <!-- Front-End -->
         <div class="skill-block">
             <h3>
                 <span class="skill-icon-emoji">
@@ -461,8 +420,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Back-End -->
         <div class="skill-block">
             <h3>
                 <span class="skill-icon-emoji">
@@ -540,7 +497,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Banco de Dados -->
         <div class="skill-block">
             <h3>
@@ -623,8 +579,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sistemas Operacionais - Windows -->
         <div class="skill-block">
             <h3>
                 <span class="skill-icon-emoji">
@@ -700,8 +654,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sistemas Operacionais - Linux -->
         <div class="skill-block">
             <h3>
                 <span class="skill-icon-emoji">
@@ -782,7 +734,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Ferramentas -->
         <div class="skill-block">
             <h3>
@@ -864,7 +815,6 @@
                 </div>
             </div>
         </div>
-
         <!-- IAs -->
         <div class="skill-block">
             <h3>
@@ -944,7 +894,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Softwares -->
         <div class="skill-block">
             <h3>
@@ -1038,7 +987,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Meus Softwares -->
         <div class="skill-block">
             <h3>
@@ -1094,7 +1042,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Design -->
         <div class="skill-block">
             <h3>
@@ -1173,7 +1120,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Softwares de Escritório -->
         <div class="skill-block">
             <h3>
@@ -1263,8 +1209,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Embarcados -->
         <div class="skill-block">
             <h3>
                 <span class="skill-icon-emoji">
@@ -1274,60 +1218,51 @@
             </h3>
             <div class="line"></div>
             <div class="icon-grid">
-                <!-- Arduino -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Arduino"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
                         alt="Arduino" />
                     <span class="tooltip-text">Arduino</span>
                 </div>
-                <!-- ESP32 -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="ESP32"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57icfEux4EB8CbJoo7rujwytwrWPcpT7yxA&s"
                         alt="ESP32" />
                     <span class="tooltip-text">ESP32</span>
                 </div>
-                <!-- Raspberry Pi -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Raspberry Pi"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
                         alt="Raspberry Pi" />
                     <span class="tooltip-text">Raspberry Pi</span>
                 </div>
-                <!-- STM32 -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="STM32"
                         src="https://avatars.githubusercontent.com/u/41542217?s=280&v=4" alt="STM32" />
                     <span class="tooltip-text">STM32</span>
                 </div>
-                <!-- ESP8266 -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="ESP8266"
                         src="https://res.cloudinary.com/di2vaxvhl/image/upload/v1547679898/Technical_Images_AP_ESP8266__1.jpg"
                         alt="ESP8266" />
                     <span class="tooltip-text">ESP8266</span>
                 </div>
-                <!-- NodeMCU -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="NodeMCU"
                         src="https://avatars.githubusercontent.com/u/9865736?s=280&v=4" alt="NodeMCU" />
                     <span class="tooltip-text">NodeMCU</span>
                 </div>
-                <!-- Orange Pi -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Orange Pi"
                         src="https://raw.githubusercontent.com/yasngleer/awesome-orange-pi/master/logo.jpg"
                         alt="Orange Pi" />
                     <span class="tooltip-text">Orange Pi</span>
                 </div>
-                <!-- Jetson Nano -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="Jetson Nano"
                         src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg" alt="Jetson Nano" />
                     <span class="tooltip-text">Jetson Nano</span>
                 </div>
-                <!-- MSP430 -->
                 <div class="icon-tooltip">
                     <img class="skill-icon" data-tech="MSP430"
                         src="https://images-na.ssl-images-amazon.com/images/I/41LsaYSclgL._SS400_.jpg" alt="MSP430" />
@@ -1336,7 +1271,6 @@
             </div>
         </div>
     </div>
-
     <section id="categoria" class="py-5">
         <div class="container" data-aos="fade-down" style="max-width: 1600px;">
             <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
@@ -1346,9 +1280,7 @@
                 </h1>
             </div>
             <div class="espaco py-4"></div>
-
             <div class="row justify-content-center g-4">
-                <!-- Categoria Software -->
                 <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <a class="categoria-link d-flex flex-column align-items-center" data-categoria="software" href="#"
                         title="Software">
@@ -1360,8 +1292,6 @@
                         <div class="categoria-line"></div>
                     </a>
                 </div>
-
-                <!-- Categoria Sites -->
                 <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <a class="categoria-link d-flex flex-column align-items-center" data-categoria="sites" href="#"
                         title="Web-Sites">
@@ -1376,7 +1306,6 @@
             </div>
         </div>
     </section>
-
     <style>
         /* Estilos Gerais */
         #categoria {
@@ -1504,15 +1433,12 @@
             }
         }
     </style>
-
-    <!-- Seção de projetos -->
     <div id="projetos">
-        <!-- Projetos de Software -->
         <div class="projeto-grid" id="projetos-software" style="display: none; max-width: 1700px;">
+            <h1 class="text-center mb-5" id="title">Projetos de Softwares</h1>
             <div class="subcategoria-container" data-aos="fade-down">
                 <h2 class="subcategoria-title">Projetos de Software</h2>
                 <div class="grid-container">
-                    <!-- CleanCrow -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://cleancrow.vercel.app/" target="_blank">
                             <div class="img-container">
@@ -1528,7 +1454,6 @@
                             </div>
                         </a>
                     </div>
-                    <!-- Crowvert -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://crowvert.vercel.app/" target="_blank">
                             <div class="img-container">
@@ -1545,7 +1470,6 @@
                             </div>
                         </a>
                     </div>
-                    <!-- DarkFeather -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/darkfeather/"
                             target="_blank">
@@ -1639,11 +1563,9 @@
                 </div>
             </div>
         </div>
-
         <!-- Projetos de Sites -->
         <div class="projeto-grid" id="projetos-sites" style="display: none; max-width: 1700px;">
             <h1 class="text-center mb-5" id="title">Projetos de Sites</h1>
-
             <!-- Subcategoria: Financeiros -->
             <div class="subcategoria-container" data-aos="fade-down">
                 <h2 class="subcategoria-title">Projetos Financeiros</h2>
@@ -1662,7 +1584,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Ajuda Cidadão -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://ajudacidadao.com.br/" target="_blank">
@@ -1676,7 +1597,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Star Consignados -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://star-consignados.vercel.app/" target="_blank">
@@ -1689,7 +1609,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Saque Crédito -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://saque-credito.vercel.app/" target="_blank">
@@ -1703,7 +1622,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Saque Crédito Landing -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://landing-page-saque-credito.vercel.app/" target="_blank">
@@ -1718,7 +1636,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Subcategoria: Educação e Serviços -->
             <div class="subcategoria-container" data-aos="fade-down">
                 <h2 class="subcategoria-title">Educação e Serviços</h2>
@@ -1738,7 +1655,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Cuida Legal -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/cuida_legal/"
@@ -1752,7 +1668,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- School Survey Virus -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/school-survey-virus/"
@@ -1766,7 +1681,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- UPP Alarmes -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/upp/" target="_blank">
@@ -1781,7 +1695,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Subcategoria: E-commerce e Negócios -->
             <div class="subcategoria-container" data-aos="fade-down">
                 <h2 class="subcategoria-title">E-commerce e Negócios</h2>
@@ -1799,7 +1712,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Destiny Monterrey -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/destino-del-mes/"
@@ -1813,7 +1725,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Gallery Barber-Shop -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/project-barber/"
@@ -1827,7 +1738,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Tasty Hamburgueria -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://eduardodossantosferreira.github.io/project-tasty/"
@@ -1843,7 +1753,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Subcategoria: Ferramentas e Tecnologia -->
             <div class="subcategoria-container" data-aos="fade-down">
                 <h2 class="subcategoria-title">Ferramentas e Tecnologia</h2>
@@ -1861,7 +1770,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Delta Compass -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://delta-compass.vercel.app/" target="_blank">
@@ -1874,7 +1782,6 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- Agência LunaDev -->
                     <div class="projeto-card" data-aos="fade-up">
                         <a class="projeto-link" href="https://luna-dev-gilt.vercel.app/" target="_blank">
@@ -1891,7 +1798,6 @@
             </div>
         </div>
     </div>
-
     <section class="py-5 contact-section" id="contact"
         style="background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);">
         <div class="container text-center">
@@ -1901,14 +1807,12 @@
                 <span class="text-danger">C</span>ontato
                 <span class="title-underline"></span>
             </h2>
-
             <!-- Subtítulo com animação -->
             <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;" data-aos="fade-up"
                 data-aos-delay="100">
                 Entre em contato comigo para mais informações, dúvidas ou colaborações.
                 <span class="contact-icon pulse" style="margin-left: 10px;">✉️</span>
             </p>
-
             <!-- Formulário estilizado -->
             <form class="form-contact mx-auto" action="#" method="post" style="max-width: 800px;" data-aos="zoom-in"
                 data-aos-delay="200">
@@ -1951,7 +1855,6 @@
                     <span class="button-wave"></span>
                 </button>
             </form>
-
             <!-- Efeito decorativo -->
             <div class="contact-decoration">
                 <div class="decoration-circle decoration-circle-1"></div>
@@ -1960,7 +1863,6 @@
             </div>
         </div>
     </section>
-
     <!-- CSS adicional -->
     <style>
         .contact-section {
@@ -2122,32 +2024,21 @@
             }
         }
     </style>
-
-    <!-- JavaScript para efeitos interativos -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Efeito de onda no botão
             const buttons = document.querySelectorAll('.send-button');
-
             buttons.forEach(button => {
                 button.addEventListener('click', function (e) {
                     e.preventDefault();
-
-                    // Reset animation
                     const wave = this.querySelector('.button-wave');
                     wave.style.animation = 'none';
-                    wave.offsetHeight; /* trigger reflow */
+                    wave.offsetHeight;
                     wave.style.animation = 'ripple 1s ease-out';
-
-                    // Efeito de envio
                     const buttonText = this.querySelector('.button-text');
                     const icon = this.querySelector('.fa-paper-plane');
-
                     buttonText.textContent = 'Enviando...';
                     icon.classList.remove('fa-paper-plane');
                     icon.classList.add('fa-spinner', 'fa-spin');
-
-                    // Simular envio (remover em produção)
                     setTimeout(() => {
                         buttonText.textContent = 'Mensagem Enviada!';
                         icon.classList.remove('fa-spinner', 'fa-spin');
@@ -2159,21 +2050,15 @@
             });
         });
     </script>
-
-    <!-- libras -->
     <div class="enabled" vw>
         <div class="active" vw-access-button></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
-    <!-- Whatsapp Icon -->
     <a class="whatsapp-float" href="https://wa.me/5513981492795" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
-
-    <!-- Crisp -->
     <script type="text/javascript">
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "e206f4ad-1d7c-4080-ac60-77fcc477710a";
