@@ -179,3 +179,93 @@ document
     e.preventDefault();
     alert("Mensagem enviada com sucesso!");
   });
+
+// ===== FUNÇÃO PARA GARANTIR MODO ESCURO NOS PROJETOS =====
+function applyDarkModeToProjects() {
+  if (document.body.classList.contains('dark-mode')) {
+    // Seleciona todos os títulos das seções de projetos e aplica cor branca
+    document.querySelectorAll(
+      '#projetos-software h1, #projetos-sites h1, ' +
+      '#projetos-software h2, #projetos-sites h2, ' +
+      '#projetos-software h3, #projetos-sites h3, ' +
+      '.subcategoria-title, .projeto-info h3, ' +
+      '.projeto-grid #title, .projeto-grid h1, .projeto-grid h2'
+    ).forEach(el => {
+      el.style.color = '#ffffff';
+    });
+    
+    // Ajusta os parágrafos
+    document.querySelectorAll('.projeto-info p').forEach(el => {
+      el.style.color = '#cccccc';
+    });
+    
+    // Ajusta os containers
+    document.querySelectorAll('.subcategoria-container').forEach(el => {
+      el.style.background = 'rgba(0, 0, 0, 0.3)';
+    });
+    
+    // Ajusta os cards
+    document.querySelectorAll('.projeto-card').forEach(el => {
+      el.style.background = 'rgba(0, 0, 0, 0.5)';
+    });
+  } else {
+    // Modo claro - volta às cores originais
+    document.querySelectorAll(
+      '#projetos-software h1, #projetos-sites h1, ' +
+      '#projetos-software h2, #projetos-sites h2, ' +
+      '#projetos-software h3, #projetos-sites h3, ' +
+      '.subcategoria-title, .projeto-info h3, ' +
+      '.projeto-grid #title, .projeto-grid h1, .projeto-grid h2'
+    ).forEach(el => {
+      el.style.color = '';
+    });
+    
+    document.querySelectorAll('.projeto-info p').forEach(el => {
+      el.style.color = '';
+    });
+    
+    document.querySelectorAll('.subcategoria-container').forEach(el => {
+      el.style.background = '';
+    });
+    
+    document.querySelectorAll('.projeto-card').forEach(el => {
+      el.style.background = '';
+    });
+  }
+}
+
+// Executar quando a página carregar
+document.addEventListener('DOMContentLoaded', applyDarkModeToProjects);
+
+// Observar mudanças no DOM para aplicar também quando conteúdo for carregado dinamicamente
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+      // Se a classe do body mudou (modo escuro ativado/desativado)
+      applyDarkModeToProjects();
+    }
+  });
+});
+
+// Iniciar observação
+observer.observe(document.body, {
+  attributes: true,
+  attributeFilter: ['class']
+});
+
+// Também observar quando novos elementos são adicionados
+const observerForNewElements = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+      // Se novos elementos foram adicionados, verificar modo escuro
+      applyDarkModeToProjects();
+    }
+  });
+});
+
+observerForNewElements.observe(document.getElementById('projetos'), {
+  childList: true,
+  subtree: true
+});
+
+// ===== FIM DA FUNÇÃO DE MODO ESCURO =====

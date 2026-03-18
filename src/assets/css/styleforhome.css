@@ -410,6 +410,87 @@ a:focus {
     color: #ff6b6b;
 }
 
+/* ===== CORREÇÕES PARA MODO ESCURO - PROJETOS ===== */
+.dark-mode .projeto-grid h1,
+.dark-mode .projeto-grid h2,
+.dark-mode .projeto-grid h3,
+.dark-mode .subcategoria-title,
+.dark-mode .projeto-info h3,
+.dark-mode #projetos-software h1,
+.dark-mode #projetos-sites h1,
+.dark-mode #projetos-software .subcategoria-title,
+.dark-mode #projetos-sites .subcategoria-title,
+.dark-mode .projeto-grid #title {
+    color: #ffffff !important;
+}
+
+.dark-mode .projeto-info p {
+    color: #cccccc !important;
+}
+
+.dark-mode .subcategoria-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .subcategoria-title::after {
+    background: linear-gradient(90deg, #ff4d4d, #b30000);
+}
+
+.dark-mode .projeto-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode #about p {
+    color: #f0f0f0;
+}
+
+.dark-mode .skill-block {
+    background-color: #9e9e9e;
+}
+
+.dark-mode .skill-block h3 {
+    color: #ffffff;
+}
+
+.dark-mode .accordion .card-header {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .accordion .card-header h5 {
+    color: #ffffff;
+}
+
+.dark-mode .accordion .card-body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .categoria-link {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.dark-mode .categoria-link:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .categoria-title {
+    color: #ffffff;
+}
+
+.dark-mode #contact p {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #aaaaaa;
+    opacity: 1;
+}
+/* ===== FIM DAS CORREÇÕES ===== */
 
 @media (max-width: 991px) {
     .row {
