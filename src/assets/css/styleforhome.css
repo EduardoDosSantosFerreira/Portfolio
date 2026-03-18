@@ -492,6 +492,303 @@ a:focus {
 }
 /* ===== FIM DAS CORREÇÕES ===== */
 
+/* ===== BOTÕES DE CATEGORIA MELHORADOS ===== */
+
+#categoria {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 50px 50px 0 0;
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #ad0000 0%, #ff4d4d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.categoria-indicador {
+    font-size: 1.2rem;
+    color: #666;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Cards melhorados */
+.categoria-link {
+    text-decoration: none;
+    color: #212529;
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 1.5rem;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    min-height: 380px;
+    width: 100%;
+}
+
+.categoria-link:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(173, 0, 0, 0.2);
+    background: white;
+    border-color: #ad0000;
+}
+
+/* Wrapper do ícone com efeito de pulso */
+.icon-hover-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Efeito de pulso no fundo */
+.pulse-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(173, 0, 0, 0.1);
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+/* Ícone principal */
+.categoria-icon {
+    width: 160px;
+    height: 160px;
+    transition: all 0.4s ease;
+    filter: grayscale(20%) brightness(0.9);
+    position: relative;
+    z-index: 2;
+}
+
+.categoria-link:hover .categoria-icon {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(0%) brightness(1);
+}
+
+/* Badge com contador */
+.icon-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ad0000;
+    color: white;
+    border-radius: 50px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(173, 0, 0, 0.3);
+    z-index: 3;
+    animation: badge-pulse 2s infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.badge-count {
+    font-size: 0.9rem;
+}
+
+/* Título da categoria */
+.categoria-title {
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 700 !important;
+    margin-top: 1rem !important;
+}
+
+.categoria-link:hover .categoria-title {
+    color: #ad0000;
+    transform: scale(1.05);
+}
+
+/* Texto descritivo */
+.categoria-link p {
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.categoria-link:hover p {
+    opacity: 1;
+    color: #ad0000 !important;
+}
+
+/* Linha animada */
+.categoria-line {
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ad0000 0%, #ff4d4d 100%);
+    transition: width 0.4s ease;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.categoria-link:hover .categoria-line {
+    width: 80px;
+}
+
+/* Botão de explorar */
+.explore-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    background: transparent;
+    border: 2px solid #ad0000;
+    color: #ad0000;
+    font-weight: 600;
+    padding: 8px 20px !important;
+}
+
+.categoria-link:hover .explore-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.explore-btn:hover {
+    background: #ad0000;
+    color: white !important;
+}
+
+/* Efeito de borda brilhante */
+.categoria-link::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(173, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.categoria-link:hover::after {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .categoria-link {
+        padding: 2rem 1rem;
+        min-height: 320px;
+    }
+    
+    .icon-hover-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .categoria-icon {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .icon-badge {
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .explore-btn {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 0.9rem;
+        padding: 5px 15px !important;
+    }
+    
+    .categoria-indicador {
+        font-size: 1rem;
+    }
+}
+
+/* Modo escuro para categoria */
+.dark-mode #categoria {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-mode .categoria-link {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.dark-mode .categoria-link:hover {
+    background: #2a2a2a;
+    border-color: #ad0000;
+}
+
+.dark-mode .categoria-title {
+    color: #ffffff;
+}
+
+.dark-mode .categoria-link p {
+    color: #aaa !important;
+}
+
+.dark-mode .categoria-link:hover p {
+    color: #ff6b6b !important;
+}
+
+.dark-mode .categoria-indicador {
+    color: #aaa;
+}
+
+/* ===== FIM DOS BOTÕES DE CATEGORIA MELHORADOS ===== */
+
 @media (max-width: 991px) {
     .row {
         justify-content: center !important;

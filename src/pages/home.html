@@ -627,6 +627,8 @@
             </div>
         </div>
     </div>
+
+    <!-- SEÇÃO DE CATEGORIA MELHORADA -->
     <section id="categoria" class="py-5">
         <div class="container" data-aos="fade-down" style="max-width: 1600px;">
             <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
@@ -636,153 +638,56 @@
                 </h1>
             </div>
             <div class="espaco py-4"></div>
+            
+            <!-- Texto indicativo -->
+            <p class="text-center mb-5 categoria-indicador">
+                👇 Escolha uma categoria para explorar meus projetos 👇
+            </p>
+            
             <div class="row justify-content-center g-4">
+                <!-- CARD DE SOFTWARE - MELHORADO -->
                 <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <a class="categoria-link d-flex flex-column align-items-center" data-categoria="software" href="#"
-                        title="Software">
+                    <a class="categoria-link d-flex flex-column align-items-center" data-categoria="software" href="#" 
+                       title="Ver Softwares" style="cursor: pointer;">
                         <div class="icon-hover-wrapper">
-                            <img src="https://img.icons8.com/color/130/windows-11.png"
-                                alt="Ícone do Windows representando a categoria de Softwares" class="categoria-icon">
+                            <div class="pulse-effect"></div>
+                            <img src="https://img.icons8.com/color/130/windows-11.png" 
+                                 alt="Ícone do Windows representando a categoria de Softwares" 
+                                 class="categoria-icon">
+                            <div class="icon-badge">
+                                <span class="badge-count">7+</span>
+                            </div>
                         </div>
-                        <h2 class="h5 fw-semibold mt-3 categoria-title">Softwares</h2>
+                        <h2 class="h4 fw-semibold mt-3 categoria-title">Softwares</h2>
+                        <p class="text-muted small mb-2">Aplicativos desktop</p>
                         <div class="categoria-line"></div>
+                        <span class="btn btn-sm btn-outline-danger mt-3 explore-btn">Explorar →</span>
                     </a>
                 </div>
+                
+                <!-- CARD DE SITES - MELHORADO -->
                 <div class="col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <a class="categoria-link d-flex flex-column align-items-center" data-categoria="sites" href="#"
-                        title="Web-Sites">
+                    <a class="categoria-link d-flex flex-column align-items-center" data-categoria="sites" href="#" 
+                       title="Ver Sites" style="cursor: pointer;">
                         <div class="icon-hover-wrapper">
-                            <img src="../assets/img/profile_icons/crowico.png"
-                                alt="Ícone de corvo representando a categoria de Web-Sites" class="categoria-icon">
+                            <div class="pulse-effect"></div>
+                            <img src="../assets/img/profile_icons/crowico.png" 
+                                 alt="Ícone de corvo representando a categoria de Web-Sites" 
+                                 class="categoria-icon">
+                            <div class="icon-badge">
+                                <span class="badge-count">15+</span>
+                            </div>
                         </div>
-                        <h2 class="h5 fw-semibold mt-3 categoria-title">Sites</h2>
+                        <h2 class="h4 fw-semibold mt-3 categoria-title">Sites</h2>
+                        <p class="text-muted small mb-2">Websites responsivos</p>
                         <div class="categoria-line"></div>
+                        <span class="btn btn-sm btn-outline-danger mt-3 explore-btn">Explorar →</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <style>
-        #categoria {
-            position: relative;
-            overflow: hidden;
-        }
 
-        .section-title {
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .text-gradient {
-            background: linear-gradient(90deg, #ad0000 0%, #ff4d4d 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            position: relative;
-        }
-
-        .categoria-link {
-            text-decoration: none;
-            color: #212529;
-            position: relative;
-            z-index: 1;
-            padding: 2rem 1rem;
-            border-radius: 16px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .categoria-link:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(173, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .icon-hover-wrapper {
-            position: relative;
-            width: 190px;
-            height: 190px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .categoria-icon {
-            width: 180px;
-            height: 180px;
-            transition: all 0.4s ease;
-            filter: grayscale(30%) brightness(0.9);
-        }
-
-        .categoria-link:hover .categoria-icon {
-            transform: scale(1.1);
-            filter: grayscale(0%) brightness(1);
-        }
-
-        .categoria-title {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .categoria-link:hover .categoria-title {
-            color: #ad0000;
-        }
-
-        .categoria-line {
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #ad0000 0%, #ff4d4d 100%);
-            transition: width 0.4s ease;
-            margin-top: 10px;
-        }
-
-        .categoria-link:hover .categoria-line {
-            width: 50px;
-        }
-
-        .categoria-link::after {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            z-index: -1;
-            border-radius: 18px;
-            background: linear-gradient(135deg, rgba(173, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .categoria-link:hover::after {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .categoria-link {
-                padding: 1.5rem 0.5rem;
-            }
-
-            .icon-hover-wrapper {
-                width: 100px;
-                height: 100px;
-            }
-
-            .categoria-icon {
-                width: 60px;
-                height: 60px;
-            }
-        }
-    </style>
     <div id="projetos">
         <div class="projeto-grid" id="projetos-software" style="display: none; max-width: 1700px;">
             <h1 class="text-center mb-5" id="title">Projetos de Softwares</h1>
