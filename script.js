@@ -54,9 +54,10 @@ const typedTextElement = document.getElementById('typed-text');
 if (typedTextElement) {
     const texts = [
         'Desenvolvedor Fullstack',
-        'Especialista em APIs',
         'Automação de Processos',
+        'Desenvolvedor de Software',
         'Python & JavaScript',
+        'Desenvolvedor WEB',
         'React & Node.js'
     ];
     let textIndex = 0;

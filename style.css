@@ -227,16 +227,6 @@ body.dark-mode .bg-light {
     z-index: 0;
 }
 
-.hero-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(220, 53, 69, 0.15) 0%, transparent 70%);
-    z-index: 1;
-}
-
 .hero-particles-bg {
     position: absolute;
     top: 0;
@@ -286,7 +276,7 @@ body.dark-mode .bg-light {
 .title-line-1,
 .title-line-2 {
     display: inline-block;
-    background: linear-gradient(135deg, #ffffff 0%, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -305,7 +295,7 @@ body.dark-mode .bg-light {
 .hero-typed-text {
     font-size: 1.4rem;
     font-family: 'Courier New', monospace;
-    color: #ff6b6b;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -394,41 +384,6 @@ body.dark-mode .bg-light {
     border-color: #dc3545;
     background: rgba(220, 53, 69, 0.1);
     transform: translateY(-3px);
-}
-
-.hero-tech-stack {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    animation: fadeInUp 0.8s ease 0.8s forwards;
-    opacity: 0;
-}
-
-.tech-stack-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-}
-
-.tech-stack-item i {
-    font-size: 1.2rem;
-    color: #ff6b6b;
-}
-
-.tech-stack-item span {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.tech-stack-item:hover {
-    transform: translateY(-3px);
-    background: rgba(220, 53, 69, 0.2);
 }
 
 .hero-scroll-indicator {
@@ -766,7 +721,7 @@ body.dark-mode .tech-icons {
     font-weight: 600;
     color: #fff;
     margin-bottom: 8px;
-    background: linear-gradient(135deg, #fff, #ff6b6b);
+    background: linear-gradient(135deg, #fff, #ff0000);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1052,18 +1007,6 @@ body.dark-mode ::-webkit-scrollbar-track {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-    }
-    
-    .hero-tech-stack {
-        gap: 12px;
-    }
-    
-    .tech-stack-item {
-        padding: 5px 12px;
-    }
-    
-    .tech-stack-item span {
-        font-size: 0.75rem;
     }
     
     .about-img {
