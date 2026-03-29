@@ -29,39 +29,41 @@ Sou **Fullstack Developer & IT Specialist**, focado em desenvolvimento web, apli
 ## Projetos em Destaque
 
 ### Aplicações Desktop
+
 - **CleanCrow** — Ferramenta de otimização e manutenção do Windows  
-  *Python + Tkinter*
+  _Python + Tkinter_
 
 - **Crowvert** — Conversão de arquivos com UI moderna  
-  *Python + PySide6*
+  _Python + PySide6_
 
 - **DarkFeather** — Visualização de redes Wi-Fi salvas no Windows  
-  *Python + Tkinter*
+  _Python + Tkinter_
 
 - **BlackWing** — Gerenciador avançado de processos do Windows  
-  *Python + Tkinter*
+  _Python + Tkinter_
 
 ---
 
 ### Projetos Web
+
 - **Dashboard – Ajuda Cidadão** — Sistema interno de operações  
-  *Vue.js + Firebase*
+  _Vue.js + Firebase_
 
 - **Landing Page – WG Convênios**  
-  *HTML + CSS + JavaScript*
+  _HTML + CSS + JavaScript_
 
 - **TaskForm** — Ferramenta simples de tarefas  
-  *HTML + CSS + JavaScript*
+  _HTML + CSS + JavaScript_
 
 ---
 
 ## Como Posso Ajudar
 
-- Desenvolvimento de sistemas completos (web + desktop)  
-- Automação de rotinas operacionais  
-- Criação de ferramentas internas para equipes  
-- Soluções personalizadas para Windows  
-- Apoio técnico e melhoria de infraestrutura local  
+- Desenvolvimento de sistemas completos (web + desktop)
+- Automação de rotinas operacionais
+- Criação de ferramentas internas para equipes
+- Soluções personalizadas para Windows
+- Apoio técnico e melhoria de infraestrutura local
 
 ---
 

@@ -150,11 +150,11 @@ body {
     box-shadow: inset 8px -4px 0px 0px #fff;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #00a6ff;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(27px);
     box-shadow: inset 15px -4px 0px 15px #ffcf48;
 }
@@ -215,7 +215,7 @@ body.dark-mode .bg-light {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    background-color: #000;
 }
 
 #hero-canvas {
@@ -234,7 +234,7 @@ body.dark-mode .bg-light {
     width: 100%;
     height: 100%;
     background-image: radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.1) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 80%, rgba(220, 53, 69, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(220, 53, 69, 0.08) 0%, transparent 50%);
     z-index: 1;
 }
 
@@ -858,6 +858,7 @@ body.dark-mode .tech-icons {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -869,6 +870,7 @@ body.dark-mode .tech-icons {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -876,23 +878,36 @@ body.dark-mode .tech-icons {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes glowPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 5px rgba(220, 53, 69, 0.3);
     }
+
     50% {
         box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
     }
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     50% {
         transform: translateX(-50%) translateY(-10px);
     }
@@ -903,6 +918,7 @@ body.dark-mode .tech-icons {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
+
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(15px);
@@ -910,27 +926,36 @@ body.dark-mode .tech-icons {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
 @keyframes heartbeat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -968,92 +993,92 @@ body.dark-mode ::-webkit-scrollbar-track {
     body {
         padding-top: 75px;
     }
-    
+
     .navbar {
         padding: 15px 0;
     }
-    
+
     .navbar-brand img {
         width: 45px;
     }
-    
+
     .nav-link {
         font-size: 16px;
         margin: 8px 0;
     }
-    
+
     .nav-link i {
         font-size: 18px;
     }
-    
+
     .hero-main-title {
         font-size: 2.5rem;
     }
-    
+
     .title-line-2 {
         margin-left: 0;
         display: block;
     }
-    
+
     .hero-typed-text {
         font-size: 1rem;
     }
-    
+
     .hero-description {
         font-size: 0.95rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    
+
     .about-img {
         width: 220px;
     }
-    
+
     .about-title {
         font-size: 2rem;
         text-align: center;
     }
-    
+
     .about-content {
         padding-left: 0;
         text-align: center;
     }
-    
+
     .about-stats {
         justify-content: center;
     }
-    
+
     .about-text {
         text-align: center;
     }
-    
+
     .img-container {
         height: 180px;
     }
-    
+
     .footer-social-link {
         padding: 8px 16px;
     }
-    
+
     .footer-social-link span {
         font-size: 0.8rem;
     }
-    
+
     .footer-name {
         font-size: 1.2rem;
     }
-    
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
         bottom: 20px;
         left: 20px;
     }
-    
+
     .whatsapp-float i {
         font-size: 24px;
     }
@@ -1063,19 +1088,19 @@ body.dark-mode ::-webkit-scrollbar-track {
     .img-container {
         height: 150px;
     }
-    
+
     .projeto-info {
         padding: 1rem;
     }
-    
+
     .projeto-info h3 {
         font-size: 1rem;
     }
-    
+
     .projeto-info p {
         font-size: 0.8rem;
     }
-    
+
     .skill-icon {
         width: 24px;
         height: 24px;
