@@ -169,22 +169,11 @@
                             </div>
                         </div>
                         <div class="mt-4">
-                            <a href="#" id="downloadPdf" class="btn btn-danger btn-lg about-btn">
+                            <a href="/src/docs/Curriculo_Eduardo_Ferreira.pdf" id="downloadPdf"
+                                class="btn btn-danger btn-lg about-btn" download>
                                 <i class="fas fa-download me-2"></i>Baixar Currículo
                             </a>
                         </div>
-
-                        <script>
-                            document.getElementById('downloadPdf').addEventListener('click', function (e) {
-                                e.preventDefault();
-                                const link = document.createElement('a');
-                                link.href = 'docs/Curriculo_Eduardo_Ferreira.pdf';
-                                link.download = 'Curriculo_Eduardo_Ferreira.pdf';
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
